@@ -12,10 +12,11 @@ import { cn } from "@/lib/utils";
 import { siteConfig } from "@/utils/site";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 export default function Navbar() {
   const pathname = usePathname();
+  const { replace } = useRouter();
   return (
     <nav className="w-full bg-black  flex items-center justify-between pt-6 content">
       <ul className="lg:flex hidden items-center gap-10 text-white w-fit text-[14px] font-medium tracking-wide ">
@@ -37,7 +38,12 @@ export default function Navbar() {
           );
         })}
       </ul>
-      <motion.div layoutId="logo" className="flex items-center justify-center">
+      <motion.div
+        layoutId="logo"
+        className="flex items-center justify-center cursor-pointer"
+        role="button"
+        onClick={() => replace("/")}
+      >
         <svg
           width="60"
           height="52"
