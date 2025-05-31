@@ -123,13 +123,13 @@
     @apply max-w-[1920px] lg:px-32 md:px-10 px-4 mx-auto;
   }
   .title {
-    @apply text-[60px] font-medium leading-[70px] text-white;
+    @apply text-[60px] font-semibold leading-[70px] text-white;
   }
   .sub-title {
     @apply text-[34px] font-medium leading-[126%] text-white;
   }
   .description {
-    @apply text-[20px] text-[#838384] leading-[126%];
+    @apply text-[20px] text-[#838384] leading-[30px] tracking-wide;
   }
 }
 

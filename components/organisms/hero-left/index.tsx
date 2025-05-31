@@ -44,7 +44,7 @@ const Heroleft = () => {
         <FadeContent>
           <h1 className="title">Software Development</h1>
         </FadeContent>
-        <div className="relative h-[60px] overflow-hidden">
+        <div className="relative h-[80px] overflow-hidden">
           <AnimatePresence mode="wait">
             <motion.h1
               key={index}
@@ -59,7 +59,7 @@ const Heroleft = () => {
           </AnimatePresence>
         </div>
         <FadeContent>
-          <p className="max-w-[700px] description mt-4">
+          <p className="max-w-[700px] description">
             Transform your business ideas into powerful digital solutions with
             our trusted offshore development team. We deliver enterprise-grade
             software at competitive rates while ensuring quality and
