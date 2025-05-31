@@ -24,7 +24,10 @@ export default function LoadingLayout({
 
         {!loading && (
           <>
-            <motion.div layoutId="logo" className="absolute top-4 left-8">
+            <motion.div
+              layoutId="logo"
+              className="absolute top-[-100px] left-[-100px]  "
+            >
               <svg
                 width="78"
                 height="72"
