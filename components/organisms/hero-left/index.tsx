@@ -2,7 +2,6 @@
 import { Button } from "@/components/atoms/button";
 import { FadeContent } from "@/components/molecules";
 import { AnimatePresence } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
@@ -71,9 +70,9 @@ const Heroleft = () => {
         <FadeContent>
           <Button
             className="w-[196px] h-[56px] mt-6"
-            icon={<ArrowRight className="rotate-[-45deg]" />}
-            iconPosition="right"
             variant="secondary"
+            iconArrow
+            iconPosition="right"
           >
             Book a Call
           </Button>

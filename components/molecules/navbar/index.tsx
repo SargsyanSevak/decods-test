@@ -135,7 +135,9 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Button variant="secondary">Contact Us</Button>
+          <Button variant="secondary" className="!h-[42px]">
+            Contact Us
+          </Button>
         </li>
       </ul>
     </nav>
