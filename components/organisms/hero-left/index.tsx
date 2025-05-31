@@ -58,6 +58,7 @@ const Heroleft = () => {
             </motion.h1>
           </AnimatePresence>
         </div>
+
         <FadeContent>
           <p className="max-w-[700px] description">
             Transform your business ideas into powerful digital solutions with
