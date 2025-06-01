@@ -6,6 +6,12 @@ import Image from "next/image";
 const InfiniteHorizontalScroll = dynamic(() =>
   import("@/components/molecules").then((c) => c.InfiniteHorizontalScroll)
 );
+const ServiceCarousel = dynamic(() =>
+  import("@/components/organisms").then((c) => c.ServiceCarousel)
+);
+const WhyChooseUs = dynamic(() =>
+  import("@/components/organisms").then((c) => c.WhyChooseUs)
+);
 
 const Home = () => {
   return (
@@ -31,12 +37,16 @@ const Home = () => {
 
       {/* Section 2 */}
       <div className="w-full bg-white">
-        <div className="w-full h-full section">Section 2</div>
+        <div className="w-full section">
+          <ServiceCarousel />
+        </div>
       </div>
 
       {/* Section 3 */}
       <div className="w-full bg-black">
-        <div className="w-full h-full text-white section">Section 3</div>
+        <div className="w-full h-full text-white section">
+          <WhyChooseUs />
+        </div>
       </div>
 
       {/* Section 4 */}
