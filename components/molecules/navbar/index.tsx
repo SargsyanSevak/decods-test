@@ -18,8 +18,8 @@ export default function Navbar() {
   const pathname = usePathname();
   const { replace } = useRouter();
   return (
-    <nav className="w-full bg-black  flex items-center justify-between pt-6 content">
-      <ul className="lg:flex hidden items-center gap-10 text-white w-fit text-[14px] font-medium tracking-wide ">
+    <nav className="w-full bg-black  flex items-center justify-between pt-9 content z-50">
+      <ul className="lg:flex hidden items-center gap-[46px] text-white w-fit text-[14px] font-medium tracking-wide ">
         {siteConfig.leftNavMenuItems.map((el) => {
           return (
             <li key={el.label}>
@@ -43,10 +43,11 @@ export default function Navbar() {
         className="flex items-center justify-center cursor-pointer"
         role="button"
         onClick={() => replace("/")}
+        transition={{ ease: "easeOut", duration: 0.6 }}
       >
         <svg
-          width="60"
-          height="52"
+          width="70"
+          height="64"
           viewBox="0 0 80 73"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -67,7 +68,7 @@ export default function Navbar() {
           />
         </svg>
       </motion.div>
-      <ul className="lg:flex hidden items-center gap-10 text-white w-fit text-[14px] font-medium tracking-wide">
+      <ul className="lg:flex hidden items-center gap-[46px] text-white w-fit text-[14px] font-medium tracking-wide relative z-50">
         <li>
           <NavigationMenu
             viewport={false}
@@ -141,7 +142,10 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Button variant="secondary" className="!h-[42px]">
+          <Button
+            variant="secondary"
+            className="!h-[42px] !text-[14px] relative z-20"
+          >
             Contact Us
           </Button>
         </li>

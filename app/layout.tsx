@@ -22,7 +22,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning={true}>
-      <body className={` ${inter.className} antialiased`}>
+      <body className={` ${inter.className} !antialiased text-[--font-inter]`}>
         <LoadingLayout>{children}</LoadingLayout>
       </body>
     </html>

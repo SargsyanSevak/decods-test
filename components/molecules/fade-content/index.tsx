@@ -16,7 +16,7 @@ const FadeContent: React.FC<FadeContentProps> = ({
   children,
   blur = false,
   duration = 2000,
-  easing = "linear",
+  easing = "ease",
   delay = 0,
   threshold = 0.1,
   initialOpacity = 0,
@@ -33,27 +33,25 @@ const FadeContent: React.FC<FadeContentProps> = ({
       ([entry]) => {
         if (entry.isIntersecting) {
           observer.unobserve(element);
-          setTimeout(() => {
-            setInView(true);
-          }, delay);
+          setTimeout(() => setInView(true), delay);
         }
       },
       { threshold }
     );
 
     observer.observe(element);
-
     return () => observer.disconnect();
   }, [threshold, delay]);
 
   return (
     <div
       ref={ref}
-      className={`min-h-[40px] ${className}`}
+      className={`min-h-[40px] will-change-opacity ${className}`}
       style={{
         opacity: inView ? 1 : initialOpacity,
         transition: `opacity ${duration}ms ${easing}, filter ${duration}ms ${easing}`,
         filter: blur ? (inView ? "blur(0px)" : "blur(10px)") : "none",
+        transform: "translateZ(0)",
       }}
     >
       {children}

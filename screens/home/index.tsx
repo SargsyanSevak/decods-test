@@ -9,22 +9,41 @@ const InfiniteHorizontalScroll = dynamic(() =>
 
 const Home = () => {
   return (
-    <div className="w-full bg-black text-white content pb-10">
-      <div className="w-full flex flex-col gap-10">
-        <Heroleft />
-        <div className="w-full h-[80px] text-center pt-10">
-          <InfiniteHorizontalScroll items={logos} />
+    <>
+      <div className="w-full bg-black text-white content pb-10">
+        <div className="w-full flex flex-col gap-10">
+          <Heroleft />
+          <div className="w-full h-[160px] text-center pt-10">
+            <InfiniteHorizontalScroll items={logos} />
+          </div>
+        </div>
+        <div className="absolute top-0 right-4 opacity-[0.075] z-0">
+          <div className="w-[485px] h-full bg-gradient-to-b from-transparent to-black">
+            <Image
+              src="https://res.cloudinary.com/dprl3uqvi/image/upload/v1748768621/OBJECTS_q4iemg.png"
+              width={485}
+              height={385}
+              alt="Background Vector"
+            />
+          </div>
         </div>
       </div>
-      <div className="absolute top-40 right-4">
-        <Image
-          src="https://res.cloudinary.com/dprl3uqvi/image/upload/v1748691210/Vector_2_ztyg2b.png"
-          width={485}
-          height={385}
-          alt="Background Vector"
-        />
+
+      {/* Section 2 */}
+      <div className="w-full bg-white">
+        <div className="w-full h-full section">Section 2</div>
       </div>
-    </div>
+
+      {/* Section 3 */}
+      <div className="w-full bg-black">
+        <div className="w-full h-full text-white section">Section 3</div>
+      </div>
+
+      {/* Section 4 */}
+      <div className="w-full bg-[#D4D4D4]">
+        <div className="w-full h-full text-black section">Section 4</div>
+      </div>
+    </>
   );
 };
 

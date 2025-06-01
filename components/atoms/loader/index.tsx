@@ -7,18 +7,17 @@ export default function Loader() {
   const [isDone, setIsDone] = useState(false);
   const progress = useMotionValue(0);
 
-  const combinedScale = useTransform(progress, [0, 1, 2], [0.9, 2.2, 0.6]);
+  const combinedScale = useTransform(progress, [0, 1], [0.9, 3]);
 
-  const combinedY = useTransform(progress, [0, 2], [0, -50]);
+  const combinedY = useTransform(progress, [0, 1], [0, -10]);
 
   const maskHeight = useTransform(progress, [0, 1], [0, 73]);
   const maskY = useTransform(maskHeight, (h) => 73 - h);
 
   useEffect(() => {
     const sequence = async () => {
-      await animate(progress, 1, { duration: 0.6, ease: "linear" });
-      await new Promise((res) => setTimeout(res, 400));
-      await animate(progress, 1.6, { duration: 1.2, ease: "linear" });
+      await animate(progress, 1, { duration: 0.8, ease: "easeInOut" });
+      await animate(progress, 2, { duration: 1.3, ease: "easeOut" });
       setIsDone(true);
     };
     sequence();
@@ -28,7 +27,6 @@ export default function Loader() {
     <motion.div
       initial={{ opacity: 1 }}
       animate={{ opacity: isDone ? 0 : 1 }}
-      transition={{ duration: 0.2, ease: "easeOut" }}
       className="fixed inset-0 z-[9999] flex items-center justify-center bg-black pointer-events-none"
     >
       <motion.div
