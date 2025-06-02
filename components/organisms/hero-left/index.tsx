@@ -31,7 +31,7 @@ const Heroleft = () => {
   return (
     <div className="w-full h-full relative will-change-opacity">
       <FadeContent delay={150}>
-        <div className="absolute top-0 left-[-70px] w-full h-full">
+        <div className="absolute top-[-50px] left-[-50px] w-full h-full">
           <Image
             src="https://res.cloudinary.com/dprl3uqvi/image/upload/v1748685735/Vector_1_bqrjfw.png"
             width={485}
@@ -39,10 +39,10 @@ const Heroleft = () => {
             alt="Background Vector"
           />
         </div>
-        <div className="flex flex-col gap-6 pt-20 relative z-10">
+        <div className="flex flex-col gap-6 pt-8 relative z-10">
           <h1 className="title">Software Development</h1>
 
-          <div className="relative 2xl:h-[120px] h-[80px] overflow-hidden">
+          <div className="relative 2xl:h-[120px] h-[80px] mt-[-18px] overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.h1
                 key={index}

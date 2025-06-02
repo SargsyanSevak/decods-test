@@ -5,11 +5,12 @@ interface TextCardProps {
   title: string;
   id: string;
   description: string;
+  className: string;
 }
 
-const TextCard: FC<TextCardProps> = ({ title, description, id }) => {
+const TextCard: FC<TextCardProps> = ({ title, description, id, className }) => {
   return (
-    <div className="w-full max-w-[500px]">
+    <div className={className}>
       <div className="flex justify-between items-center">
         <div className="w-full flex justify-between items-center">
           <div className="flex items-center gap-4">
@@ -34,3 +35,16 @@ const TextCard: FC<TextCardProps> = ({ title, description, id }) => {
 };
 
 export default TextCard;
+
+// <div className="row-start-3 col-start-3 space-y-2">
+//             <p className="text-sm text-gray-400">07</p>
+//             <h3 className="text-lg font-semibold">
+//               Industry Compliance & Security
+//             </h3>
+//             <p className="text-sm text-gray-300">
+//               Whether you&lsquo;re in healthcare, finance, e-commerce, or any
+//               regulated industry, we ensure your custom business software meets
+//               all relevant compliance requirements, including GDPR, HIPAA, PCI
+//               DSS, and industry-specific regulations.
+//             </p>
+//           </div>

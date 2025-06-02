@@ -122,7 +122,7 @@
     @apply bg-black text-foreground mx-auto;
   }
   .content {
-    @apply max-w-[1920px] lg:px-20 md:px-10 px-4 mx-auto;
+    @apply max-w-[1920px] lg:px-16 md:px-10 px-4 mx-auto;
   }
   .title {
     @apply 2xl:text-[86px] text-[60px] font-semibold 2xl:leading-[100px] leading-[70px] text-white;
@@ -137,7 +137,7 @@
     @apply 2xl:text-[16px] 2xl:leading-[30px] text-[14px] leading-[27px] text-[#292929] font-medium;
   }
   .section {
-    @apply w-full max-w-[1920px]  h-full py-20 lg:px-20 md:px-10 px-4 mx-auto;
+    @apply w-full max-w-[1920px]  h-full py-20 lg:px-16 md:px-10 px-4 mx-auto;
   }
   .section-title {
     @apply 2xl:text-[58px] 2xl:leading-[83px] text-[38px] leading-[65px] text-white;

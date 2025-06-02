@@ -65,11 +65,11 @@ const ServiceCarousel = () => {
         and operational efficiency.”
       </p>
 
-      <div className="w-full mt-16 flex justify-center items-center">
+      <div className="w-full mt-16 flex justify-between items-center gap-14">
         {/* Texts Start */}
-        <div className="w-[calc(100%_-_600px)] min-h-[500px] 2xl:pr-20 pr-10 flex flex-col justify-between">
-          <div className="w-full flex gap-10 justify-between">
-            <div className="flex gap-4 w-full 2xl:max-w-[500px] max-w-[400px]">
+        <div className="w-[calc(100%_-_280px)] min-h-[500px] flex flex-col justify-between">
+          <div className="w-full flex flex-col gap-10 justify-between">
+            <div className="flex gap-2 w-full 2xl:max-w-[500px] max-w-[400px]">
               <div className="min-w-[2px] min-h-[240px] w-[2px] h-full bg-gradient-to-b from-[#292929] to-transparent opacity-60" />
               <p className="2xl:text-[16px] text-[14px] 2xl:leading-[23px] leading-[20px] font-medium">
                 As a trusted software development company, Decods specializes in
@@ -80,32 +80,7 @@ const ServiceCarousel = () => {
                 solutions accessible to businesses of all sizes.
               </p>
             </div>
-            <div className="flex gap-4 w-full 2xl:max-w-[500px] max-w-[400px]">
-              <div className="min-w-[2px] min-h-[240px] w-[2px] h-full bg-gradient-to-b from-[#292929] to-transparent opacity-60" />
-              <p className="2xl:text-[16px] text-[14px] 2xl:leading-[23px] leading-[20px] font-medium">
-                Our full-cycle software development covers every project aspect.
-                From initial concept to ongoing maintenance. Whether you need
-                custom business applications for workflow automation, enterprise
-                software solutions for complex organizational needs, or digital
-                product development for market-ready SaaS platforms, we provide
-                comprehensive IT services that drive measurable business
-                results.
-              </p>
-            </div>
-          </div>
-          <div className="w-full flex gap-10 justify-between mt-10">
-            <div className="flex gap-4 w-full 2xl:max-w-[500px] max-w-[400px]">
-              <div className="min-w-[2px] min-h-[240px] w-[2px] h-full bg-gradient-to-b from-[#292929] to-transparent opacity-60" />
-              <p className="2xl:text-[16px] text-[14px] 2xl:leading-[23px] leading-[20px] font-medium">
-                As a trusted software development company, Decods specializes in
-                delivering custom software development services that transform
-                business ideas into powerful digital solutions. Our offshore
-                software development team combines global talent with
-                cost-effective pricing. This approach makes enterprise software
-                solutions accessible to businesses of all sizes.
-              </p>
-            </div>
-            <div className="flex gap-4 w-full 2xl:max-w-[500px] max-w-[400px]">
+            <div className="flex gap-2 w-full 2xl:max-w-[500px] max-w-[400px]">
               <div className="min-w-[2px] min-h-[240px] w-[2px] h-full bg-gradient-to-b from-[#292929] to-transparent opacity-60" />
               <p className="2xl:text-[16px] text-[14px] 2xl:leading-[23px] leading-[20px] font-medium">
                 Our full-cycle software development covers every project aspect.
@@ -122,7 +97,7 @@ const ServiceCarousel = () => {
         {/* Texts End */}
 
         {/* Carousel Start */}
-        <div className="w-[600px] h-[500px] flex flex-col">
+        <div className="w-[580px] min-w-[580px] h-[500px] flex flex-col">
           <div
             {...swipeHandlers}
             className="relative w-full h-full bg-black rounded-[25px] rounded-tl-[180px] rounded-br-[180px] overflow-hidden"
@@ -176,6 +151,34 @@ const ServiceCarousel = () => {
           </div>
         </div>
         {/* Carousel End */}
+
+        <div className="w-[calc(100%_-_280px)] min-h-[500px]  flex flex-col justify-between">
+          <div className="w-full flex flex-col gap-10 justify-between">
+            <div className="flex gap-2 w-full 2xl:max-w-[500px] max-w-[400px]">
+              <p className="2xl:text-[16px] text-[14px] 2xl:leading-[23px] leading-[20px] font-medium">
+                As a trusted software development company, Decods specializes in
+                delivering custom software development services that transform
+                business ideas into powerful digital solutions. Our offshore
+                software development team combines global talent with
+                cost-effective pricing. This approach makes enterprise software
+                solutions accessible to businesses of all sizes.
+              </p>
+              <div className="min-w-[2px] min-h-[240px] w-[2px] h-full bg-gradient-to-b from-[#292929] to-transparent opacity-60" />
+            </div>
+            <div className="flex gap-2 w-full 2xl:max-w-[500px] max-w-[400px]">
+              <p className="2xl:text-[16px] text-[14px] 2xl:leading-[23px] leading-[20px] font-medium">
+                Our full-cycle software development covers every project aspect.
+                From initial concept to ongoing maintenance. Whether you need
+                custom business applications for workflow automation, enterprise
+                software solutions for complex organizational needs, or digital
+                product development for market-ready SaaS platforms, we provide
+                comprehensive IT services that drive measurable business
+                results.
+              </p>
+              <div className="min-w-[2px] min-h-[240px] w-[2px] h-full bg-gradient-to-b from-[#292929] to-transparent opacity-60" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );

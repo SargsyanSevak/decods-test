@@ -5,10 +5,13 @@ import { FC, ReactNode } from "react";
 interface AnimatedImageProps {
   btn: ReactNode;
   image: string;
+  className?: string;
 }
-const AnimatedImage: FC<AnimatedImageProps> = ({ btn, image }) => {
+const AnimatedImage: FC<AnimatedImageProps> = ({ btn, image, className }) => {
   return (
-    <div className="group relative w-full h-full overflow-hidden">
+    <div
+      className={`group relative w-full h-full overflow-hidden ${className}`}
+    >
       <div className="absolute inset-0 z-0 transition-all duration-200 rounded-[4px] group-hover:rounded-bl-[300px] overflow-hidden">
         <Image src={image} alt="Card Image" fill className="object-cover" />
       </div>
