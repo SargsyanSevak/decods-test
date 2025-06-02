@@ -57,8 +57,8 @@ const Heroleft = () => {
             </AnimatePresence>
           </div>
 
-          <p className="max-w-[700px] description will-change-transform">
-            Transform your business ideas into powerful digital solutions with
+          <p className="max-w-[700px] description will-change-[opacity,filter,transform]">
+            Transform your business ideas into powerful digital solutions withs
             our trusted offshore development team. We deliver high quality
             software development at competitive rates while ensuring quality and
             reliability.
