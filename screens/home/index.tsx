@@ -12,6 +12,9 @@ const ServiceCarousel = dynamic(() =>
 const WhyChooseUs = dynamic(() =>
   import("@/components/organisms").then((c) => c.WhyChooseUs)
 );
+const DevelopmentProcess = dynamic(() =>
+  import("@/components/organisms").then((c) => c.DevelopmentProcess)
+);
 
 const Home = () => {
   return (
@@ -44,14 +47,41 @@ const Home = () => {
 
       {/* Section 3 */}
       <div className="w-full bg-black">
-        <div className="w-full h-full text-white section">
+        <div className="w-full text-white section">
           <WhyChooseUs />
         </div>
       </div>
 
       {/* Section 4 */}
       <div className="w-full bg-[#D4D4D4]">
-        <div className="w-full h-full text-black section">Section 4</div>
+        <div className="w-full h-full text-black section pr-0">
+          <DevelopmentProcess />
+        </div>
+      </div>
+
+      {/* Section 5 */}
+      <div className="w-full bg-black">
+        <div className="w-full text-white section">Section 5</div>
+      </div>
+
+      {/* Section 6 */}
+      <div className="w-full bg-white">
+        <div className="w-full text-black section">Section 6</div>
+      </div>
+
+      {/* Section 7 */}
+      <div className="w-full bg-black">
+        <div className="w-full text-white section">Section 7</div>
+      </div>
+
+      {/* Section 8 */}
+      <div className="w-full bg-white">
+        <div className="w-full text-black section">Section 8</div>
+      </div>
+
+      {/* Footer*/}
+      <div className="w-full bg-black">
+        <div className="w-full text-white section">Footer</div>
       </div>
     </>
   );

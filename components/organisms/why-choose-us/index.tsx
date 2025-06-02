@@ -20,7 +20,7 @@ const WhyChooseUs = () => {
       <p className="section-sub-title max-w-[520px] mt-10">
         What Makes Decods Different from Other Software Development Companies
       </p>
-      <div className="min-h-screen bg-black text-white  py-12 pb-0">
+      <div className=" bg-black text-white  py-12 pb-0">
         <div className=" grid grid-cols-1 md:grid-cols-3 grid-rows-3 2xl:gap-20 gap-10 relative">
           {/* 01 */}
           <TextCard
