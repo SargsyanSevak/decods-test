@@ -19,26 +19,29 @@ const MultiCarousel = ({ slides }: MultiCarouselProps) => {
   const [current, setCurrent] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
   const [slideWidth, setSlideWidth] = useState(0);
-  const slidesPerView =
-    typeof window !== "undefined" && window.innerWidth < 768 ? 1.1 : 1.5;
+  const [slidesPerView, setSlidesPerView] = useState(1.1); // default mobile
 
+  // Set responsive slidesPerView and slideWidth
   useEffect(() => {
-    const updateWidth = () => {
+    const updateDimensions = () => {
+      const newSlidesPerView = window.innerWidth < 768 ? 1.1 : 1.5;
+      setSlidesPerView(newSlidesPerView);
+
       if (containerRef.current) {
         const width = containerRef.current.offsetWidth;
-        setSlideWidth(width / slidesPerView);
+        setSlideWidth(width / newSlidesPerView);
       }
     };
-    updateWidth();
-    window.addEventListener("resize", updateWidth);
-    return () => window.removeEventListener("resize", updateWidth);
-  }, [slidesPerView]);
+
+    updateDimensions();
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
+  const maxIndex = Math.max(0, slides.length - slidesPerView);
 
   const swipeHandlers = useSwipeable({
-    onSwipedLeft: () =>
-      setCurrent((prev) =>
-        Math.min(prev + 1, slides.length - Math.ceil(slidesPerView))
-      ),
+    onSwipedLeft: () => setCurrent((prev) => Math.min(prev + 1, maxIndex)),
     onSwipedRight: () => setCurrent((prev) => Math.max(prev - 1, 0)),
     trackMouse: true,
   });
@@ -86,18 +89,14 @@ const MultiCarousel = ({ slides }: MultiCarouselProps) => {
         <Button
           onClick={() => setCurrent((prev) => Math.max(prev - 1, 0))}
           className="!w-[72px] !h-[48px] !rounded-[160px] !p-0 bg-[#292929]"
-          disabled={current === 0}
+          disabled={current <= 0}
         >
           <ArrowLeft />
         </Button>
         <Button
-          onClick={() =>
-            setCurrent((prev) =>
-              Math.min(prev + 1, slides.length - Math.ceil(slidesPerView))
-            )
-          }
+          onClick={() => setCurrent((prev) => Math.min(prev + 1, maxIndex))}
           className="!w-[72px] !h-[48px] !rounded-[160px] !p-0 bg-[#292929]"
-          disabled={current >= slides.length - Math.ceil(slidesPerView)}
+          disabled={current >= maxIndex}
         >
           <ArrowRight />
         </Button>
