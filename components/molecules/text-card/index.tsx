@@ -10,7 +10,7 @@ interface TextCardProps {
 
 const TextCard: FC<TextCardProps> = ({ title, description, id, className }) => {
   return (
-    <div className={className}>
+    <div className={`relative z-10 ${className}`}>
       <div className="flex justify-between items-center">
         <div className="w-full flex justify-between items-center">
           <div className="flex items-center gap-4">

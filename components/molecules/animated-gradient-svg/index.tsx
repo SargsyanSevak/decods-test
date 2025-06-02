@@ -3,6 +3,30 @@ import { memo } from "react";
 
 const AnimatedGradientSVG = () => {
   return (
+    // <div className="w-[600px] h-[400px] bg-[#838384] rounded-tr-[200px] rounded-br-[200px] relative flex justify-center items-center ml-12 overflow-hidden">
+    //   {/* Background Video */}
+    //   <video
+    //     className="absolute top-0 left-0 w-full h-full object-cover z-0"
+    //     autoPlay
+    //     loop
+    //     muted
+    //     playsInline
+    //   >
+    //     <source
+    //       src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+    //       type="video/mp4"
+    //     />
+    //     Your browser does not support the video tag.
+    //   </video>
+
+    //   {/* Centered Black Shape */}
+    //   <div className="w-[600px] h-[60px] bg-black rounded-tr-[200px] rounded-br-[200px] mr-[124px] z-10"></div>
+
+    //   {/* Side Covers to simulate the missing round ends */}
+    //   {/* <div className="w-[110px] h-[160px] bg-[#838384] absolute top-0 left-[-26px] rounded-bl-full z-10"></div>
+    //   <div className="w-[110px] h-[160px] bg-[#838384] absolute bottom-0 left-[-26px] rounded-tl-full z-10"></div> */}
+    // </div>
+
     <svg
       width="622"
       height="417"

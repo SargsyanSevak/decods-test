@@ -7,20 +7,20 @@ import React from "react";
 const WhyChooseUs = () => {
   return (
     <div className="w-full relative">
-      <h2 className="section-title 2xl:max-w-[800px] max-w-[600px]">
+      <h2 className="section-title 2xl:max-w-[800px] max-w-[600px] relative z-10">
         Why Choose Our Software Development Company
       </h2>
-      <p className="paragraph text-[#7F7F7F] 2xl:max-w-[800px] max-w-[600px] mt-10">
+      <p className="paragraph text-[#7F7F7F] 2xl:max-w-[800px] max-w-[600px] mt-10 relative z-10">
         When you partner with Decods, you&apos;re choosing a reliable
         development partner committed to delivering exceptional results. Our
         offshore software development model provides significant cost
         advantages—typically 40-60% lower than onshore alternatives. Quality and
         communication standards remain uncompromised.
       </p>
-      <p className="section-sub-title max-w-[520px] mt-10">
+      <p className="section-sub-title max-w-[520px] mt-10 relative z-10">
         What Makes Decods Different from Other Software Development Companies
       </p>
-      <div className=" bg-black text-white  py-12 pb-0">
+      <div className="bg-black text-white  py-12 pb-0">
         <div className=" grid grid-cols-1 md:grid-cols-3 grid-rows-3 2xl:gap-20 gap-10 relative">
           {/* 01 */}
           <TextCard
