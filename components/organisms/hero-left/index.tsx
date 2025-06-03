@@ -33,7 +33,7 @@ const Heroleft = () => {
       <FadeContent delay={150}>
         <div className="absolute top-[-50px] left-[-50px] w-full h-full">
           <Image
-            src="https://res.cloudinary.com/dprl3uqvi/image/upload/v1748685735/Vector_1_bqrjfw.png"
+            src="https://res.cloudinary.com/dudf3yqtz/image/upload/v1748965526/Vector_6_ytzsrf.png"
             width={485}
             height={385}
             alt="Background Vector"

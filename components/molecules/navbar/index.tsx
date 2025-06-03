@@ -13,13 +13,32 @@ import { siteConfig } from "@/utils/site";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
   const { replace } = useRouter();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <nav className="w-full bg-black  flex items-center justify-between h-[100px] content z-50 sticky top-0">
+    <nav
+      className={cn(
+        "w-full   flex items-center justify-between h-[100px] content z-50 sticky top-0",
+        scrolled && "bg-black"
+      )}
+    >
       <ul className="lg:flex hidden items-center gap-[46px] text-white w-fit text-[14px] font-medium tracking-wide ">
         {siteConfig.leftNavMenuItems.map((el) => {
           return (

@@ -14,7 +14,7 @@ const Testimonials = () => {
               key={item.id}
               className="w-[561px] max-w-[561px] h-[380px] bg-gray-100 rounded-[4px] rounded-tl-[100px] rounded-br-[100px] relative p-8 border-r-[2px] border-r-[#b9b9b9] border-b-[2px] border-b-[#b9b9b9]"
             >
-              <div className="w-full h-[2px] bg-gradient-to-l from-[#b9b9b9]  via-gray-100 to-transparent via-[70%] absolute top-0 left-0 rounded-[30px]" />
+              <div className="w-[80%] h-[2px] bg-gradient-to-l from-[#b9b9b9]  via-gray-100 to-transparent via-[70%] absolute top-0 right-0 rounded-[30px]" />
               <div className="w-full h-[2px] bg-gradient-to-l  via-gray-100  absolute bottom-[-2px] right-24" />
               <div className="w-[200px] h-[3px]   bg-gray-100 absolute bottom-[-2px] left-0" />
               <div className="absolute top-[-26px] right-8">

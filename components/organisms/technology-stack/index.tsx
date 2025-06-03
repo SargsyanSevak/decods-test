@@ -88,7 +88,7 @@ const TechnologyStack = () => {
       </div>
       <div className="absolute top-[-60px] right-[5%]">
         <Image
-          src="https://res.cloudinary.com/dprl3uqvi/image/upload/v1748685735/Vector_1_bqrjfw.png"
+          src="https://res.cloudinary.com/dudf3yqtz/image/upload/v1748965526/Vector_6_ytzsrf.png"
           width={485}
           height={385}
           alt="Background Vector"
