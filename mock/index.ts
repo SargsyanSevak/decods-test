@@ -122,3 +122,44 @@ export const techStack = [
     technologies: ["Docker", "Kubernetes", "Jenkins", "GitLab CI", "Terraform"],
   },
 ];
+
+export const testimonials = [
+  {
+    id: 1,
+    by: "Mark Chen",
+    company: "Product Owner at NovaTech",
+    text: `Decods LLC quickly became an essential part of our product journey. Their ability to turn complex requirements into smooth, scalable systems made a big impact on our launch. We couldn't have done it without their speed and technical clarity.`,
+  },
+  {
+    id: 2,
+    by: "Amina Rahim",
+    company: "CTO at BrightEdge Systems",
+    text: `We partnered with Decods LLC to overhaul our internal tools. The result was a beautifully functional system that saved us countless hours and helped the entire team work more efficiently. Their design sense and backend skills are top-tier.`,
+  },
+  {
+    id: 3,
+    by: "Leo Zhang",
+    company: "Founder at Fingo",
+    text: `Decods LLC helped us build our MVP in record time. The communication was smooth, the deadlines were sharp, and the product worked from day one. Highly recommended for any startup needing serious results with minimal overhead.`,
+  },
+  {
+    id: 4,
+    by: "Eliza Wang",
+    company: "Operations Director at CoreShift",
+    text: `From the first sprint, the Decods LLC team proved they understood more than just code — they understood our business. Every decision they made felt intentional, strategic, and tailored to our goals.`,
+  },
+  {
+    id: 5,
+    by: "Ivan Petrov",
+    company: "VP of Engineering at TrackWise",
+    text: `The QA and DevOps support from Decods LLC brought stability to our releases. Bugs dropped, uptime improved, and the team was always available to jump in when needed.
+`,
+  },
+  {
+    id: 6,
+    by: "Julia Tran",
+    company: "Head of Digital at LuminoTech",
+    text: `What impressed us most about Decods LLC was their flexibility and dedication. Whether it was late-stage feature changes or scaling the system after launch, they handled everything with speed and precision. It felt like working with an in-house team.
+`,
+  },
+];
