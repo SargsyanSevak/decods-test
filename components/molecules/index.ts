@@ -6,3 +6,4 @@ export { default as TextCard } from "./text-card";
 export { default as AnimatedImage } from "./animated-image";
 export { default as AnimatedCounter } from "./animated-counter";
 export { default as MultiCarousel } from "./multi-carousel";
+export { default as ServicesDropdown } from "./services-dropdown";
