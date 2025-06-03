@@ -17,8 +17,9 @@ import { usePathname, useRouter } from "next/navigation";
 export default function Navbar() {
   const pathname = usePathname();
   const { replace } = useRouter();
+
   return (
-    <nav className="w-full bg-black  flex items-center justify-between pt-9 content z-50">
+    <nav className="w-full bg-black  flex items-center justify-between h-[100px] content z-50 sticky top-0">
       <ul className="lg:flex hidden items-center gap-[46px] text-white w-fit text-[14px] font-medium tracking-wide ">
         {siteConfig.leftNavMenuItems.map((el) => {
           return (

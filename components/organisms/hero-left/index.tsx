@@ -42,7 +42,7 @@ const Heroleft = () => {
         <div className="flex flex-col gap-6 pt-8 relative z-10">
           <h1 className="title">Software Development</h1>
 
-          <div className="relative 2xl:h-[120px] h-[80px] mt-[-18px] overflow-hidden">
+          <div className="relative 2xl:h-[120px] h-[76px] mt-[-18px] overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.h1
                 key={index}

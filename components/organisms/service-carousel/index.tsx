@@ -11,7 +11,7 @@ const slides = [
   {
     title: "Custom ERP and CRM development",
     image:
-      "https://res.cloudinary.com/dprl3uqvi/image/upload/v1748778475/man-desk-with-two-computer_1_jh2hwu.png",
+      "https://res.cloudinary.com/dudf3yqtz/image/upload/v1748934730/man-desk-with-two-computer_1_cyqyja.png",
   },
   {
     title: "Advanced SaaS Platform Solutions",
