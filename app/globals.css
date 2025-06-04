@@ -142,7 +142,7 @@
     @apply w-full max-w-[1920px]  h-full py-20 lg:px-16 md:px-10 px-4 mx-auto;
   }
   .section-title {
-    @apply 2xl:text-[58px] 2xl:leading-[83px] text-[38px] leading-[65px] text-white;
+    @apply 2xl:text-[54px] 2xl:leading-[70px] text-[38px] leading-[65px] text-white;
   }
   .section-sub-title {
     @apply 2xl:text-[26px] 2xl:leading-[38px] text-[22px] leading-[35px] text-white font-medium;

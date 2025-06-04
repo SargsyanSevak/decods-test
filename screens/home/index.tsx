@@ -23,6 +23,10 @@ const Testimonials = dynamic(() =>
 );
 const FAQ = dynamic(() => import("@/components/organisms").then((c) => c.FAQ));
 
+const Banner = dynamic(() =>
+  import("@/components/organisms").then((c) => c.Banner)
+);
+
 const Home = () => {
   return (
     <>
@@ -89,7 +93,9 @@ const Home = () => {
 
       {/* Section 8 */}
       <div className="w-full bg-white">
-        <div className="w-full text-black section">Section 8</div>
+        <div className="w-full text-black section">
+          <Banner />
+        </div>
       </div>
 
       {/* Footer*/}
