@@ -180,3 +180,62 @@ export const servicesRight = [
   { id: 11, title: "Code Audit & Refactoring", href: "#" },
   { id: 12, title: "Progressive Web Apps (PWA)", href: "#" },
 ];
+
+export const faqDataLeft = [
+  {
+    id: 1,
+    question: "What types of software development services do you offer?",
+    answer:
+      "We provide end-to-end custom software development including web applications, mobile apps, enterprise software, API development, and cloud solutions. Our team handles everything from initial concept to post-launch maintenance.",
+  },
+  {
+    id: 2,
+    question: "How do you ensure quality when working with an offshore team?",
+    answer: `We maintain strict quality standards through dedicated project managers, regular code reviews, comprehensive testing protocols, and direct communication channels. All our developers are vetted professionals with proven track records.
+`,
+  },
+  {
+    id: 3,
+    question: "What is your typical project timeline and cost structure?",
+    answer: `Project timelines vary from 4-6 weeks for MVPs to 6+ months for complex enterprise solutions. We offer flexible pricing models including fixed-price, time & materials, and dedicated team arrangements. Contact us for a detailed estimate.`,
+  },
+  {
+    id: 4,
+    question: "Can you work within our existing technology stack?",
+    answer: `Absolutely. Our developers are experienced with various technologies including React, Node.js, Python, .NET, Java, PHP, and modern cloud platforms. We adapt to your preferred technologies and integrate seamlessly with existing systems.`,
+  },
+  {
+    id: 5,
+    question: "How do you handle project communication and collaboration?",
+    answer: `We use your preferred communication tools (Slack, Teams, etc.) and provide regular updates through daily standups, weekly reports, and milestone reviews. You'll have direct access to your development team and dedicated project manager.`,
+  },
+];
+
+export const faqDataRight = [
+  {
+    id: 6,
+    question: "Do you provide ongoing support after project completion?",
+    answer: `Yes, we offer comprehensive post-launch support including bug fixes, performance monitoring, security updates, and feature enhancements. We provide various maintenance packages to fit different needs and budgets.`,
+  },
+  {
+    id: 7,
+    question: "What industries do you have experience working with?",
+    answer: `We've successfully delivered projects across multiple industries including healthcare, fintech, e-commerce, real estate, SaaS platforms, and various business sectors. Our flexible team structure allows us to quickly adapt to specific industry requirements.`,
+  },
+  {
+    id: 8,
+    question:
+      "How do you protect our intellectual property and ensure data security?",
+    answer: `We sign comprehensive NDAs, follow strict security protocols, and implement industry-standard data protection measures. Our team is experienced with compliance requirements including GDPR, HIPAA, PCI DSS, and other regulatory standards.`,
+  },
+  {
+    id: 9,
+    question: "Can you help modernize our existing legacy software?",
+    answer: `Yes, we specialize in legacy system modernization including code refactoring, technology stack updates, cloud migration, and performance optimization while ensuring minimal disruption to your business operations.`,
+  },
+  {
+    id: 10,
+    question: "How quickly can you start our project?",
+    answer: `We can typically begin initial project phases within 1-2 weeks after requirements finalization. For urgent projects, we can assemble a development team and start within a few days, depending on the specific skill requirements.`,
+  },
+];

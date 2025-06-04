@@ -21,6 +21,7 @@ const TechnologyStack = dynamic(() =>
 const Testimonials = dynamic(() =>
   import("@/components/organisms").then((c) => c.Testimonials)
 );
+const FAQ = dynamic(() => import("@/components/organisms").then((c) => c.FAQ));
 
 const Home = () => {
   return (
@@ -80,8 +81,10 @@ const Home = () => {
       </div>
 
       {/* Section 7 */}
-      <div className="w-full bg-black">
-        <div className="w-full text-white section">Section 7</div>
+      <div className="w-full bg-black overflow-hidden">
+        <div className="w-full text-white section">
+          <FAQ />
+        </div>
       </div>
 
       {/* Section 8 */}

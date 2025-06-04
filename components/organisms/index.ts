@@ -5,3 +5,4 @@ export { default as WhyChooseUs } from "./why-choose-us";
 export { default as DevelopmentProcess } from "./development-process";
 export { default as TechnologyStack } from "./technology-stack";
 export { default as Testimonials } from "./testimonials";
+export { default as FAQ } from "./faq";
