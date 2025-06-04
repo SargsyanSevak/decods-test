@@ -1,28 +1,25 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { ArrowRight, ChevronDown } from "lucide-react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
-
-const services = [
-  "Software Development Company",
-  "Custom Software Development Services",
-  "Enterprise Software Solutions",
-  "Offshore Software Development",
-  "Full-Cycle Software Development",
-  "Digital Product Development Company",
-  "IT Solutions Provider",
-  "Software Engineering Services",
-  "Trusted Software Development Partner",
-  "End-To-End Software Development",
-  "Custom Business Applications",
-  "IT Consulting And Development Services",
-];
+import { servicesleft, servicesRight } from "@/mock";
 
 const ServicesDropdown = ({ scrolled }: { scrolled: boolean }) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
   return (
     <div
       className="relative"
@@ -43,46 +40,79 @@ const ServicesDropdown = ({ scrolled }: { scrolled: boolean }) => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2, ease: "easeOut" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5, ease: "easeInOut" }}
             className={cn(
-              "fixed left-0 top-[98px] w-full bg-black/70 backdrop-blur-md text-white z-40 p-10 rounded-none transition-all duration-300",
+              "fixed left-0 top-[84px] w-full bg-black/70 backdrop-blur-md text-white z-40 p-10 pb-20 rounded-none transition-all duration-300",
               scrolled && "bg-white"
             )}
           >
-            <div className="max-w-7xl mx-auto flex flex-col lg:flex-row justify-between gap-10">
+            <div className="mx-auto flex flex-col lg:flex-row justify-between gap-10 content">
               {/* Left Block */}
-              <div className="lg:w-1/3 space-y-4">
-                <h2 className="text-4xl font-semibold">Our Services</h2>
-                <h3 className="text-xl text-gray-300 font-medium">
-                  Planning, Design,{" "}
-                  <span className="text-white font-semibold">Develop</span>!
-                </h3>
-                <p className="text-sm text-gray-400">
+              <div
+                className={cn(
+                  "max-w-[400px] font-medium",
+                  scrolled && "text-black"
+                )}
+              >
+                <h2
+                  className={cn(
+                    "text-white text-[54px] font-medium",
+                    scrolled && "text-black"
+                  )}
+                >
+                  Our Services
+                </h2>
+                <p
+                  className={cn(
+                    "text-[30px] text-[#B4B4B4] mt-1 font-medium",
+                    scrolled && "text-[#5e5e5e]"
+                  )}
+                >
+                  Planning, Design, Develop !
+                </p>
+                <p
+                  className={cn(
+                    "paragraph text-[#B4B4B4] mt-4 font-medium",
+                    scrolled && "text-[#212121]"
+                  )}
+                >
                   DECODS brings together a team of expert developers and
                   innovators, delivering cutting-edge web development and
                   tailor-made software solutions.
                 </p>
                 <Link
                   href="/services"
-                  className="inline-block mt-4 text-sm text-white hover:underline"
+                  className="flex items-center gap-2 text-[16px] mt-10"
                 >
-                  Explore All Services →
+                  Explore All Services{" "}
+                  <ArrowRight className="rotate-[-45deg]" />
                 </Link>
               </div>
 
               {/* Right Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-16 gap-y-3 text-sm lg:w-2/3">
-                {services.map((label, idx) => (
-                  <span
-                    key={idx}
-                    className="text-gray-200 hover:text-white transition-colors cursor-default"
-                  >
-                    {label}
-                  </span>
-                ))}
+              <div
+                className={cn(
+                  "text-white flex gap-20  pt-8",
+                  scrolled && "text-black"
+                )}
+              >
+                <ul className={"flex flex-col gap-6 text-[16px] font-medium"}>
+                  {servicesleft.map((el) => (
+                    <li key={el.id}>
+                      <Link href={el.href}>{el.title}</Link>
+                    </li>
+                  ))}
+                </ul>
+                <ul className={"flex flex-col gap-6 text-[16px] font-medium"}>
+                  {servicesRight.map((el) => (
+                    <li key={el.id}>
+                      <Link href={el.href}>{el.title}</Link>
+                    </li>
+                  ))}
+                </ul>
               </div>
             </div>
           </motion.div>

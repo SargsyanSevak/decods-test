@@ -29,7 +29,7 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        "w-full flex items-center  h-[100px] z-50 sticky top-0  transition-colors duration-500 ease-in-out ",
+        "w-full flex items-center  h-[85px] z-50 sticky top-0  transition-colors duration-500 ease-in-out ",
         scrolled && "bg-white shadow-[0_0_20px_0_rgba(0,0,0,0.1)]"
       )}
     >
@@ -66,8 +66,8 @@ export default function Navbar() {
           transition={{ ease: "easeOut", duration: 0.6 }}
         >
           <svg
-            width="70"
-            height="64"
+            width="60"
+            height="54"
             viewBox="0 0 80 73"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -114,7 +114,7 @@ export default function Navbar() {
           <li>
             <Button
               variant="secondary"
-              className="!h-[42px] !text-[14px] relative z-20"
+              className="!h-[48px] !text-[15px] relative z-20"
             >
               Contact Us
             </Button>

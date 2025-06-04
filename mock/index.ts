@@ -163,3 +163,20 @@ export const testimonials = [
 `,
   },
 ];
+
+export const servicesleft = [
+  { id: 1, title: "Custom Software Development", href: "#" },
+  { id: 2, title: "Web And Mobile Applications Development", href: "#" },
+  { id: 3, title: "UI/UX Design", href: "#" },
+  { id: 4, title: "DevOps", href: "#" },
+  { id: 5, title: "Quality Assurance", href: "#" },
+  { id: 6, title: "Hire Developer", href: "#" },
+];
+export const servicesRight = [
+  { id: 7, title: "API And Backend Development", href: "#" },
+  { id: 8, title: "Support & Maintenance", href: "#" },
+  { id: 9, title: "Web Performance Optimization", href: "#" },
+  { id: 10, title: "Website Audit & SEO", href: "#" },
+  { id: 11, title: "Code Audit & Refactoring", href: "#" },
+  { id: 12, title: "Progressive Web Apps (PWA)", href: "#" },
+];
