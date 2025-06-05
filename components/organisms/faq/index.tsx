@@ -87,7 +87,7 @@ const FAQ = () => {
       <div className="absolute top-[-100px] right-[-100px] bottom-0 opacity-[0.075] z-0">
         <div className="w-[485px] h-full bg-gradient-to-b from-transparent to-black">
           <Image
-            src="https://res.cloudinary.com/dprl3uqvi/image/upload/v1748768621/OBJECTS_q4iemg.png"
+            src="https://res.cloudinary.com/dudf3yqtz/image/upload/v1749135955/256037434_3ee9f99e-2759-4bc6-a392-1b3c856055eb_1_2_fmdkae.png"
             width={485}
             height={385}
             alt="Background Vector"

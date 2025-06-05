@@ -39,27 +39,27 @@ export const slides = [
     description:
       "We analyze your business needs, define requirements, and create a detailed project roadmap",
     image:
-      "https://res.cloudinary.com/dprl3uqvi/image/upload/v1746175546/2150169850_1_eoo4yg.png",
+      "https://res.cloudinary.com/dudf3yqtz/image/upload/v1749121998/2437f77e8af2350c2fc8fea7d06beb63ced825be_wv805w.webp",
   },
   {
     title: "Design & Architecture",
     description:
       "UI/UX design, system architecture planning, and technical specifications development",
     image:
-      "https://res.cloudinary.com/dprl3uqvi/image/upload/v1746175541/2150169847_1_vhbyfn.png",
+      "https://res.cloudinary.com/dudf3yqtz/image/upload/v1749122008/6bce51a2f17dacb6dbd20ac7b6b0256f3a31fe69_cz18wn.webp",
   },
   {
     title: "Development & QA",
     description:
       "Agile development process with continuous testing and quality assurance",
     image:
-      "https://res.cloudinary.com/dprl3uqvi/image/upload/v1746175546/2150169850_1_eoo4yg.png",
+      "https://res.cloudinary.com/dudf3yqtz/image/upload/v1749121998/2437f77e8af2350c2fc8fea7d06beb63ced825be_wv805w.webp",
   },
   {
     title: "Launch & Support",
     description: "Final deployment, monitoring, and post-launch support",
     image:
-      "https://res.cloudinary.com/dprl3uqvi/image/upload/v1746175541/2150169847_1_vhbyfn.png",
+      "https://res.cloudinary.com/dudf3yqtz/image/upload/v1749122008/6bce51a2f17dacb6dbd20ac7b6b0256f3a31fe69_cz18wn.webp",
   },
 ];
 
@@ -237,5 +237,126 @@ export const faqDataRight = [
     id: 10,
     question: "How quickly can you start our project?",
     answer: `We can typically begin initial project phases within 1-2 weeks after requirements finalization. For urgent projects, we can assemble a development team and start within a few days, depending on the specific skill requirements.`,
+  },
+];
+
+export const footerTexts = {
+  company: {
+    title: "COMPANY",
+    items: [
+      {
+        title: "About Us",
+        href: "/about",
+      },
+      {
+        title: "Services",
+        href: "/services",
+      },
+      {
+        title: "Portfolio",
+        href: "/portfolio",
+      },
+      {
+        title: "Contact Us",
+        href: "/contact",
+      },
+      {
+        title: "Terms & Conditions",
+        href: "/terms-and-conditions",
+      },
+      {
+        title: "Privacy Policy",
+        href: "/privacy-policy",
+      },
+    ],
+  },
+  dev_and_design: {
+    title: "Development & Design",
+    items: [
+      {
+        title: "Custom Software Development",
+        href: "/custom-software-development",
+      },
+      {
+        title: "API and Backend Development",
+        href: "/api-and-backend-development",
+      },
+      {
+        title: "Web and Mobile Apps",
+        href: "/web-and-mobile-apps",
+      },
+      {
+        title: "UI/UX Design",
+        href: "/ui-ux-design",
+      },
+      {
+        title: "Progressive Web Apps (PWA)",
+        href: "/pwa",
+      },
+      {
+        title: "Code Audit & Refactoring",
+        href: "/code-audit-and-refactoring",
+      },
+    ],
+  },
+  support: {
+    title: "Support & Optimization",
+    items: [
+      {
+        title: "Support & Maintenance",
+        href: "/support-and-maintenance",
+      },
+      {
+        title: "Performance Optimization",
+        href: "/performance-optimization",
+      },
+      {
+        title: "DevOps",
+        href: "/devops",
+      },
+      {
+        title: "Website Audit & SEO",
+        href: "/website-audit-and-seo",
+      },
+      {
+        title: "Quality Assurance",
+        href: "/quality-assurance",
+      },
+      {
+        title: "Hire Developer",
+        href: "/hire-developer",
+      },
+    ],
+  },
+};
+
+export const solutionsData = [
+  {
+    id: 1,
+    title: "Custom ERP, CRM & Real Estate Platforms",
+    image:
+      "https://res.cloudinary.com/dudf3yqtz/image/upload/v1749136929/2c148758ec5a882d3901266ceb7c4d8f61581922_ehkkd7.webp",
+    text: "Our full-cycle software development covers every project aspect. From initial concept to ongoing maintenance. Whether you need custom business applications for workflow automation,enterprise software solutions for complex organizational needs, or digital product development for market-ready SaaS platforms, we provide comprehensive IT services that drive measurablebusiness results.",
+  },
+  {
+    id: 2,
+    title: "SaaS & Financial Application Development",
+    image:
+      "https://res.cloudinary.com/dudf3yqtz/image/upload/v1749137104/bb760509b24c8e6fa5cb4c1e227f068d00f0bcd2_sgwkod.jpg",
+    text: "Our full-cycle software development covers every project aspect. From initial concept to ongoing maintenance. Whether you need custom business applications for workflow automation,enterprise software solutions for complex organizational needs, or digital product development for market-ready SaaS platforms, we provide comprehensive IT services that drive measurablebusiness results.",
+  },
+  {
+    id: 3,
+    title: "E-commerce platform development",
+    image:
+      "https://res.cloudinary.com/dudf3yqtz/image/upload/v1749137139/776b145a1e4f3e988784ec33282ef0b0eaae8288_obvcl5.jpg",
+    text: "Our full-cycle software development covers every project aspect. From initial concept to ongoing maintenance. Whether you need custom business applications for workflow automation,enterprise software solutions for complex organizational needs, or digital product development for market-ready SaaS platforms, we provide comprehensive IT services that drive measurablebusiness results.",
+  },
+  {
+    id: 4,
+    title: " Healthcare solutions (HIPAA compliance)",
+    image:
+      "https://res.cloudinary.com/dudf3yqtz/image/upload/v1749137178/85871d74ba7b0154311a948905e4984e0922e5f1_ggjp1o.jpg",
+    text: "Our full-cycle software development covers every project aspect. From initial concept to ongoing maintenance. Whether you need custom business applications for workflow automation,enterprise software solutions for complex organizational needs, or digital product development for market-ready SaaS platforms, we provide comprehensive IT services that drive measurablebusiness results.",
   },
 ];

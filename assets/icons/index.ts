@@ -1,0 +1,9 @@
+export { default as IconTwitter } from "./IconTwitter";
+export { default as IconFacebook } from "./IconFacebook";
+export { default as IconInstagram } from "./IconInstagram";
+export { default as IconWhatsapp } from "./IconWhatsapp";
+export { default as IconTelegram } from "./IconTelegram";
+export { default as IconEmail } from "./IconEmail";
+export { default as IconLocation } from "./IconLocation";
+export { default as IconX } from "./IconX";
+export { default as IconLinkedin } from "./IconLinkedin";

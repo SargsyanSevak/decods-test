@@ -7,3 +7,5 @@ export { default as AnimatedImage } from "./animated-image";
 export { default as AnimatedCounter } from "./animated-counter";
 export { default as MultiCarousel } from "./multi-carousel";
 export { default as ServicesDropdown } from "./services-dropdown";
+export { default as SocLinks } from "./soc-links";
+export { default as SolutionCard } from "./solution-card";

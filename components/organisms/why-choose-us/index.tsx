@@ -47,7 +47,7 @@ seamless. Future maintenance stays straightforward."
           {/* Image */}
           <div className="row-start-1 row-span-1 col-start-3 -mt-[250px]">
             <AnimatedImage
-              image="https://res.cloudinary.com/dprl3uqvi/image/upload/v1748786623/aebe55ee1fed0db6abbb2759054695dcc30610e9_rfsy0d.jpg"
+              image="https://res.cloudinary.com/dudf3yqtz/image/upload/v1749121822/aebe55ee1fed0db6abbb2759054695dcc30610e9_1_dxrsfr.jpg"
               btn={
                 <Link href="/services">
                   <Button
@@ -136,7 +136,7 @@ your business grows."
       <div className="absolute top-[-80px] left-[-70px] bottom-[-80px] opacity-[0.075] z-0 rotate-[180deg]">
         <div className="w-[485px] h-full bg-gradient-to-b from-transparent to-black">
           <Image
-            src="https://res.cloudinary.com/dprl3uqvi/image/upload/v1748768621/OBJECTS_q4iemg.png"
+            src="https://res.cloudinary.com/dudf3yqtz/image/upload/v1749135955/256037434_3ee9f99e-2759-4bc6-a392-1b3c856055eb_1_2_fmdkae.png"
             width={685}
             height={385}
             alt="Background Vector"

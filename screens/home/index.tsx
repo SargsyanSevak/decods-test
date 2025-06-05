@@ -40,7 +40,7 @@ const Home = () => {
         <div className="absolute top-0 right-4 opacity-[0.075] z-0">
           <div className="w-[485px] h-full bg-gradient-to-b from-transparent to-black">
             <Image
-              src="https://res.cloudinary.com/dprl3uqvi/image/upload/v1748768621/OBJECTS_q4iemg.png"
+              src="https://res.cloudinary.com/dudf3yqtz/image/upload/v1749122519/Group_7_yzjage.png"
               width={485}
               height={385}
               alt="Background Vector"
@@ -96,11 +96,6 @@ const Home = () => {
         <div className="w-full text-black section">
           <Banner />
         </div>
-      </div>
-
-      {/* Footer*/}
-      <div className="w-full bg-black">
-        <div className="w-full text-white section">Footer</div>
       </div>
     </>
   );

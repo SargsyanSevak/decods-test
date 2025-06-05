@@ -98,7 +98,7 @@ const TechnologyStack = () => {
       <div className="absolute top-[-80px] left-[-70px] bottom-[-80px] opacity-[0.075] z-0 rotate-[180deg]">
         <div className="w-[485px] h-full bg-gradient-to-b from-transparent to-black">
           <Image
-            src="https://res.cloudinary.com/dprl3uqvi/image/upload/v1748768621/OBJECTS_q4iemg.png"
+            src="https://res.cloudinary.com/dudf3yqtz/image/upload/v1749122579/256037434_3ee9f99e-2759-4bc6-a392-1b3c856055eb_1_1_icfn0m.png"
             width={685}
             height={385}
             alt="Background Vector"

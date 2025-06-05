@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Loader } from "@/components/atoms";
 import { Navbar } from "@/components/molecules";
+import Footer from "@/components/molecules/footer";
 
 export default function LoadingLayout({
   children,
@@ -52,6 +53,7 @@ export default function LoadingLayout({
             </motion.div>
             <Navbar />
             <main className="mt-20">{children}</main>
+            <Footer />
           </>
         )}
       </div>
