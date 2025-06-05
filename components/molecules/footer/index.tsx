@@ -8,7 +8,7 @@ import { Input } from "@/components/atoms/input";
 const Footer = () => {
   return (
     <div className="w-full bg-black relative overflow-hidden">
-      <div className="w-full text-white section relative z-20">
+      <div className="w-full text-white section pb-8 relative z-20">
         <div className="">
           <Image
             src="https://res.cloudinary.com/dudf3yqtz/image/upload/v1749114267/Group_20_2_ydltw7.png"
