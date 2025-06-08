@@ -69,6 +69,7 @@ const Heroleft = () => {
             target="_blank"
             rel="noreferrer"
             aria-label="calendly"
+            className="w-fit"
           >
             <Button
               className="w-[196px] h-[56px] mt-6"
