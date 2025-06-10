@@ -124,31 +124,34 @@
     -moz-osx-font-smoothing: grayscale;
   }
   .content {
-    @apply max-w-[1920px] lg:px-16 md:px-10 px-4 mx-auto;
+    @apply max-w-[1920px] lg:px-14 md:px-10 px-4 mx-auto;
   }
   .title {
-    @apply 2xl:text-[80px] text-[60px] font-semibold 2xl:leading-[96px] leading-[70px] text-white;
-  }
-  .sub-title {
-    @apply 2xl:text-[38px] text-[34px] font-medium leading-[126%] text-white;
-  }
-  .description {
-    @apply 2xl:text-[22px] text-[20px] text-[#838384] leading-[30px] tracking-wide;
+    @apply text-[90px] font-semibold  leading-[90px] text-white;
   }
   .paragraph {
-    @apply 2xl:text-[16px] 2xl:leading-[30px] text-[14px] leading-[27px] text-[#292929] font-medium;
+    @apply 2xl:text-[18px] text-[16px] 2xl:leading-[24px] leading-[20px] font-medium text-white;
+  }
+  .sub-title {
+    @apply text-[52px] leading-[100%] font-semibold text-white;
+  }
+  .description {
+    @apply text-[24px] text-white/50 leading-[32px] tracking-wide;
   }
   .section {
     @apply w-full max-w-[1920px]  h-full py-20 lg:px-16 md:px-10 px-4 mx-auto;
   }
   .section-title {
-    @apply 2xl:text-[54px] 2xl:leading-[70px] text-[38px] leading-[65px] text-white;
+    @apply 2xl:text-[64px] text-[54px] leading-[100%] font-bold text-white;
   }
   .section-sub-title {
     @apply 2xl:text-[26px] 2xl:leading-[38px] text-[22px] leading-[35px] text-white font-medium;
   }
   .link-hover {
     @apply transition-all duration-300 ease-in-out hover:opacity-60;
+  }
+  .text32 {
+    @apply 2xl:text-[32px] 2xl:leading-[36px] text-[28px] leading-[32px]  font-bold text-white;
   }
   .center {
     @apply flex justify-center items-center;

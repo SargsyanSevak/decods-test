@@ -30,10 +30,10 @@ const Banner = dynamic(() =>
 const Home = () => {
   return (
     <>
-      <div className="w-full bg-black text-white content pb-10">
+      <div className="w-full bg-black text-white content">
         <div className="w-full flex flex-col gap-10">
           <Heroleft />
-          <div className="w-full h-[160px] text-center pt-10">
+          <div className="w-full h-[120px] text-center">
             <InfiniteHorizontalScroll items={logos} />
           </div>
         </div>
@@ -64,7 +64,7 @@ const Home = () => {
       </div>
 
       {/* Section 4 */}
-      <div className="w-full bg-[#D4D4D4]">
+      <div className="w-full bg-white">
         <div className="w-full h-full text-black section pr-0">
           <DevelopmentProcess />
         </div>

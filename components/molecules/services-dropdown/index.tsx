@@ -38,7 +38,7 @@ const ServicesDropdown = ({ scrolled }: { scrolled: boolean }) => {
         name="services-btn"
         aria-label="services-btn"
         className={cn(
-          "flex items-center gap-1 cursor-pointer text-white hover:text-gray-300 h-[70px]",
+          "flex items-center gap-1 cursor-pointer text-white/50 hover:text-white transition-all duration-300 ease-in-out h-[70px]",
           scrolled && "text-black hover:text-gray-700"
         )}
       >

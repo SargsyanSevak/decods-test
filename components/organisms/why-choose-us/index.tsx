@@ -1,31 +1,28 @@
-import { Button } from "@/components/atoms/button";
-import { AnimatedImage, TextCard } from "@/components/molecules";
+import { TextCard } from "@/components/molecules";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 
 const WhyChooseUs = () => {
   return (
     <div className="w-full relative">
-      <h2 className="section-title 2xl:max-w-[800px] max-w-[600px] relative z-10">
+      <h2 className="section-title max-w-[724px]">
         Why Choose Our Software Development Company
       </h2>
-      <p className="paragraph text-[#7F7F7F] 2xl:max-w-[800px] max-w-[600px] mt-10 relative z-10">
+      <p className="paragraph text-white/50 max-w-[620px] mt-6">
         When you partner with Decods, you&apos;re choosing a reliable
         development partner committed to delivering exceptional results. Our
         offshore software development model provides significant cost
         advantages—typically 40-60% lower than onshore alternatives. Quality and
         communication standards remain uncompromised.
       </p>
-      <p className="section-sub-title max-w-[520px] mt-10 relative z-10">
+      <p className="text-[32px] leading-[36px] text-white font-semibold max-w-[576px] mt-10">
         What Makes Decods Different from Other Software Development Companies
       </p>
       <div className="bg-black text-white  py-12 pb-0">
-        <div className=" grid grid-cols-1 md:grid-cols-3 grid-rows-3 2xl:gap-20 gap-10 relative">
+        <div className=" grid grid-cols-1 md:grid-cols-3 grid-rows-3 2xl:gap-6 gap-4 relative">
           {/* 01 */}
           <TextCard
-            className="row-start-1 col-start-1 space-y-2"
-            id="01"
+            className="row-start-1 col-start-1 "
             title="48-Hour Team Assembly"
             description="Most competitors take weeks to start. We can 
 assemble your dedicated development team and begin 
@@ -35,8 +32,7 @@ productivity."
           />
           {/* 02 */}
           <TextCard
-            className="row-start-1 col-start-2 space-y-2"
-            id="02"
+            className="row-start-1 col-start-2 "
             title="Zero-Documentation-Gap Policy"
             description="Every line of code comes with comprehensive 
 documentation. Our developers create detailed 
@@ -45,34 +41,31 @@ deployment guides. Knowledge transfer becomes
 seamless. Future maintenance stays straightforward."
           />
           {/* Image */}
-          <div className="row-start-1 row-span-1 col-start-3 -mt-[250px]">
-            <AnimatedImage
-              image="https://res.cloudinary.com/dudf3yqtz/image/upload/v1749121822/aebe55ee1fed0db6abbb2759054695dcc30610e9_1_dxrsfr.jpg"
-              btn={
-                <Link href="/services">
-                  <Button
-                    variant="secondary"
-                    iconArrow
-                    iconPosition="right"
-                    className="!w-[130px] !h-[37px] !text-[12px]"
-                  >
-                    Services
-                  </Button>
-                </Link>
-              }
-            />
-            <p className="paragraph text-[#7F7F7F] italic mt-10">
-              “According to recent industry research, companies that invest in
-              custom software development see an average ROI of 300% within the
-              first two years, primarily due to improved operational efficiency
-              and competitive differentiation.”
-            </p>
+          <div className="row-start-1 row-span-1 col-start-3 -mb-[270px] -mt-[150px] relative">
+            <div className={`group relative w-full h-full overflow-hidden`}>
+              <div className="absolute inset-0 z-0 transition-all duration-200 rounded-[24px] rounded-tl-[120px] overflow-hidden">
+                <Image
+                  src="https://res.cloudinary.com/dudf3yqtz/image/upload/v1749121822/aebe55ee1fed0db6abbb2759054695dcc30610e9_1_dxrsfr.jpg"
+                  alt="Card Image"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent to-black pointer-events-none" />
+            </div>
+            <div className="absolute left-0 right-0 bottom-[-40px] z-10  pointer-events-none">
+              <p className="paragraph text-white font-medium italic  line-clamp-4">
+                “According to recent industry research, companies that invest in
+                custom software development see an average ROI of 300% within
+                the first two years, primarily due to improved operational
+                efficiency and competitive differentiation.”
+              </p>
+            </div>
           </div>
 
           {/* 03 */}
           <TextCard
             className="row-start-2 col-start-1 space-y-2"
-            id="03"
             title="Proactive Communication System"
             description="While typical offshore teams provide weekly updates,
 we offer daily progress reports, real-time chat access,
@@ -82,15 +75,13 @@ project—no surprises, no delays, no confusion."
           />
           {/* 04 */}
           <TextCard
-            className="row-start-2 col-start-2 space-y-2"
-            id="04"
+            className="row-start-2 col-start-2"
             title="Agile Methodology"
             description="As your trusted software development partner, we do more than write code — we align technology with your business goals. By combining deep industry insight, clear communication, and an agile, collaborative process, we ensure flexible solutions and full transparency from start to finish."
           />
           {/* 05 */}
           <TextCard
-            className="row-start-3 col-start-1 space-y-2 mt-12"
-            id="05"
+            className="row-start-3 col-start-1 "
             title="Quality-First Development"
             description="Every project undergoes comprehensive code review
 and testing processes. Our quality assurance protocols
@@ -101,8 +92,7 @@ enterprise-grade standards from day one."
 
           {/* 06 */}
           <TextCard
-            className="row-start-3 col-start-2 space-y-2 mt-12"
-            id="06"
+            className="row-start-3 col-start-2 "
             title="Post-Launch Partnership"
             description="Our relationship doesn't end at deployment. We 
 provide comprehensive software maintenance and 
@@ -114,33 +104,13 @@ your business grows."
           {/* 07 */}
 
           <TextCard
-            className="row-start-3 col-start-3 space-y-2 mt-12"
-            id="07"
+            className="row-start-3 col-start-3 "
             title="Post-Launch Partnership"
             description="Our relationship doesn't end at deployment. We 
 provide comprehensive software maintenance and 
 support, including bug fixes, feature enhancements,
 performance monitoring, and scaling assistance as
 your business grows."
-          />
-        </div>
-      </div>
-      <div className="absolute top-4 right-16">
-        <Image
-          src="https://res.cloudinary.com/dudf3yqtz/image/upload/v1748965526/Vector_6_ytzsrf.png"
-          width={485}
-          height={385}
-          alt="Background Vector"
-        />
-      </div>
-      <div className="absolute top-[-80px] left-[-70px] bottom-[-80px] opacity-[0.075] z-0 rotate-[180deg]">
-        <div className="w-[485px] h-full bg-gradient-to-b from-transparent to-black">
-          <Image
-            src="https://res.cloudinary.com/dudf3yqtz/image/upload/v1749135955/256037434_3ee9f99e-2759-4bc6-a392-1b3c856055eb_1_2_fmdkae.png"
-            width={685}
-            height={385}
-            alt="Background Vector"
-            className="h-full"
           />
         </div>
       </div>

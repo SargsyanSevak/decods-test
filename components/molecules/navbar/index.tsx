@@ -29,7 +29,7 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        "w-full flex items-center  h-[85px] z-50 sticky top-0  transition-colors duration-500 ease-in-out ",
+        "w-full flex items-center bg-[#050505] border-b-[1px] border-b-white/15  h-[80px] z-50 sticky top-0  transition-colors duration-500 ease-in-out ",
         scrolled && "bg-white shadow-[0_0_20px_0_rgba(0,0,0,0.1)]"
       )}
     >
@@ -38,18 +38,18 @@ export default function Navbar() {
           "w-full flex items-center justify-between h-[100px] content z-50 sticky top-0  transition-colors duration-500 ease-in-out "
         )}
       >
-        <ul className="lg:flex hidden items-center gap-[46px] text-white w-fit text-[16px] font-medium tracking-wide ">
+        <ul className="lg:flex hidden items-center gap-[46px] text-white/50 w-fit text-[18px] font-medium tracking-wide ">
           {siteConfig.leftNavMenuItems.map((el) => {
             return (
               <li key={el.label}>
                 <Link
                   href={el.href}
                   className={cn(
-                    "relative after:absolute after:left-0 after:bottom-[-4px] after:h-[1px] after:bg-white after:transition-all after:duration-300",
+                    "relative after:absolute after:left-0 after:bottom-[-4px] after:h-[1px] after:bg-white after:transition-all after:duration-300 hover:text-white transition-all duration-300 ease-in-out",
                     pathname === el.href
                       ? "after:w-full"
                       : "after:w-0 hover:after:w-full",
-                    scrolled && "text-black after:bg-black"
+                    scrolled && "text-black after:bg-black hover:text-black"
                   )}
                 >
                   {el.label}
@@ -66,8 +66,8 @@ export default function Navbar() {
           transition={{ ease: "easeOut", duration: 0.6 }}
         >
           <svg
-            width="60"
-            height="54"
+            width="52"
+            height="52"
             viewBox="0 0 80 73"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -90,8 +90,8 @@ export default function Navbar() {
         </motion.div>
         <ul
           className={cn(
-            "lg:flex hidden items-center gap-[46px] text-white w-fit text-[16px] font-medium tracking-wide relative z-50",
-            scrolled && "text-black"
+            "lg:flex hidden items-center gap-[46px] text-white/50  w-fit text-[18px] font-medium tracking-wide relative z-50",
+            scrolled && "text-black hover:text-black"
           )}
         >
           <li>
@@ -101,11 +101,11 @@ export default function Navbar() {
             <Link
               href={"/articles"}
               className={cn(
-                "relative after:absolute after:left-0 after:bottom-[-4px] after:h-[1px] after:bg-white after:transition-all after:duration-300",
+                "relative after:absolute after:left-0 after:bottom-[-4px] after:h-[1px] after:bg-white after:transition-all after:duration-300 hover:text-white transition-all duration-300 ease-in-out",
                 pathname === "/articles"
                   ? "after:w-full"
                   : "after:w-0 hover:after:w-full",
-                scrolled && "text-black after:bg-black"
+                scrolled && "text-black after:bg-black hover:text-black"
               )}
             >
               Articles
@@ -113,8 +113,8 @@ export default function Navbar() {
           </li>
           <li>
             <Button
-              variant="secondary"
-              className="!h-[48px] !text-[15px] relative z-20"
+              variant={scrolled ? "default" : "secondary"}
+              className="!h-[40px] !w-[127px] !text-[16px]  relative z-20"
             >
               Contact Us
             </Button>

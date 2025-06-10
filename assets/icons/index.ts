@@ -7,3 +7,6 @@ export { default as IconEmail } from "./IconEmail";
 export { default as IconLocation } from "./IconLocation";
 export { default as IconX } from "./IconX";
 export { default as IconLinkedin } from "./IconLinkedin";
+export { default as IconDollar } from "./IconDollar";
+export { default as IconCloud } from "./IconCloud";
+export { default as IconHome } from "./IconHome";

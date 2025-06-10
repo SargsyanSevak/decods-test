@@ -1,35 +1,20 @@
-import { ArrowRight } from "lucide-react";
 import { FC } from "react";
 
 interface TextCardProps {
   title: string;
-  id: string;
   description: string;
   className: string;
 }
 
-const TextCard: FC<TextCardProps> = ({ title, description, id, className }) => {
+const TextCard: FC<TextCardProps> = ({ title, description, className }) => {
   return (
-    <div className={`relative z-10 ${className}`}>
-      <div className="flex justify-between items-center">
-        <div className="w-full flex justify-between items-center">
-          <div className="flex items-center gap-4">
-            <div className="flex items-center justify-between 2xl:w-[63px] w-[50px]">
-              <div className="w-[1px] h-[34px] bg-[#FCFDFF]" />
-              <h2 className="paragraph text-white">{id}</h2>
-            </div>
-            <h2 className="text-white text-[20px] whitespace-nowrap">
-              {title}
-            </h2>
-          </div>
-          <span className="rotate-[-45deg]">
-            <ArrowRight color="#7F7F7F" size={34} />
-          </span>
-        </div>
-      </div>
-      <p className="paragraph text-[#7F7F7F] pl-12 mt-4 text-left">
-        {description}
-      </p>
+    <div
+      className={`relative flex flex-col justify-between z-10 bg-white/15 rounded-[24px] px-[20px] py-[16px] h-[300px] ${className}`}
+    >
+      <h2 className="2xl:text-[32px] text-[28px] text-white font-semibold">
+        {title}
+      </h2>
+      <p className="paragraph text-white/50 line-clamp-3">{description}</p>
     </div>
   );
 };

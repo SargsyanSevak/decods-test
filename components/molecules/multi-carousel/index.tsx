@@ -5,7 +5,7 @@ import { useSwipeable } from "react-swipeable";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Button } from "@/components/atoms/button";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 interface MultiCarouselProps {
   slides: {
@@ -64,20 +64,20 @@ const MultiCarousel = ({ slides }: MultiCarouselProps) => {
             className="flex-shrink-0 px-4"
             style={{ width: `${slideWidth}px` }}
           >
-            <div className="overflow-hidden">
+            <div className="overflow-hidden h-[400px]">
               <Image
                 src={slide.image}
                 alt={slide.title}
-                width={486}
-                height={324}
-                className="rounded-[3px] rounded-tl-[80px] rounded-br-[80px] object-contain w-full h-full"
+                width={428}
+                height={460}
+                className="rounded-[24px] rounded-tl-[120px] rounded-br-[120px] object-cover w-full h-full"
               />
             </div>
             <div className="mt-4">
-              <h3 className="text-[28px] font-semibold text-black">
+              <h3 className="text-[32px] font-semibold text-black">
                 {slide.title}
               </h3>
-              <p className="paragraph font-normal mt-1 2xl:leading-[23px] leading-[20px]">
+              <p className="paragraph font-medium !text-[#05050580] mt-1">
                 {slide.description}
               </p>
             </div>
@@ -85,20 +85,26 @@ const MultiCarousel = ({ slides }: MultiCarouselProps) => {
         ))}
       </div>
 
-      <div className="w-full flex justify-center items-center gap-4 mt-12">
+      <div className="w-full flex items-center pl-4 gap-4 mt-12">
         <Button
           onClick={() => setCurrent((prev) => Math.max(prev - 1, 0))}
-          className="!w-[72px] !h-[48px] !rounded-[160px] !p-0 bg-[#292929]"
+          className="!w-[56px] !h-[56px] !rounded-full  !p-0 bg-[#292929]"
           disabled={current <= 0}
         >
-          <ArrowLeft />
+          <ChevronLeft
+            color={current <= 0 ? "#0505053D" : "white"}
+            className="size-5"
+          />
         </Button>
         <Button
           onClick={() => setCurrent((prev) => Math.min(prev + 1, maxIndex))}
-          className="!w-[72px] !h-[48px] !rounded-[160px] !p-0 bg-[#292929]"
+          className="!w-[56px] !h-[56px] !rounded-full !p-0 bg-[#292929]"
           disabled={current >= maxIndex}
         >
-          <ArrowRight />
+          <ChevronRight
+            color={current >= maxIndex ? "#0505053D" : "white"}
+            className="size-5"
+          />
         </Button>
       </div>
     </div>

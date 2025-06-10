@@ -2,7 +2,6 @@
 import { Button } from "@/components/atoms/button";
 import { AnimatedGradientSVG, FadeContent } from "@/components/molecules";
 import { AnimatePresence } from "framer-motion";
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
@@ -31,22 +30,16 @@ const Heroleft = () => {
   return (
     <div className="w-full h-full relative will-change-opacity">
       <FadeContent delay={150}>
-        <div className="absolute top-[-50px] left-[-50px] w-full h-full">
-          <Image
-            src="https://res.cloudinary.com/dudf3yqtz/image/upload/v1748965526/Vector_6_ytzsrf.png"
-            width={485}
-            height={385}
-            alt="Background Vector"
-          />
-        </div>
-        <div className="flex flex-col gap-6 pt-8 relative z-10">
-          <h1 className="title">Software Development</h1>
+        <div className="flex flex-col gap-6 pt-6 relative z-10">
+          <h1 className="title">
+            Software <br /> Development
+          </h1>
 
-          <div className="relative 2xl:h-[120px] h-[76px] mt-[-18px] overflow-hidden">
+          <div className="relative h-[46px] my-3 overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.h1
                 key={index}
-                className="title text-white/50 absolute"
+                className="text-[44px] leading-[44px] font-medium text-white/50 absolute"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
@@ -72,7 +65,7 @@ const Heroleft = () => {
             className="w-fit"
           >
             <Button
-              className="w-[196px] h-[56px] mt-6"
+              className="w-[196px] h-[56px] mt-4"
               variant="secondary"
               iconArrow
               iconPosition="right"
@@ -80,12 +73,16 @@ const Heroleft = () => {
               Book a Call
             </Button>
           </a>
-          <div className="mt-10 w-full  flex justify-between gap-10">
-            <AnimatedGradientSVG />
+          <div className="mt-20 w-full  flex justify-between gap-10">
+            <div className="mt-6">
+              <AnimatedGradientSVG />
+            </div>
 
-            <div className="max-w-[520px] min-h-[400px] flex flex-col gap-10 justify-between bg-gradient-to-b from-black to-transparent relative z-20">
+            <div className="max-w-[520px]  flex flex-col gap-12 justify-between bg-gradient-to-b from-black to-transparent relative z-20">
               <div className="w-full">
-                <h2 className="sub-title">Global Talent, Local Results</h2>
+                <h2 className="2xl:text-[32px] text-[28px] leading-[100%] font-semibold">
+                  Global Talent, Local Results
+                </h2>
 
                 <p className="text-white/50 text-[18px] leading-[24px] mt-2">
                   Access skilled developers worldwide. No compromise on
@@ -94,14 +91,18 @@ const Heroleft = () => {
               </div>
               <div className="w-full">
                 {" "}
-                <h2 className="sub-title">Cost-Effective Excellence</h2>
+                <h2 className="2xl:text-[32px] text-[28px] leading-[100%] font-semibold">
+                  Cost-Effective Excellence
+                </h2>
                 <p className="text-white/50 text-[18px] leading-[24px] mt-2">
                   Premium software development services at 40–60% lower costs
                   than onshore alternatives.
                 </p>
               </div>
               <div className="w-full">
-                <h2 className="sub-title">Fast Team Assembly</h2>
+                <h2 className="2xl:text-[32px] text-[28px] leading-[100%] font-semibold">
+                  Fast Team Assembly
+                </h2>
 
                 <p className="text-white/50 text-[18px] leading-[24px] mt-2">
                   Start development within 48 hours. Pre-vetted developers

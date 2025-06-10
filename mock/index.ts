@@ -67,7 +67,7 @@ export const stackData = [
   {
     title: "Development",
     image:
-      "https://res.cloudinary.com/dudf3yqtz/image/upload/v1748950909/be1cb64dc686bf843427fc49f83e58a59f718f2d_1_vki26g.jpg",
+      "https://res.cloudinary.com/dudf3yqtz/image/upload/v1749122008/6bce51a2f17dacb6dbd20ac7b6b0256f3a31fe69_cz18wn.webp",
   },
   {
     description: `Our custom software development services have empowered 
@@ -83,7 +83,7 @@ financial industry requirements.`,
   {
     title: "UX/UI Design",
     image:
-      "https://res.cloudinary.com/dudf3yqtz/image/upload/v1748950984/688181d90a0e00e5ef39412e53ec51f63c80e059_q5w1hd.webp",
+      "https://res.cloudinary.com/dudf3yqtz/image/upload/v1749572102/5a79a1817201293311c00492a46a427909faa5d2_ucgbgl.jpg",
   },
   {
     description: `For e-commerce businesses and marketplaces, we create 
