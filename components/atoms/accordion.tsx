@@ -51,7 +51,7 @@ function AccordionTrigger({
       >
         <div
           className={cn(
-            "flex items-center gap-10  text-[18px] text-white font-semibold"
+            "flex items-center gap-10  text-[19px] text-white font-semibold"
           )}
         >
           {children}
