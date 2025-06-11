@@ -43,7 +43,7 @@ const Home = () => {
               src="https://res.cloudinary.com/dudf3yqtz/image/upload/v1749122519/Group_7_yzjage.png"
               width={485}
               height={385}
-              alt="Background Vector"
+              alt="Background"
             />
           </div>
         </div>
