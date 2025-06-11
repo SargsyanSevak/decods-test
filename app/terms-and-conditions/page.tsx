@@ -132,24 +132,34 @@ export const metadata: Metadata = {
     ],
   },
 };
+
 const TermsAndConditions = () => {
   return (
-    <div className="w-full h-full bg-white section">
-      <div>
-        <h1 className="text-[64px]">Terms & Conditions</h1>
-        <p>
+    <div className="w-full h-full bg-white section flex gap-20">
+      <div className="max-w-[620px] flex flex-col gap-6">
+        <h1 className="text-[54px] font-bold leading-[100%]">
+          Terms & Conditions
+        </h1>
+        <p className="paragraph text-[#05050580]">
           These Terms & Conditions (hereinafter referred to as the “Agreement”)
           govern the use of the website and/or digital products provided by
           Decods (hereinafter referred to as the “Company”, “we”, “us”) by users
           (hereinafter referred to as “User”, “you”).
         </p>
-        <p>Effective Date: 04.08.2025</p>
+        <p className="text-[20px] font-semibold">Effective Date: 04.08.2025</p>
       </div>
-      <article className="text-[#505050] font-medium">
-        <h2 className="font-bold text-md mt-10">1. General Provisions</h2>
+      <article className="text-[#05050580] font-medium">
+        <p className="text-[20px] text-black font-semibold leading-[28px]">
+          Please read this Agreement carefully before using our services.
+          By accessing or using our website or services, you agree to be bound
+          by these terms.
+        </p>
+        <h2 className="font-bold text-[24px] text-black mt-8">
+          1. General Provisions
+        </h2>
 
-        <ul className="text-[14px] mt-4">
-          <li className="my-2">
+        <ul className="mt-4 paragraph text-[#05050580]">
+          <li className="my-2 ">
             1.1. This Agreement regulates the relationship between the Company
             and the User regarding the use of all digital products, websites,
             services, and content provided by the Company.
@@ -164,8 +174,8 @@ const TermsAndConditions = () => {
           </li>
         </ul>
 
-        <h2 className="font-bold text-md mt-10">2. Services</h2>
-        <ul className="text-[14px] mt-4">
+        <h2 className="font-bold text-[24px] text-black mt-8">2. Services</h2>
+        <ul className="mt-4 text-[#05050580] paragraph">
           <li className="my-2">
             2.1. The Company provides access to its digital products, software,
             interfaces, and other features available online.
@@ -176,8 +186,10 @@ const TermsAndConditions = () => {
           </li>
         </ul>
 
-        <h2 className="font-bold text-md mt-10">3. Intellectual Property</h2>
-        <ul className="text-[14px] mt-4">
+        <h2 className="font-bold text-[24px] text-black mt-8">
+          3. Intellectual Property
+        </h2>
+        <ul className="mt-4 text-[#05050580] paragraph">
           <li className="my-2">
             3.1. All materials presented on the website and in our products
             (including design, text, code, graphics, etc.) are the intellectual
@@ -189,8 +201,8 @@ const TermsAndConditions = () => {
           </li>
         </ul>
 
-        <h2 className="font-bold text-md mt-10">4. Liability</h2>
-        <ul className="text-[14px] mt-4">
+        <h2 className="font-bold text-[24px] text-black mt-8">4. Liability</h2>
+        <ul className="mt-4 text-[#05050580] paragraph">
           <li className="my-2">
             4.1. The Company is not responsible for any damages resulting from
             the use or inability to use our services.
@@ -207,7 +219,7 @@ const TermsAndConditions = () => {
         </ul>
 
         <h2 className="font-bold text-md mt-10">5. Privacy</h2>
-        <ul className="text-[14px] mt-4">
+        <ul className="mt-4 text-[#05050580] paragraph">
           <li className="my-2">
             5.1. All information provided by the User is processed in accordance
             with our Privacy Policy, which forms an integral part of this
@@ -220,8 +232,8 @@ const TermsAndConditions = () => {
           </li>
         </ul>
 
-        <h2 className="font-bold text-md mt-10">6. Amendments</h2>
-        <ul className="text-[14px] mt-4">
+        <h2 className="font-bold text-[24px] text-black mt-8">6. Amendments</h2>
+        <ul className="mt-4 text-[#05050580] paragraph">
           <li className="my-2">
             6.1. The Company reserves the right to modify this Agreement at any
             time.
@@ -233,8 +245,10 @@ const TermsAndConditions = () => {
           </li>
         </ul>
 
-        <h2 className="font-bold text-md mt-10">7. Final Provisions</h2>
-        <ul className="text-[14px] mt-4">
+        <h2 className="font-bold text-[24px] text-black mt-8">
+          7. Final Provisions
+        </h2>
+        <ul className="mt-4 text-[#05050580] paragraph">
           <li className="my-2">
             7.1. This Agreement is governed by the laws of [insert applicable
             jurisdiction].
