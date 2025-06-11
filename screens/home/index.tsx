@@ -1,7 +1,10 @@
+"use client";
 import { Heroleft } from "@/components/organisms";
 import { logos } from "@/mock";
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import Lenis from "lenis";
+import { useEffect } from "react";
 
 const InfiniteHorizontalScroll = dynamic(() =>
   import("@/components/molecules").then((c) => c.InfiniteHorizontalScroll)
@@ -28,6 +31,23 @@ const Banner = dynamic(() =>
 );
 
 const Home = () => {
+  useEffect(() => {
+    const lenis = new Lenis({
+      lerp: 0.3,
+    });
+
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
+  }, []);
+
   return (
     <>
       <div className="w-full bg-black text-white content mt-20">

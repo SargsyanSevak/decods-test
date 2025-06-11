@@ -23,7 +23,7 @@ function AccordionItem({ className, ...props }: AccordionItemProps) {
     <AccordionPrimitive.Item
       data-slot="accordion-item"
       className={cn(
-        "bg-white/15 transition-all rounded-[24px] duration-300 px-5 py-2",
+        "bg-[#FFFFFF1F] transition-all rounded-[24px] duration-300 px-5 py-2",
         className
       )}
       {...props}
@@ -44,7 +44,7 @@ function AccordionTrigger({
       <AccordionPrimitive.Trigger
         data-slot="accordion-trigger"
         className={cn(
-          "flex flex-1 items-center justify-between gap-4 rounded-md py-4 text-left text-sm font-medium transition-all outline-none  f disabled:pointer-events-none disabled:opacity-50 [&[data-state=open]>svg]:rotate-180 cursor-pointer",
+          "flex flex-1 items-center justify-between gap-4 rounded-md h-[80px] py-4 text-left text-sm font-medium transition-all outline-none   disabled:pointer-events-none disabled:opacity-50 [&[data-state=open]>svg]:rotate-180 cursor-pointer",
           className
         )}
         {...props}
@@ -59,13 +59,13 @@ function AccordionTrigger({
 
         <div
           className={cn(
-            "min-w-[48px] min-h-[48px] rounded-full bg-[#FFFFFF0F] flex justify-center items-center transition-all duration-300 "
+            "min-w-[40px] min-h-[40px] rounded-full bg-[#FFFFFF0F] flex justify-center items-center transition-all duration-300 "
           )}
         >
           {active ? (
-            <Minus className="text-white/50" />
+            <Minus size={24} className="text-white/50" />
           ) : (
-            <Plus className="text-white/50" />
+            <Plus size={24} className="text-white/50" />
           )}
         </div>
       </AccordionPrimitive.Trigger>
