@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center !px-6 gap-2 whitespace-nowrap rounded-[56px] !text-[18px] !font-semibold transition-all disabled:pointer-events-none disabled:bg-[#0505050F] [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive cursor-pointer text-[14px] tracking-wide font-medium !h-[46px] duration-300",
+  "inline-flex items-center justify-center !px-6 gap-2 whitespace-nowrap rounded-[56px] 2xl:text-[18px] text-[16px] !font-semibold transition-all disabled:pointer-events-none disabled:bg-[#0505050F] [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive cursor-pointer text-[14px] tracking-wide font-medium !h-[46px] duration-300",
   {
     variants: {
       variant: {
@@ -16,7 +16,7 @@ const buttonVariants = cva(
         destructive:
           "bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
         outline:
-          "border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
+          "border bg-background shadow-xs border-[1px] border-black hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50",
         secondary:
           "bg-white text-secondary-foreground shadow-xs hover:bg-white/80 text-[#050505] !h-[56px]",
         ghost: "bg-[#838383] hover:bg-[#838383] hover:opacity-[0.8] text-white",

@@ -7,7 +7,7 @@ import React from "react";
 const TechnologyStack = () => {
   return (
     <div className="w-full flex flex-col items-center relative">
-      <h2 className="section-title 2xl:max-w-[1000px] 2xl:leading-[56px] leading-[50px] max-w-[700px] relative z-10 text-white text-center">
+      <h2 className="section-title  2xl:leading-[56px] leading-[50px] max-w-[700px] relative z-10 text-white text-center">
         Industries We Serve & Technology Stack
       </h2>
       <p className="paragraph relative z-10 text-white/50 text-center mt-6">
@@ -34,7 +34,7 @@ const TechnologyStack = () => {
                     className="object-cover w-full h-full"
                   />
                   {!!el.title && (
-                    <h2 className="2xl:text-[32px] text-[28px] text-white font-semibold absolute bottom-4 left-4 z-20">
+                    <h2 className="text-[24px] text-white font-semibold absolute bottom-4 left-4 z-20">
                       {el.title}
                     </h2>
                   )}
@@ -64,7 +64,7 @@ const TechnologyStack = () => {
             return (
               <div key={el.category} className="text-white">
                 <div>
-                  <h2 className="text32">{el.category}</h2>
+                  <h2 className="text24">{el.category}</h2>
                 </div>
                 <ul className="mt-5 flex flex-col gap-2">
                   {el.technologies.map((item) => {

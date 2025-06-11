@@ -41,7 +41,7 @@ const Testimonials = () => {
                 </div>
 
                 <div className="w-full h-[100px]">
-                  <div className="text-black font-semibold text-[24px]">
+                  <div className="text-black font-semibold text-[18px]">
                     {item.by}
                   </div>
                   <div className="paragraph  text-[#05050580] mt-1">

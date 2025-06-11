@@ -7,9 +7,8 @@ const ServiceCarousel = () => {
     <div className="w-full h-full">
       <div className="flex justify-between gap-20">
         <div className="">
-          <h2 className="2xl:text-[64px] text-[50px] 2xl:leading-[64px] leading-[50px] font-bold max-w-[872px]">
-            Leading Software Development Company — Comprehensive Custom
-            Solutions
+          <h2 className="2xl:text-[52px] text-[50px] leading-[100%] font-bold max-w-[600px]">
+            Leading Software Development Company
           </h2>
           <div className="flex gap-10 mt-20">
             <p className="paragraph text-[#6f6f6f] 2xl:max-w-[500px] max-w-[380px]">
@@ -62,7 +61,7 @@ const ServiceCarousel = () => {
             </p>
           </div>
         </div>
-        <div className="2xl:w-[576px] w-[480px] 2xl:min-w-[576px] min-w-[480px]  rounded-[24px] rounded-tl-[120px] overflow-hidden mt-4">
+        <div className="2xl:w-[576px] w-[480px] 2xl:min-w-[576px] min-w-[480px]  rounded-[24px] rounded-tl-[120px] overflow-hidden mt-4 relative">
           <Image
             src="https://res.cloudinary.com/dudf3yqtz/image/upload/v1749136929/2c148758ec5a882d3901266ceb7c4d8f61581922_ehkkd7.webp"
             width={576}
@@ -70,10 +69,18 @@ const ServiceCarousel = () => {
             alt="image"
             className="w-full h-full object-cover"
           />
+          <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent to-black pointer-events-none p-4 flex items-end">
+            <p className="text-[14px] italic text-white leading-[20px] font-medium">
+              «The global custom software development market is projected
+              to reach $146.18 billion by 2030, with businesses increasingly
+              choosing tailored solutions over off-the-shelf alternatives
+              to gain competitive advantage and operational efficiency.»
+            </p>
+          </div>
         </div>
       </div>
       <div className="mt-24">
-        <h2 className="text-black 2xl:text-[52px] text-[44px] 2xl:leading-[52px] leading-[44px] font-bold max-w-[576px]">
+        <h2 className="text-black 2xl:text-[44px] text-[40px] leading-[100%] font-bold max-w-[576px]">
           Key Technologies & Specializations
         </h2>
         <div className="grid grid-cols-3 mt-10 gap-4">

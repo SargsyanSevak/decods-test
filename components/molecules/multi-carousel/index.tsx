@@ -68,13 +68,13 @@ const MultiCarousel = ({ slides }: MultiCarouselProps) => {
               <Image
                 src={slide.image}
                 alt={slide.title}
-                width={428}
-                height={460}
+                width={400}
+                height={420}
                 className="rounded-[24px] rounded-tl-[120px] rounded-br-[120px] object-cover w-full h-full"
               />
             </div>
             <div className="mt-4">
-              <h3 className="text-[32px] font-semibold text-black">
+              <h3 className="text-[24px] font-semibold text-black">
                 {slide.title}
               </h3>
               <p className="paragraph font-medium !text-[#05050580] mt-1">

@@ -50,7 +50,7 @@ const Heroleft = () => {
             </AnimatePresence>
           </div>
 
-          <p className="max-w-[700px] description will-change-[opacity,filter,transform]">
+          <p className="max-w-[700px] text-[18px] will-change-[opacity,filter,transform]">
             Transform your business ideas into powerful digital solutions withs
             our trusted offshore development team. We deliver high quality
             software development at competitive rates while ensuring quality and
@@ -78,33 +78,33 @@ const Heroleft = () => {
               <AnimatedGradientSVG />
             </div>
 
-            <div className="max-w-[520px]  flex flex-col gap-12 justify-between bg-gradient-to-b from-black to-transparent relative z-20">
+            <div className="max-w-[520px]  flex flex-col gap-8 justify-between bg-gradient-to-b from-black to-transparent relative z-20">
               <div className="w-full">
-                <h2 className="2xl:text-[32px] text-[28px] leading-[100%] font-semibold">
+                <h2 className="2xl:text-[28px] text-[24px] leading-[100%] font-semibold">
                   Global Talent, Local Results
                 </h2>
 
-                <p className="text-white/50 text-[18px] leading-[24px] mt-2">
+                <p className="text-white/50 text-[16px] leading-[24px] mt-2">
                   Access skilled developers worldwide. No compromise on
                   communication or project quality.
                 </p>
               </div>
               <div className="w-full">
                 {" "}
-                <h2 className="2xl:text-[32px] text-[28px] leading-[100%] font-semibold">
+                <h2 className="2xl:text-[28px] text-[24px] leading-[100%] font-semibold">
                   Cost-Effective Excellence
                 </h2>
-                <p className="text-white/50 text-[18px] leading-[24px] mt-2">
+                <p className="text-white/50 text-[16px] leading-[24px] mt-2">
                   Premium software development services at 40–60% lower costs
                   than onshore alternatives.
                 </p>
               </div>
               <div className="w-full">
-                <h2 className="2xl:text-[32px] text-[28px] leading-[100%] font-semibold">
+                <h2 className="2xl:text-[28px] text-[24px] leading-[100%] font-semibold">
                   Fast Team Assembly
                 </h2>
 
-                <p className="text-white/50 text-[18px] leading-[24px] mt-2">
+                <p className="text-white/50 text-[16px] leading-[24px] mt-2">
                   Start development within 48 hours. Pre-vetted developers
                   matched to your technology stack.
                 </p>

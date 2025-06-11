@@ -271,60 +271,64 @@ export const footerTexts = {
     ],
   },
   dev_and_design: {
-    title: "Development & Design",
+    title: "Development Services",
     items: [
       {
-        title: "Custom Software Development",
-        href: "/custom-software-development",
+        title: "Software development company",
+        href: "/software-development-company",
       },
       {
-        title: "API and Backend Development",
-        href: "/api-and-backend-development",
+        title: "Custom software development services",
+        href: "/custom-software-development-services",
       },
       {
-        title: "Web and Mobile Apps",
-        href: "/web-and-mobile-apps",
+        title: "Full-cycle software development",
+        href: "/full-cycle-software-development",
       },
       {
-        title: "UI/UX Design",
-        href: "/ui-ux-design",
+        title: "End-to-end software development",
+        href: "/end-to-end-software-development",
       },
       {
-        title: "Progressive Web Apps (PWA)",
-        href: "/pwa",
+        title: "Software engineering services",
+        href: "/software-engineering-services",
       },
       {
-        title: "Code Audit & Refactoring",
-        href: "/code-audit-and-refactoring",
+        title: "Offshore software development",
+        href: "/offshore-software-development",
       },
     ],
   },
   support: {
-    title: "Support & Optimization",
+    title: "BUSINESS & IT SOLUTION",
     items: [
       {
-        title: "Support & Maintenance",
-        href: "/support-and-maintenance",
+        title: "Digital product development company",
+        href: "/digital-product-development-company",
       },
       {
         title: "Performance Optimization",
         href: "/performance-optimization",
       },
       {
-        title: "DevOps",
-        href: "/devops",
+        title: "Enterprise software solutions",
+        href: "/enterprise-software-solutions",
       },
       {
-        title: "Website Audit & SEO",
-        href: "/website-audit-and-seo",
+        title: "Custom business applications",
+        href: "/custom-business-applications",
       },
       {
-        title: "Quality Assurance",
-        href: "/quality-assurance",
+        title: "IT consulting and development services",
+        href: "/it-consulting-and-development-services",
       },
       {
-        title: "Hire Developer",
-        href: "/hire-developer",
+        title: "IT solutions provider",
+        href: "/it-solutions-provider",
+      },
+      {
+        title: "Trusted software development partner",
+        href: "/trusted-software-development-partner",
       },
     ],
   },

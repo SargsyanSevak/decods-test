@@ -130,10 +130,10 @@
     @apply text-[90px] font-semibold  leading-[90px] text-white;
   }
   .paragraph {
-    @apply 2xl:text-[18px] text-[16px] 2xl:leading-[24px] leading-[20px] font-medium text-white;
+    @apply text-[16px]  leading-[20px] font-medium text-white;
   }
   .sub-title {
-    @apply text-[52px] leading-[100%] font-semibold text-white;
+    @apply text-[44px] leading-[100%] font-semibold text-white;
   }
   .description {
     @apply text-[24px] text-white/50 leading-[32px] tracking-wide;
@@ -142,16 +142,16 @@
     @apply w-full max-w-[1920px]  h-full py-20 lg:px-16 md:px-10 px-4 mx-auto;
   }
   .section-title {
-    @apply 2xl:text-[64px] text-[54px] leading-[100%] font-bold text-white;
+    @apply 2xl:text-[52px] text-[50px] leading-[100%] font-bold text-white;
   }
   .section-sub-title {
     @apply 2xl:text-[26px] 2xl:leading-[38px] text-[22px] leading-[35px] text-white font-medium;
   }
   .link-hover {
-    @apply transition-all duration-300 ease-in-out hover:opacity-60;
+    @apply transition-all duration-300 ease-in-out hover:!text-white;
   }
-  .text32 {
-    @apply 2xl:text-[32px] 2xl:leading-[36px] text-[28px] leading-[32px]  font-bold text-white;
+  .text24 {
+    @apply text-[24px] leading-[32px]  font-bold text-white;
   }
   .center {
     @apply flex justify-center items-center;

@@ -38,7 +38,7 @@ export default function Navbar() {
           "w-full flex items-center justify-between h-[100px] content z-50 sticky top-0  transition-colors duration-500 ease-in-out "
         )}
       >
-        <ul className="lg:flex hidden items-center gap-[46px] text-white/50 w-fit text-[18px] font-medium tracking-wide ">
+        <ul className="lg:flex hidden items-center gap-[46px] text-white/50 w-fit text-[16px] font-medium tracking-wide ">
           {siteConfig.leftNavMenuItems.map((el) => {
             return (
               <li key={el.label}>
@@ -90,7 +90,7 @@ export default function Navbar() {
         </motion.div>
         <ul
           className={cn(
-            "lg:flex hidden items-center gap-[46px] text-white/50  w-fit text-[18px] font-medium tracking-wide relative z-50",
+            "lg:flex hidden items-center gap-[46px] text-white/50  w-fit text-[16px] font-medium tracking-wide relative z-50",
             scrolled && "text-black hover:text-black"
           )}
         >
@@ -114,7 +114,7 @@ export default function Navbar() {
           <li>
             <Button
               variant={scrolled ? "default" : "secondary"}
-              className="!h-[40px] !w-[127px] !text-[16px]  relative z-20"
+              className="!h-[44px] !w-[127px] !text-[16px]  relative z-20"
             >
               Contact Us
             </Button>

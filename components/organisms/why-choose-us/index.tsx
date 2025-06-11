@@ -5,9 +5,7 @@ import React from "react";
 const WhyChooseUs = () => {
   return (
     <div className="w-full relative">
-      <h2 className="section-title max-w-[724px]">
-        Why Choose Our Software Development Company
-      </h2>
+      <h2 className="section-title max-w-[724px]">Why Choose Decods</h2>
       <p className="paragraph text-white/50 max-w-[620px] mt-6">
         When you partner with Decods, you&apos;re choosing a reliable
         development partner committed to delivering exceptional results. Our
@@ -41,7 +39,7 @@ deployment guides. Knowledge transfer becomes
 seamless. Future maintenance stays straightforward."
           />
           {/* Image */}
-          <div className="row-start-1 row-span-1 col-start-3 -mb-[270px] -mt-[150px] relative">
+          <div className="row-start-1 row-span-1 col-start-3 2xl:-mb-[270px] -mb-[220px] -mt-[150px] relative">
             <div className={`group relative w-full h-full overflow-hidden`}>
               <div className="absolute inset-0 z-0 transition-all duration-200 rounded-[24px] rounded-tl-[120px] overflow-hidden">
                 <Image
@@ -54,7 +52,7 @@ seamless. Future maintenance stays straightforward."
               <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent to-black pointer-events-none" />
             </div>
             <div className="absolute left-0 right-0 bottom-[-40px] z-10  pointer-events-none">
-              <p className="paragraph text-white font-medium italic  line-clamp-4">
+              <p className="2xl:paragraph text-[14px] text-white font-medium italic  line-clamp-4">
                 “According to recent industry research, companies that invest in
                 custom software development see an average ROI of 300% within
                 the first two years, primarily due to improved operational
