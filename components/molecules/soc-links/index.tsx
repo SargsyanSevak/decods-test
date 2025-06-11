@@ -1,6 +1,13 @@
-import { IconFacebook, IconInstagram, IconLinkedin, IconX } from "@/assets";
+import {
+  IconFacebook,
+  IconInstagram,
+  IconLinkedin,
+  IconX,
+  IconXBlack,
+} from "@/assets";
+import { cn } from "@/lib/utils";
 
-const SocLinks = () => {
+const SocLinks = ({ variant }: { variant: "outlined" | "default" }) => {
   return (
     <div className="flex items-center gap-2">
       <a
@@ -8,9 +15,13 @@ const SocLinks = () => {
         href="https://www.facebook.com/decodscom"
         target="_blank"
         rel="noreferrer"
-        className="w-[40px] h-[40px] bg-white/15 hover:bg-primary transition-all duration-300 rounded-full center"
+        className={cn(
+          "w-[40px] h-[40px] bg-white/15 hover:bg-primary transition-all duration-300 rounded-full center",
+          variant === "outlined" &&
+            "border border-black background-white hover:!bg-white"
+        )}
       >
-        <IconFacebook />
+        <IconFacebook fill={variant === "outlined" ? "black" : ""} />
       </a>
 
       <a
@@ -18,27 +29,39 @@ const SocLinks = () => {
         href="https://www.instagram.com/decods_com"
         target="_blank"
         rel="noreferrer"
-        className="w-[40px] h-[40px] bg-white/15 hover:bg-primary transition-all duration-300 rounded-full center"
+        className={cn(
+          "w-[40px] h-[40px] bg-white/15 hover:bg-primary transition-all duration-300 rounded-full center",
+          variant === "outlined" &&
+            "border border-black background-white hover:!bg-white"
+        )}
       >
-        <IconInstagram />
+        <IconInstagram fill={variant === "outlined" ? "black" : ""} />
       </a>
       <a
         aria-label="linkedin"
         href="https://www.linkedin.com/company/decods"
         target="_blank"
         rel="noreferrer"
-        className="w-[40px] h-[40px] bg-white/15 hover:bg-primary transition-all duration-300 rounded-full center"
+        className={cn(
+          "w-[40px] h-[40px] bg-white/15 hover:bg-primary transition-all duration-300 rounded-full center",
+          variant === "outlined" &&
+            "border border-black background-white hover:!bg-white"
+        )}
       >
-        <IconLinkedin />
+        <IconLinkedin fill={variant === "outlined" ? "black" : ""} />
       </a>
       <a
         aria-label="x"
         href="https://x.com/decods_com"
         target="_blank"
         rel="noreferrer"
-        className="w-[40px] h-[40px] bg-white/15 hover:bg-primary transition-all duration-300 rounded-full center"
+        className={cn(
+          "w-[40px] h-[40px] bg-white/15 hover:bg-primary transition-all duration-300 rounded-full center",
+          variant === "outlined" &&
+            "border border-black background-white hover:!bg-white"
+        )}
       >
-        <IconX />
+        {variant === "outlined" ? <IconXBlack /> : <IconX />}
       </a>
     </div>
   );

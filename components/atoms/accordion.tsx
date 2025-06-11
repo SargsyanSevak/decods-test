@@ -23,7 +23,7 @@ function AccordionItem({ className, ...props }: AccordionItemProps) {
     <AccordionPrimitive.Item
       data-slot="accordion-item"
       className={cn(
-        "bg-white/15 transition-all rounded-[24px] duration-300 p-5",
+        "bg-white/15 transition-all rounded-[24px] duration-300 px-5 py-2",
         className
       )}
       {...props}
@@ -51,7 +51,7 @@ function AccordionTrigger({
       >
         <div
           className={cn(
-            "flex items-center gap-10  text-[24px] text-white font-semibold"
+            "flex items-center gap-10  text-[20px] text-white font-semibold"
           )}
         >
           {children}

@@ -5,12 +5,15 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Loader } from "@/components/atoms";
 import { Navbar } from "@/components/molecules";
 import Footer from "@/components/molecules/footer";
+import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 export default function LoadingLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -20,7 +23,12 @@ export default function LoadingLayout({
 
   return (
     <>
-      <div className="relative w-full mx-auto">
+      <div
+        className={cn(
+          "relative w-full mx-auto",
+          pathname !== "/" && "bg-white"
+        )}
+      >
         <AnimatePresence>{loading && <Loader key="loader" />}</AnimatePresence>
 
         {!loading && (
@@ -52,7 +60,7 @@ export default function LoadingLayout({
               </svg>
             </motion.div>
             <Navbar />
-            <main className="mt-20">{children}</main>
+            <main>{children}</main>
             <Footer />
           </>
         )}

@@ -10,3 +10,4 @@ export { default as IconLinkedin } from "./IconLinkedin";
 export { default as IconDollar } from "./IconDollar";
 export { default as IconCloud } from "./IconCloud";
 export { default as IconHome } from "./IconHome";
+export { default as IconXBlack } from "./IconXBlack";

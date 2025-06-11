@@ -30,7 +30,7 @@ const Banner = dynamic(() =>
 const Home = () => {
   return (
     <>
-      <div className="w-full bg-black text-white content">
+      <div className="w-full bg-black text-white content mt-20">
         <div className="w-full flex flex-col gap-10">
           <Heroleft />
           <div className="w-full h-[120px] text-center">
