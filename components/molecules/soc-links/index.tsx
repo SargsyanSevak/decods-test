@@ -7,7 +7,7 @@ import {
 } from "@/assets";
 import { cn } from "@/lib/utils";
 
-const SocLinks = ({ variant }: { variant: "outlined" | "default" }) => {
+const SocLinks = ({ variant }: { variant?: "outlined" | "default" }) => {
   return (
     <div className="flex items-center gap-2">
       <a
