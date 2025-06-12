@@ -364,3 +364,58 @@ export const solutionsData = [
     text: "Our full-cycle software development covers every project aspect. From initial concept to ongoing maintenance. Whether you need custom business applications for workflow automation,enterprise software solutions for complex organizational needs, or digital product development for market-ready SaaS platforms, we provide comprehensive IT services that drive measurablebusiness results.",
   },
 ];
+
+export const categories = ["Insights", "Company", "Press"];
+
+export const mockArticles = Array.from({ length: 50 }, (_, i) => ({
+  id: i + 1,
+  title: `Why Every Business Needs a Software Development Blog ${i + 1}`,
+  date: "June 6, 2025",
+  timeToRead: "12 min read",
+  category: categories[Math.floor(Math.random() * categories.length)],
+  by: "User",
+  image:
+    "https://res.cloudinary.com/dudf3yqtz/image/upload/v1749136929/2c148758ec5a882d3901266ceb7c4d8f61581922_ehkkd7.webp",
+  description:
+    "These Terms & Conditions (hereinafter referred to as the “Agreement”) govern the use of the website and/or digital products provided by Decods (hereinafter referred to as the “Company”, “we”, “us”) by users (hereinafter referred to as “User”, “you”).",
+  content: [
+    {
+      id: 1,
+      title: "Smashing Magazine",
+      subTitle: "Best for: Frontend developers, designers, UX engineers",
+      description:
+        "Smashing Magazine is one of the most iconic resources for web professionals. Known for its thoughtful, in-depth articles, it covers topics ranging from CSS tricks and accessibility to performance optimization and design systems. What sets Smashing apart is its editorial depth—each article is like a mini-course, helping you understand not just the “how” but the “why” behind each solution. Whether you're exploring the nuances of responsive design or diving into the latest front-end frameworks, Smashing is a goldmine of reliable content.",
+    },
+    {
+      id: 2,
+      title: "Stack Overflow Blog",
+      subTitle:
+        "Best for: Full-stack devs, engineering managers, community-focused developers",
+      description:
+        "Stack Overflow isn’t just the place for copying code snippets—it also publishes a high-quality blog that dives into the broader world of software engineering. From thoughtful explorations of developer workflows and productivity, to deep dives into the evolution of programming languages and tools, their blog is a great mix of practical insights and cultural commentary. They also share unique data-driven stories from their massive user base, giving readers a peek into real-world developer trends.",
+    },
+    {
+      id: 3,
+      title: "CSS-Tricks (by DigitalOcean)",
+      subTitle: "Best for: Frontend devs, UI/UX specialists, visual coders",
+      description:
+        "Founded by Chris Coyier and now a part of the DigitalOcean family, CSS-Tricks is the ultimate hub for everything related to front-end development. While CSS is the anchor, the blog goes far beyond—covering modern JavaScript, accessibility, SVGs, grid systems, and frameworks like React or Vue. With a mix of hands-on tutorials, demos, and “guide” style posts, CSS-Tricks empowers developers to build visually stunning and performant interfaces.",
+    },
+    {
+      id: 4,
+      title: "Overreacted (Dan Abramov)",
+      subTitle:
+        "Best for: React developers, advanced JS engineers, devs who think deeply",
+      description:
+        "Dan Abramov—one of the core React developers at Meta—uses his personal blog to explore technical concepts, anti-patterns, and philosophical takes on modern frontend engineering. His writing style is incredibly approachable, yet rich with depth and precision. Overreacted is a must-read if you want to go beyond the docs and gain a deeper understanding of component lifecycles, rendering behaviors, and developer mindset.",
+    },
+    {
+      id: 5,
+      title: "The GitHub Blog",
+      subTitle:
+        "Best for: Open-source contributors, DevOps engineers, software teams",
+      description:
+        "As the world’s largest repository platform, GitHub naturally has a pulse on the development world. Their blog is filled with product updates, security news, productivity tips, and feature releases that affect millions. But beyond the tools, they also spotlight powerful open-source projects, share industry case studies, and highlight best practices for version control, CI/CD, and collaboration—making it a must-follow for teams building scalable software.",
+    },
+  ],
+}));

@@ -21,6 +21,7 @@ const buttonVariants = cva(
           "bg-white text-secondary-foreground !text-[16px] shadow-xs hover:bg-white/80 text-[#050505] !h-[56px]",
         ghost: "bg-[#838383] hover:bg-[#838383] hover:opacity-[0.8] text-white",
         link: "text-primary underline-offset-4 hover:underline",
+        activeCircle: "bg-black text-white rounded-full hover:bg-black",
       },
       size: {
         default: "h-[40px] px-4 py-2 has-[>svg]:px-3",

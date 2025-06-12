@@ -135,7 +135,7 @@ export const metadata: Metadata = {
 
 const TermsAndConditions = () => {
   return (
-    <div className="w-full h-full bg-white section flex gap-20">
+    <div className="w-full h-full bg-white section flex gap-20 ">
       <div className="max-w-[620px] flex flex-col gap-6">
         <h1 className="text-[54px] font-bold leading-[100%]">Privacy Policy</h1>
         <p className="paragraph text-[#05050580]">

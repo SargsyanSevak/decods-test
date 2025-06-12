@@ -1,3 +1,4 @@
+import { Articles } from "@/screens";
 import { Metadata } from "next";
 
 export const dynamic = "force-static";
@@ -66,7 +67,7 @@ export const metadata: Metadata = {
 };
 
 const Page = () => {
-  return <div className="text-white content">Articles</div>;
+  return <Articles />;
 };
 
 export default Page;

@@ -8,3 +8,5 @@ export { default as MultiCarousel } from "./multi-carousel";
 export { default as ServicesDropdown } from "./services-dropdown";
 export { default as SocLinks } from "./soc-links";
 export { default as SolutionCard } from "./solution-card";
+export { default as DynamicPagination } from "./dynamic-pagination";
+export { default as ArticleCard } from "./article-card";

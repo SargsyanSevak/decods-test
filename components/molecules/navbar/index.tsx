@@ -65,7 +65,7 @@ export default function Navbar() {
           })}
         </ul>
         <motion.div
-          layoutId="logo"
+          layoutId={scrolled ? "" : "logo"}
           className="flex items-center justify-center cursor-pointer"
           role="button"
           onClick={() => replace("/")}
