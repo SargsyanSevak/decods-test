@@ -122,6 +122,8 @@
     @apply bg-black text-foreground mx-auto antialiased;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-y: auto;
+    height: 100%;
   }
   .content {
     @apply max-w-[1920px] lg:px-14 md:px-10 px-4 mx-auto;
@@ -198,4 +200,8 @@ img {
     animation-direction: var(--animation-direction, forwards);
     animation-duration: var(--animation-duration, 40s);
   }
+}
+
+#smooth-scroll-container {
+  height: 100%;
 }

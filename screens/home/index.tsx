@@ -1,7 +1,11 @@
+"use client";
 import { Heroleft } from "@/components/organisms";
 import { logos } from "@/mock";
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import LocomotiveScroll from "locomotive-scroll";
+import "locomotive-scroll/dist/locomotive-scroll.css";
+import { useEffect, useRef } from "react";
 
 const InfiniteHorizontalScroll = dynamic(() =>
   import("@/components/molecules").then((c) => c.InfiniteHorizontalScroll)
@@ -28,8 +32,21 @@ const Banner = dynamic(() =>
 );
 
 const Home = () => {
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const scroll = new LocomotiveScroll({
+      el: scrollRef.current as HTMLElement,
+      smooth: true,
+    });
+
+    return () => {
+      scroll.destroy();
+    };
+  }, []);
+
   return (
-    <>
+    <div id="smooth-scroll-container" data-scroll-container ref={scrollRef}>
       <div className="w-full bg-black text-white content mt-20">
         <div className="w-full flex flex-col gap-10">
           <Heroleft />
@@ -97,7 +114,7 @@ const Home = () => {
           <Banner />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
