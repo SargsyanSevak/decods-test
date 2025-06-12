@@ -1,10 +1,16 @@
 import React from "react";
 
-const IconXBlack = () => {
+const IconXBlack = ({
+  width,
+  height,
+}: {
+  width?: string | number;
+  height?: string | number;
+}) => {
   return (
     <svg
-      width="15"
-      height="14"
+      width={width || "15"}
+      height={height || "14"}
       viewBox="0 0 15 14"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

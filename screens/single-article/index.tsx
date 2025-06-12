@@ -66,17 +66,17 @@ const SingleArticleScreen: FC<Article> = ({ data }) => {
           <div className="flex items-center gap-2">
             <div className="w-[40px] h-[40px] border-[1px] border-[gray] rounded-full flex justify-center items-center cursor-pointer">
               <FacebookShareButton url={href} quote={data.title}>
-                <IconFacebook fill="#05050580" />
+                <IconFacebook width={20} height={20} fill="#05050580" />
               </FacebookShareButton>
             </div>
             <div className="w-[40px] h-[40px] border-[1px] border-[gray] rounded-full flex justify-center items-center cursor-pointer">
               <LinkedinShareButton url={href}>
-                <IconLinkedin fill="#05050580" />
+                <IconLinkedin width={18} height={18} fill="#05050580" />
               </LinkedinShareButton>
             </div>
             <div className="w-[40px] h-[40px] border-[1px] border-[gray] rounded-full flex justify-center items-center cursor-pointer">
               <TwitterShareButton url={href} title={data.title}>
-                <IconXBlack />
+                <IconXBlack width={17} height={17} />
               </TwitterShareButton>
             </div>
           </div>

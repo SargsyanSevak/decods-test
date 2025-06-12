@@ -1,10 +1,18 @@
 import React from "react";
 
-const IconLinkedin = ({ fill }: { fill?: string }) => {
+const IconLinkedin = ({
+  fill,
+  width,
+  height,
+}: {
+  fill?: string;
+  width?: string | number;
+  height?: string | number;
+}) => {
   return (
     <svg
-      width="14"
-      height="13"
+      width={width || "14"}
+      height={height || "13"}
       viewBox="0 0 21 20"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

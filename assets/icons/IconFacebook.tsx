@@ -5,8 +5,8 @@ const IconFacebook = ({
   height,
   fill,
 }: {
-  width?: string;
-  height?: string;
+  width?: string | number;
+  height?: string | number;
   fill?: string;
 }) => {
   return (
