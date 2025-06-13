@@ -29,7 +29,7 @@ export default function LoadingLayout({
     <>
       <div
         className={cn(
-          "relative w-full mx-auto",
+          "w-full mx-auto antialiased",
           pathname !== "/" && "bg-white"
         )}
       >

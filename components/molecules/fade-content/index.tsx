@@ -46,12 +46,11 @@ const FadeContent: React.FC<FadeContentProps> = ({
   return (
     <div
       ref={ref}
-      className={`min-h-[40px] will-change-opacity ${className}`}
+      className={`min-h-[40px] ${className}`}
       style={{
         opacity: inView ? 1 : initialOpacity,
         transition: `opacity ${duration}ms ${easing}, filter ${duration}ms ${easing}`,
         filter: blur ? (inView ? "blur(0px)" : "blur(10px)") : "none",
-        willChange: "opacity, filter, transform",
       }}
     >
       {children}
