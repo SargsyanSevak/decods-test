@@ -1,21 +1,29 @@
-import { TextCard } from "@/components/molecules";
+import { FadeContent, TextCard } from "@/components/molecules";
 import Image from "next/image";
 import React from "react";
 
 const WhyChooseUs = () => {
   return (
     <div className="w-full relative">
-      <h2 className="section-title max-w-[724px]">Why Choose Decods</h2>
-      <p className="paragraph text-white/50 max-w-[620px] mt-6">
-        When you partner with Decods, you&apos;re choosing a reliable
-        development partner committed to delivering exceptional results. Our
-        offshore software development model provides significant cost
-        advantages—typically 40-60% lower than onshore alternatives. Quality and
-        communication standards remain uncompromised.
-      </p>
-      <p className="text-[32px] leading-[36px] text-white font-semibold max-w-[576px] mt-10">
-        What Makes Decods Different from Other Software Development Companies
-      </p>
+      <FadeContent>
+        <h2 className="section-title max-w-[724px]">Why Choose Decods</h2>
+      </FadeContent>
+      <FadeContent delay={100}>
+        <p className="paragraph text-white/50 max-w-[620px] mt-6">
+          When you partner with Decods, you&apos;re choosing a reliable
+          development partner committed to delivering exceptional results. Our
+          offshore software development model provides significant cost
+          advantages—typically 40-60% lower than onshore alternatives. Quality
+          and communication standards remain uncompromised.
+        </p>
+      </FadeContent>
+      <FadeContent delay={150}>
+        {" "}
+        <p className="text-[32px] leading-[36px] text-white font-semibold max-w-[576px] mt-10">
+          What Makes Decods Different from Other Software Development Companies
+        </p>
+      </FadeContent>
+
       <div className="bg-black text-white  py-12 pb-0">
         <div className=" grid grid-cols-1 md:grid-cols-3 grid-rows-3 2xl:gap-6 gap-4 relative">
           {/* 01 */}
@@ -52,12 +60,14 @@ seamless. Future maintenance stays straightforward."
               <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent to-black pointer-events-none" />
             </div>
             <div className="absolute left-0 right-0 bottom-[-40px] z-10  pointer-events-none">
-              <p className="2xl:paragraph text-[14px] text-white font-medium italic  line-clamp-4">
-                “According to recent industry research, companies that invest in
-                custom software development see an average ROI of 300% within
-                the first two years, primarily due to improved operational
-                efficiency and competitive differentiation.”
-              </p>
+              <FadeContent>
+                <p className="2xl:paragraph text-[14px] text-white font-medium italic  line-clamp-4">
+                  “According to recent industry research, companies that invest
+                  in custom software development see an average ROI of 300%
+                  within the first two years, primarily due to improved
+                  operational efficiency and competitive differentiation.”
+                </p>
+              </FadeContent>
             </div>
           </div>
 

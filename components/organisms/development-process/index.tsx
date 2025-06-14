@@ -1,5 +1,9 @@
 import { Button } from "@/components/atoms/button";
-import { AnimatedCounter, MultiCarousel } from "@/components/molecules";
+import {
+  AnimatedCounter,
+  FadeContent,
+  MultiCarousel,
+} from "@/components/molecules";
 import { slides } from "@/mock";
 import React from "react";
 
@@ -8,17 +12,21 @@ const DevelopmentProcess = () => {
     <div className="w-full flex justify-between 2xl:gap-20 gap-16 ralative overflow-hidden">
       {/* Left Side  Start*/}
       <div className="w-[50%] max-w-[700px]">
-        <h2 className="section-title text-black">
-          Our Proven Development Process
-        </h2>
-        <p className="paragraph mt-6 max-w-[620px] text-[#05050580]">
-          At Decods, we&lsquo;ve refined our software development process
-          through hundreds of successful projects. This creates a methodology
-          that balances agile development principles with predictable outcomes.
-          Our end-to-end software development approach ensures that every custom
-          software solution we deliver not only meets technical requirements but
-          drives real business value from day one.
-        </p>
+        <FadeContent>
+          <h2 className="section-title text-black">
+            Our Proven Development Process
+          </h2>
+        </FadeContent>
+        <FadeContent>
+          <p className="paragraph mt-6 max-w-[620px] text-[#05050580]">
+            At Decods, we&lsquo;ve refined our software development process
+            through hundreds of successful projects. This creates a methodology
+            that balances agile development principles with predictable
+            outcomes. Our end-to-end software development approach ensures that
+            every custom software solution we deliver not only meets technical
+            requirements but drives real business value from day one.
+          </p>
+        </FadeContent>
 
         <div className="w-full flex justify-between mt-10">
           <div className="flex gap-3  min-w-[240px] h-[300px]">
@@ -26,9 +34,11 @@ const DevelopmentProcess = () => {
               <h2 className="sub-title text-[#292929]">
                 <AnimatedCounter to={100} duration={1} />+
               </h2>
-              <p className="text-[16px] leading-[20px] font-medium text-black">
-                100+ happy customers who have contacted us.
-              </p>
+              <FadeContent>
+                <p className="text-[16px] leading-[20px] font-medium text-black">
+                  100+ happy customers who have contacted us.
+                </p>
+              </FadeContent>
             </div>
           </div>
 
@@ -37,9 +47,11 @@ const DevelopmentProcess = () => {
               <h2 className="sub-title text-[#292929]">
                 <AnimatedCounter to={150} duration={1} />+
               </h2>
-              <p className="text-[16px] leading-[20px] font-medium text-black">
-                Resolved technical issues within the first hour.
-              </p>
+              <FadeContent>
+                <p className="text-[16px] leading-[20px] font-medium text-black">
+                  Resolved technical issues within the first hour.
+                </p>
+              </FadeContent>
             </div>
           </div>
 
@@ -48,29 +60,35 @@ const DevelopmentProcess = () => {
               <h2 className="sub-title text-[#292929] whitespace-nowrap">
                 <AnimatedCounter to={5} duration={1} />X <br /> Faster
               </h2>
-              <p className="text-[16px] leading-[20px] font-medium text-black">
-                IT solution deployment vs. in-house teams.
-              </p>
+              <FadeContent>
+                <p className="text-[16px] leading-[20px] font-medium text-black">
+                  IT solution deployment vs. in-house teams.
+                </p>
+              </FadeContent>
             </div>
           </div>
         </div>
+        <FadeContent>
+          <p className="paragraph mt-20 text-[#05050580] max-w-[577px]">
+            This proven software development methodology has helped us maintain
+            a 98% client satisfaction rate. We establish long-term partnerships
+            across diverse industries. Whether you&apos;re building a minimum
+            viable product (MVP) for market validation or developing
+            enterprise-grade software solutions, our process adapts to your
+            specific timeline, budget, and technical constraints.
+          </p>
+        </FadeContent>
 
-        <p className="paragraph mt-20 text-[#05050580] max-w-[577px]">
-          This proven software development methodology has helped us maintain a
-          98% client satisfaction rate. We establish long-term partnerships
-          across diverse industries. Whether you&apos;re building a minimum
-          viable product (MVP) for market validation or developing
-          enterprise-grade software solutions, our process adapts to your
-          specific timeline, budget, and technical constraints.
-        </p>
-        <Button
-          iconArrow
-          iconPosition="right"
-          variant="default"
-          className="w-[171px] mt-10"
-        >
-          About Us
-        </Button>
+        <FadeContent className="overflow-hidden">
+          <Button
+            iconArrow
+            iconPosition="right"
+            variant="default"
+            className="w-[171px] mt-10"
+          >
+            About Us
+          </Button>
+        </FadeContent>
       </div>
       {/* Left Side  End*/}
 

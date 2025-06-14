@@ -165,7 +165,6 @@ html {
   scroll-behavior: smooth !important;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   background-color: black;
-  overflow: auto;
   min-height: 100%;
   box-sizing: border-box;
 }

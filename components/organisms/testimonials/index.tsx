@@ -8,13 +8,16 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/atoms/carousel";
+import { FadeContent } from "@/components/molecules";
 
 const Testimonials = () => {
   return (
     <div className="w-full">
-      <h2 className="section-title  text-black text-center">
-        What Our Clients Say
-      </h2>
+      <FadeContent>
+        <h2 className="section-title  text-black text-center">
+          What Our Clients Say
+        </h2>
+      </FadeContent>
 
       <Carousel
         opts={{
@@ -35,18 +38,20 @@ const Testimonials = () => {
                   />
                 </div>
                 <div className="w-full h-[250px]">
-                  <p className="break-words whitespace-normal 2xl:pt-20 sm:pt-24 md:pt-[70px] text-[#050505] font-medium paragraph">
-                    {item.text}
-                  </p>
+                  <FadeContent>
+                    <p className="break-words whitespace-normal 2xl:pt-20 sm:pt-24 md:pt-[70px] text-[#050505] font-medium paragraph">
+                      {item.text}
+                    </p>
+                  </FadeContent>
                 </div>
 
                 <div className="w-full h-[100px]">
-                  <div className="text-black font-semibold text-[18px]">
+                  <FadeContent className="text-black font-semibold text-[18px]">
                     {item.by}
-                  </div>
-                  <div className="paragraph  text-[#05050580] mt-1">
+                  </FadeContent>
+                  <FadeContent className="paragraph  text-[#05050580] mt-1">
                     {item.company}
-                  </div>
+                  </FadeContent>
                 </div>
               </div>
             </CarouselItem>

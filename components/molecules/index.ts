@@ -10,3 +10,4 @@ export { default as SocLinks } from "./soc-links";
 export { default as SolutionCard } from "./solution-card";
 export { default as DynamicPagination } from "./dynamic-pagination";
 export { default as ArticleCard } from "./article-card";
+export { default as FadeDown } from "./fade-down";

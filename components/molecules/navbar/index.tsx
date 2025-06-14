@@ -8,6 +8,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import ServicesDropdown from "../services-dropdown";
+import FadeContent from "../fade-content";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -48,18 +49,20 @@ export default function Navbar() {
           {siteConfig.leftNavMenuItems.map((el) => {
             return (
               <li key={el.label}>
-                <Link
-                  href={el.href}
-                  className={cn(
-                    "relative after:absolute after:left-0 after:bottom-[-4px] after:h-[1px] after:bg-white after:transition-all after:duration-300 hover:text-white transition-all duration-300 ease-in-out",
-                    pathname === el.href
-                      ? "after:w-full"
-                      : "after:w-0 hover:after:w-full",
-                    lightMode && "text-black after:bg-black hover:text-black"
-                  )}
-                >
-                  {el.label}
-                </Link>
+                <FadeContent>
+                  <Link
+                    href={el.href}
+                    className={cn(
+                      "relative after:absolute after:left-0 after:bottom-[-4px] after:h-[1px] after:bg-white after:transition-all after:duration-300 hover:text-white transition-all duration-300 ease-in-out",
+                      pathname === el.href
+                        ? "after:w-full"
+                        : "after:w-0 hover:after:w-full",
+                      lightMode && "text-black after:bg-black hover:text-black"
+                    )}
+                  >
+                    {el.label}
+                  </Link>
+                </FadeContent>
               </li>
             );
           })}
@@ -104,26 +107,30 @@ export default function Navbar() {
             <ServicesDropdown scrolled={lightMode} />
           </li>
           <li>
-            <Link
-              href={"/articles"}
-              className={cn(
-                "relative after:absolute after:left-0 after:bottom-[-4px] after:h-[1px] after:bg-white after:transition-all after:duration-300 hover:text-white transition-all duration-300 ease-in-out",
-                pathname === "/articles"
-                  ? "after:w-full"
-                  : "after:w-0 hover:after:w-full",
-                lightMode && "text-black after:bg-black hover:text-black"
-              )}
-            >
-              Articles
-            </Link>
+            <FadeContent>
+              <Link
+                href={"/articles"}
+                className={cn(
+                  "relative after:absolute after:left-0 after:bottom-[-4px] after:h-[1px] after:bg-white after:transition-all after:duration-300 hover:text-white transition-all duration-300 ease-in-out",
+                  pathname === "/articles"
+                    ? "after:w-full"
+                    : "after:w-0 hover:after:w-full",
+                  lightMode && "text-black after:bg-black hover:text-black"
+                )}
+              >
+                Articles
+              </Link>
+            </FadeContent>
           </li>
           <li>
-            <Button
-              variant={lightMode ? "default" : "secondary"}
-              className="!h-[44px] !w-[127px] !text-[16px]  relative z-20"
-            >
-              Contact Us
-            </Button>
+            <FadeContent>
+              <Button
+                variant={lightMode ? "default" : "secondary"}
+                className="!h-[44px] !w-[127px] !text-[16px]  relative z-20"
+              >
+                Contact Us
+              </Button>
+            </FadeContent>
           </li>
         </ul>
       </div>
