@@ -1,9 +1,11 @@
 "use client";
 
+import { useWindowSize } from "@/hooks/useWindowSize";
 import { motion, useMotionValue, useTransform, animate } from "framer-motion";
 import { useEffect, useState } from "react";
 
 export default function Loader() {
+  const { width } = useWindowSize();
   const [isDone, setIsDone] = useState(false);
   const progress = useMotionValue(0);
 
@@ -27,15 +29,15 @@ export default function Loader() {
     <motion.div
       initial={{ opacity: 1 }}
       animate={{ opacity: isDone ? 0 : 1 }}
-      className="fixed inset-0 z-[9999] flex items-center justify-center bg-black pointer-events-none"
+      className="fixed inset-0 z-[9999] flex items-center justify-center dark-bg pointer-events-none"
     >
       <motion.div
         style={{ scale: combinedScale, y: combinedY }}
         layoutId="logo"
       >
         <svg
-          width="80"
-          height="73"
+          width={width > 640 ? "80" : "50"}
+          height={width > 640 ? "73" : "43"}
           viewBox="0 0 80 73"
           xmlns="http://www.w3.org/2000/svg"
         >

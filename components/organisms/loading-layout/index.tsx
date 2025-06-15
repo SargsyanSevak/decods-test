@@ -39,7 +39,7 @@ export default function LoadingLayout({
           <>
             <motion.div
               layoutId="logo"
-              className="absolute top-[-100px] left-[-100px]  "
+              className="absolute top-[-100px] left-[-100px] !z-[9999]"
             >
               <svg
                 width="78"

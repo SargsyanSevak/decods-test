@@ -21,10 +21,9 @@ const MultiCarousel = ({ slides }: MultiCarouselProps) => {
   const [slideWidth, setSlideWidth] = useState(0);
   const [slidesPerView, setSlidesPerView] = useState(1.1); // default mobile
 
-  // Set responsive slidesPerView and slideWidth
   useEffect(() => {
     const updateDimensions = () => {
-      const newSlidesPerView = window.innerWidth < 768 ? 1.1 : 1.5;
+      const newSlidesPerView = window.innerWidth < 768 ? 1 : 1.5;
       setSlidesPerView(newSlidesPerView);
 
       if (containerRef.current) {
@@ -53,7 +52,7 @@ const MultiCarousel = ({ slides }: MultiCarouselProps) => {
       ref={containerRef}
     >
       <div
-        className="flex transition-transform duration-500 ease-in-out"
+        className="flex xl:gap-0 gap-4 transition-transform duration-500 ease-in-out"
         style={{
           transform: `translateX(-${current * slideWidth}px)`,
         }}
@@ -61,7 +60,7 @@ const MultiCarousel = ({ slides }: MultiCarouselProps) => {
         {slides.map((slide, idx) => (
           <motion.div
             key={idx}
-            className="flex-shrink-0 px-4"
+            className="flex-shrink-0 xl:px-4 px-0"
             style={{ width: `${slideWidth}px` }}
           >
             <div className="overflow-hidden h-[400px]">
@@ -70,14 +69,14 @@ const MultiCarousel = ({ slides }: MultiCarouselProps) => {
                 alt={slide.title}
                 width={400}
                 height={420}
-                className="rounded-[24px] rounded-tl-[120px] rounded-br-[120px] object-cover w-full h-full"
+                className="rounded-[24px] xl:rounded-tl-[120px] rounded-tl-[80px]   xl:rounded-br-[120px] rounded-br-[24px]  object-cover w-full h-full"
               />
             </div>
             <div className="mt-4">
               <h3 className="text-[24px] font-semibold text-black">
                 {slide.title}
               </h3>
-              <p className="paragraph font-medium !text-[#05050580] mt-1">
+              <p className="paragraph font-medium slate-text mt-1">
                 {slide.description}
               </p>
             </div>
@@ -85,7 +84,7 @@ const MultiCarousel = ({ slides }: MultiCarouselProps) => {
         ))}
       </div>
 
-      <div className="w-full flex items-center pl-4 gap-4 mt-12">
+      <div className="w-full flex items-center xl:justify-start justify-center xl:pl-4 pl-0 gap-4 xl:mt-12 mt-8">
         <Button
           onClick={() => setCurrent((prev) => Math.max(prev - 1, 0))}
           className="!w-[56px] !h-[56px] !rounded-full  !p-0 bg-[#292929]"

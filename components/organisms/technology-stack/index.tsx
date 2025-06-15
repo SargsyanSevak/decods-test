@@ -9,19 +9,19 @@ const TechnologyStack = () => {
   return (
     <div className="w-full flex flex-col items-center relative">
       <FadeContent>
-        <h2 className="section-title  2xl:leading-[56px] leading-[50px] max-w-[700px] relative z-10 text-white text-center">
+        <h2 className="section-title   max-w-[700px] relative z-10 text-white text-center">
           Industries We Serve & Technology Stack
         </h2>
       </FadeContent>
       <FadeDown>
         <FadeContent>
-          <p className="paragraph relative z-10 text-white/50 text-center mt-6">
+          <p className="paragraph relative z-10 dark-bg-text text-center mt-6">
             Powering Digital Transformation Across Industries
           </p>
         </FadeContent>
       </FadeDown>
 
-      <div className="grid grid-cols-3 gap-6 text-white mt-20">
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-6 text-white lg:mt-20 mt-12">
         {stackData.map((el, i) => {
           return (
             <div
@@ -33,7 +33,7 @@ const TechnologyStack = () => {
             >
               <FadeContent>
                 {!!el.image && (
-                  <div className="rounded-[24px] rounded-tl-[120px] rounded-br-[120px] overflow-hidden h-[520px] w-full relative ">
+                  <div className="rounded-[24px] lg:rounded-tl-[120px] rounded-tl-[80px] lg:rounded-br-[120px] rounded-br-[80px] overflow-hidden md:h-[520px] h-[400px] w-full relative ">
                     <Image
                       src={el.image}
                       width={410}
@@ -42,7 +42,7 @@ const TechnologyStack = () => {
                       className="object-cover w-full h-full"
                     />
                     {!!el.title && (
-                      <h2 className="text-[24px] text-white font-semibold absolute bottom-4 left-4 z-20">
+                      <h2 className="md:text-[24px] text-[20px] text-white font-semibold absolute bottom-4 left-4 z-20">
                         {el.title}
                       </h2>
                     )}
@@ -52,7 +52,7 @@ const TechnologyStack = () => {
 
                 {!!el.description && (
                   <FadeDown>
-                    <p className="paragraph text-center  text-white/50">
+                    <p className="paragraph text-center dark-bg-text">
                       {el.description}
                     </p>
                   </FadeDown>
@@ -63,27 +63,30 @@ const TechnologyStack = () => {
         })}
       </div>
 
-      <FadeDown className="w-full flex justify-center items-center my-16">
-        <Button variant="secondary" iconArrow iconPosition="right">
+      <FadeDown className="w-full flex justify-center items-center md:my-16 my-10">
+        <Button
+          variant="secondary"
+          iconArrow
+          iconPosition="right"
+          className="[@media(max-width:460px)]:!w-full"
+        >
           Hire Our Development Team
         </Button>
       </FadeDown>
 
       <div className="w-full relative z-20">
-        <div className="w-full flex justify-between mt-10">
+        <div className="w-full flex justify-between gap-6 xl:flex-nowrap flex-wrap sm:flex-row flex-col md:mt-10 mt-2">
           {techStack.map((el) => {
             return (
               <div key={el.category} className="text-white">
                 <FadeContent>
                   <h2 className="text24">{el.category}</h2>
                 </FadeContent>
-                <ul className="mt-5 flex flex-col gap-2">
+                <ul className="xl:mt-5 mt-3 flex flex-col gap-2">
                   {el.technologies.map((item, i) => {
                     return (
-                      <FadeDown key={item} delay={0.3 * i}>
-                        <li className="paragraph text-white/50 font-medium">
-                          {item}
-                        </li>
+                      <FadeDown key={item} delay={0.1 * i}>
+                        <li className="paragraph dark-bg-text">{item}</li>
                       </FadeDown>
                     );
                   })}

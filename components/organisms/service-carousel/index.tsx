@@ -6,16 +6,16 @@ import { FadeContent, FadeDown } from "@/components/molecules";
 const ServiceCarousel = () => {
   return (
     <div className="w-full h-full">
-      <div className="flex justify-between gap-20">
+      <div className="flex justify-between xl:flex-row flex-col lg:gap-20 gap-10">
         <div className="">
           <FadeContent>
-            <h2 className="2xl:text-[52px] text-[50px] leading-[100%] font-bold max-w-[600px]">
+            <h2 className="2xl:text-[52px] lg:text-[44px] text-[32px] lg:leading-[100%] leading-[36px] font-bold max-w-[600px]">
               Leading Software Development Company
             </h2>
           </FadeContent>
           <FadeContent>
-            <div className="flex gap-10 mt-20">
-              <p className="paragraph text-[#6f6f6f] 2xl:max-w-[500px] max-w-[380px]">
+            <div className="flex justify-between md:flex-row flex-col lg:gap-10 gap-6 lg:mt-20 mt-10">
+              <p className="paragraph slate-text 2xl:max-w-[500px] max-w-full w-full">
                 As a trusted software development company,{" "}
                 <span className="text-black font-bold">
                   Decods specializes in delivering custom software development
@@ -37,7 +37,7 @@ const ServiceCarousel = () => {
                 market-ready SaaS platforms, we provide comprehensive IT
                 services that drive measurablebusiness results.
               </p>
-              <p className="paragraph text-[#6f6f6f] 2xl:max-w-[500px] max-w-[380px]">
+              <p className="paragraph slate-text 2xl:max-w-[500px] max-w-full w-full">
                 We excel in web application development, creating responsive,
                 scalable solutions using React, Angular, and Vue. js. Our mobile
                 app development services cover both native iOS and Android
@@ -66,7 +66,7 @@ const ServiceCarousel = () => {
             </div>
           </FadeContent>
         </div>
-        <div className="2xl:w-[576px] w-[480px] 2xl:min-w-[576px] min-w-[480px]  rounded-[24px] rounded-tl-[120px] overflow-hidden mt-4 relative">
+        <div className="2xl:w-[576px] 2xl:max-w-[576px] max-w-full w-full xl:min-w-[576px] min-w-full  rounded-[24px] sm:rounded-tl-[120px] rounded-tl-[80px]  overflow-hidden sm:mt-4 mt-0 relative [@media(max-width:600px)]:h-[400px]">
           <Image
             src="https://res.cloudinary.com/dudf3yqtz/image/upload/v1749136929/2c148758ec5a882d3901266ceb7c4d8f61581922_ehkkd7.webp"
             width={576}
@@ -87,14 +87,14 @@ const ServiceCarousel = () => {
           </div>
         </div>
       </div>
-      <div className="mt-24">
+      <div className="lg:mt-24 md:mt-20 mt-16">
         <FadeContent>
-          <h2 className="text-black 2xl:text-[44px] text-[40px] leading-[100%] font-bold max-w-[576px]">
+          <h2 className="text-black section-title font-bold max-w-[576px]">
             Key Technologies & Specializations
           </h2>
         </FadeContent>
 
-        <div className="grid grid-cols-3 mt-10 gap-4">
+        <div className="grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:mt-10 mt-8 xl:gap-4 gap-2">
           <FadeDown className="bg-[#0505050F] p-[20px] rounded-[24px] flex flex-col gap-1">
             <FadeContent>
               <span>
@@ -102,12 +102,12 @@ const ServiceCarousel = () => {
               </span>
             </FadeContent>
             <FadeContent>
-              <h2 className="2xl:text-[24px] text-[20px] leading-[100%] font-bold whitespace-nowrap mt-2">
+              <h2 className="2xl:text-[24px] text-[18px] leading-[100%] font-bold lg:whitespace-nowrap whitespace-normal mt-2">
                 Custom ERP and CRM Development
               </h2>
             </FadeContent>
             <FadeContent>
-              <p className="paragraph text-[#05050580]">
+              <p className="paragraph slate-text">
                 for streamlined business operations
               </p>
             </FadeContent>
@@ -120,12 +120,12 @@ const ServiceCarousel = () => {
               </span>
             </FadeContent>
             <FadeContent>
-              <h2 className="2xl:text-[24px] text-[20px] leading-[100%] font-bold whitespace-nowrap mt-2">
+              <h2 className="2xl:text-[24px] text-[18px] leading-[100%] font-bold lg:whitespace-nowrap whitespace-normal mt-2">
                 SaaS Application Development
               </h2>
             </FadeContent>
             <FadeContent>
-              <p className="paragraph text-[#05050580]">
+              <p className="paragraph slate-text">
                 with multi-tenant architectures
               </p>
             </FadeContent>
@@ -138,12 +138,12 @@ const ServiceCarousel = () => {
               </span>
             </FadeContent>
             <FadeContent>
-              <h2 className="2xl:text-[24px] text-[20px] leading-[100%] font-bold whitespace-nowrap mt-2">
+              <h2 className="2xl:text-[24px] text-[18px] leading-[100%] font-bold lg:whitespace-nowrap whitespace-normal mt-2">
                 E-commerce Development
               </h2>
             </FadeContent>
             <FadeContent>
-              <p className="paragraph text-[#05050580]">
+              <p className="paragraph slate-text">
                 with integrated payment systems
               </p>
             </FadeContent>
@@ -155,12 +155,12 @@ const ServiceCarousel = () => {
               </span>
             </FadeContent>
             <FadeContent>
-              <h2 className="2xl:text-[24px] text-[20px] leading-[100%] font-bold whitespace-nowrap mt-2">
+              <h2 className="2xl:text-[24px] text-[18px] leading-[100%] font-bold lg:whitespace-nowrap whitespace-normal mt-2">
                 Healthcare Solutions
               </h2>
             </FadeContent>
             <FadeContent>
-              <p className="paragraph text-[#05050580]">(HIPAA compliance)</p>
+              <p className="paragraph slate-text">(HIPAA compliance)</p>
             </FadeContent>
           </FadeDown>
 
@@ -171,14 +171,12 @@ const ServiceCarousel = () => {
               </span>
             </FadeContent>
             <FadeContent>
-              <h2 className="2xl:text-[24px] text-[20px] leading-[100%] font-bold whitespace-nowrap mt-2">
+              <h2 className="2xl:text-[24px] text-[18px] leading-[100%] font-bold lg:whitespace-nowrap whitespace-normal mt-2">
                 Financial Applications
               </h2>
             </FadeContent>
             <FadeContent>
-              <p className="paragraph text-[#05050580]">
-                (PCI, KYC compliance)
-              </p>
+              <p className="paragraph slate-text">(PCI, KYC compliance)</p>
             </FadeContent>
           </FadeDown>
 
@@ -189,14 +187,12 @@ const ServiceCarousel = () => {
               </span>
             </FadeContent>
             <FadeContent>
-              <h2 className="2xl:text-[24px] text-[20px] leading-[100%] font-bold whitespace-nowrap mt-2">
+              <h2 className="2xl:text-[24px] text-[18px] leading-[100%] font-bold lg:whitespace-nowrap whitespace-normal mt-2">
                 Real Estate Platforms
               </h2>
             </FadeContent>
             <FadeContent>
-              <p className="paragraph text-[#05050580]">
-                (CRM, mobile applications)
-              </p>
+              <p className="paragraph slate-text">(CRM, mobile applications)</p>
             </FadeContent>
           </FadeDown>
         </div>

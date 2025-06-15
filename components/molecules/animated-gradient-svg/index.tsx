@@ -1,8 +1,11 @@
+import { useWindowSize } from "@/hooks/useWindowSize";
+
 const AnimatedGradientSVG = () => {
+  const { width } = useWindowSize();
   return (
     <svg
-      width="475"
-      height="320"
+      width={width > 600 ? "475" : "340"}
+      height={width > 600 ? "320" : "270"}
       viewBox="0 0 475 320"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

@@ -26,7 +26,7 @@ const SocLinks = ({ variant }: { variant?: "outlined" | "default" }) => {
           <IconFacebook fill={variant === "outlined" ? "black" : ""} />
         </a>
       </FadeDown>
-      <FadeDown delay={0.2}>
+      <FadeDown delay={0.1}>
         <a
           aria-label="instagram"
           href="https://www.instagram.com/decods_com"
@@ -41,7 +41,7 @@ const SocLinks = ({ variant }: { variant?: "outlined" | "default" }) => {
           <IconInstagram fill={variant === "outlined" ? "black" : ""} />
         </a>
       </FadeDown>
-      <FadeDown delay={0.4}>
+      <FadeDown delay={0.2}>
         <a
           aria-label="linkedin"
           href="https://www.linkedin.com/company/decods"
@@ -56,7 +56,7 @@ const SocLinks = ({ variant }: { variant?: "outlined" | "default" }) => {
           <IconLinkedin fill={variant === "outlined" ? "black" : ""} />
         </a>
       </FadeDown>
-      <FadeDown delay={0.6}>
+      <FadeDown delay={0.3}>
         <a
           aria-label="x"
           href="https://x.com/decods_com"

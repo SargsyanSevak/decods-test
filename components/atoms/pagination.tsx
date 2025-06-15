@@ -55,7 +55,7 @@ function PaginationLink({
           size,
         }),
         isActive
-          ? "bg-black text-white hover:bg-black"
+          ? "dark-bg text-white hover:dark-bg"
           : "bg-transparent text-black hover:bg-gray-100",
         className
       )}

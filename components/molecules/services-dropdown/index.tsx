@@ -40,7 +40,7 @@ const ServicesDropdown = ({ scrolled }: { scrolled: boolean }) => {
           name="services-btn"
           aria-label="services-btn"
           className={cn(
-            "flex items-center gap-1 cursor-pointer text-white/50 hover:text-white transition-all duration-300 ease-in-out h-[70px]",
+            "flex items-center gap-1 cursor-pointer dark-bg-text hover:text-white transition-all duration-300 ease-in-out h-[70px]",
             scrolled && "text-black hover:text-gray-700"
           )}
         >
@@ -77,15 +77,15 @@ const ServicesDropdown = ({ scrolled }: { scrolled: boolean }) => {
             </h2>
             <p
               className={cn(
-                "text-[44px] leading-[100%] text-white/50 mt-1 font-bold",
-                scrolled && "text-[#05050580]"
+                "text-[44px] leading-[100%] dark-bg-text mt-1 font-bold",
+                scrolled && "text-[#1e1e1e]"
               )}
             >
               Planning, Design, Develop !
             </p>
             <p
               className={cn(
-                "paragraph text-[#B4B4B4] mt-4 font-medium",
+                "paragraph dark-bg-text mt-4 font-medium",
                 scrolled && "text-[#05050580]"
               )}
             >
@@ -121,7 +121,7 @@ const ServicesDropdown = ({ scrolled }: { scrolled: boolean }) => {
                       "transition-colors duration-200",
                       scrolled
                         ? "text-[#05050580] group-hover:text-[#d1d1d1] hover:text-black"
-                        : "text-[#b4b4b4] group-hover:text-[#4d4d4d] hover:text-white"
+                        : "slate-text group-hover:text-[#4d4d4d] hover:text-white"
                     )}
                   >
                     {el.title}
@@ -142,7 +142,7 @@ const ServicesDropdown = ({ scrolled }: { scrolled: boolean }) => {
                       "transition-colors duration-200",
                       scrolled
                         ? "text-[#05050580] group-hover:text-[#d1d1d1] hover:text-black"
-                        : "text-[#b4b4b4] group-hover:text-[#4d4d4d] hover:text-white"
+                        : "slate-text group-hover:text-[#4d4d4d] hover:text-white"
                     )}
                   >
                     {el.title}

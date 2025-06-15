@@ -11,3 +11,5 @@ export { default as SolutionCard } from "./solution-card";
 export { default as DynamicPagination } from "./dynamic-pagination";
 export { default as ArticleCard } from "./article-card";
 export { default as FadeDown } from "./fade-down";
+export { default as MobileMenu } from "./mobile-menu";
+export { default as Subscribe } from "./subscribe";

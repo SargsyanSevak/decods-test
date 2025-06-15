@@ -9,8 +9,11 @@ import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import ServicesDropdown from "../services-dropdown";
 import FadeContent from "../fade-content";
+import MobileMenu from "../mobile-menu";
+import { useWindowSize } from "@/hooks/useWindowSize";
 
 export default function Navbar() {
+  const { width } = useWindowSize();
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
   const { replace } = useRouter();
@@ -35,7 +38,7 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        "w-full flex items-center bg-[#050505] border-b-[1px] border-b-white/15  h-[80px] z-50 sticky top-0  transition-colors duration-500 ease-in-out ",
+        "w-full flex items-center bg-[#050505] border-b-[1px] border-b-white/15  h-[80px] z-50 sticky !top-0 left-[-1px] right-[-1px]  transition-colors duration-500 ease-in-out ",
         scrolled && "bg-white shadow-[0_0_20px_0_rgba(0,0,0,0.1)]",
         pathname !== "/" && "bg-white"
       )}
@@ -45,7 +48,7 @@ export default function Navbar() {
           "w-full flex items-center justify-between h-[100px] content z-50 sticky top-0  transition-colors duration-500 ease-in-out "
         )}
       >
-        <ul className="lg:flex hidden items-center gap-[46px] text-white/50 w-fit text-[16px] font-medium tracking-wide ">
+        <ul className="lg:flex hidden items-center gap-[46px] dark-bg-text w-fit text-[16px] font-medium tracking-wide ">
           {siteConfig.leftNavMenuItems.map((el) => {
             return (
               <li key={el.label}>
@@ -75,8 +78,8 @@ export default function Navbar() {
           transition={{ ease: "easeOut", duration: 0.6 }}
         >
           <svg
-            width="52"
-            height="52"
+            width={width > 640 ? "52" : "40"}
+            height={width > 640 ? "52" : "40"}
             viewBox="0 0 80 73"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +102,7 @@ export default function Navbar() {
         </motion.div>
         <ul
           className={cn(
-            "lg:flex hidden items-center gap-[46px] text-white/50  w-fit text-[16px] font-medium tracking-wide relative z-50",
+            "lg:flex hidden items-center gap-[46px] dark-bg-text w-fit text-[16px] font-medium tracking-wide relative z-50",
             lightMode && "text-black hover:text-black"
           )}
         >
@@ -133,6 +136,15 @@ export default function Navbar() {
             </FadeContent>
           </li>
         </ul>
+        <div className="text-white lg:hidden flex items-center gap-4">
+          <Button
+            variant={lightMode ? "default" : "secondary"}
+            className="!h-[44px] !w-[127px] !text-[16px]  relative z-20"
+          >
+            Contact Us
+          </Button>
+          <MobileMenu scrolled={lightMode} />
+        </div>
       </div>
     </nav>
   );

@@ -54,6 +54,10 @@
   --primary: oklch(0.21 0.006 285.885);
   --primary-foreground: oklch(0.985 0 0);
   --secondary: #1f1f1f;
+  --black: #0a0a0a;
+  --hair: #ffffff80;
+  --dark-white: #c9c9c9;
+  --dark-gray: #898989;
   --secondary-foreground: oklch(0.21 0.006 285.885);
   --muted: oklch(0.967 0.001 286.375);
   --muted-foreground: oklch(0.552 0.016 285.938);
@@ -119,7 +123,7 @@
     @apply border-border outline-ring/50 m-0 p-0 box-border overscroll-none;
   }
   body {
-    @apply bg-black text-foreground mx-auto !antialiased;
+    @apply bg-[#0a0a0a] text-foreground mx-auto !antialiased;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -127,22 +131,22 @@
     @apply max-w-[1920px] lg:px-14 md:px-10 px-4 mx-auto;
   }
   .title {
-    @apply text-[90px] font-semibold  leading-[90px] text-white;
+    @apply sm:text-[90px] text-[44px] font-semibold  leading-[100%] text-white;
   }
   .paragraph {
     @apply text-[16px]  leading-[20px] font-medium text-white;
   }
   .sub-title {
-    @apply text-[44px] leading-[100%] font-semibold text-white;
+    @apply xl:text-[44px] text-[32px] leading-[100%] font-semibold text-white;
   }
   .description {
-    @apply text-[24px] text-white/50 leading-[32px] tracking-wide;
+    @apply text-[24px]  leading-[32px] tracking-wide;
   }
   .section {
     @apply w-full max-w-[1920px]  h-full py-20 lg:px-16 md:px-10 px-4 mx-auto;
   }
   .section-title {
-    @apply 2xl:text-[52px] text-[50px] leading-[100%] font-bold text-white;
+    @apply 2xl:text-[52px] lg:text-[44px] text-[32px] lg:leading-[100%] leading-[36px] font-bold text-white;
   }
   .section-sub-title {
     @apply 2xl:text-[26px] 2xl:leading-[38px] text-[22px] leading-[35px] text-white font-medium;
@@ -151,10 +155,22 @@
     @apply transition-all duration-300 ease-in-out hover:!text-white;
   }
   .text24 {
-    @apply text-[24px] leading-[32px]  font-bold text-white;
+    @apply lg:text-[24px] md:text-[18px] text-[16px] lg:leading-[32px] md:leading-[24px] leading-[22px] font-bold text-white;
   }
   .center {
     @apply flex justify-center items-center;
+  }
+  .dark-bg {
+    @apply bg-[#0a0a0a];
+  }
+  .slate-text {
+    @apply text-[#585858] font-medium;
+  }
+  .dark-bg-text {
+    @apply text-[#999999];
+  }
+  .slate-bg {
+    @apply bg-[#292929];
   }
 }
 

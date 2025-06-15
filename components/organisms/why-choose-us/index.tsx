@@ -9,7 +9,7 @@ const WhyChooseUs = () => {
         <h2 className="section-title max-w-[724px]">Why Choose Decods</h2>
       </FadeContent>
       <FadeContent delay={100}>
-        <p className="paragraph text-white/50 max-w-[620px] mt-6">
+        <p className="paragraph dark-bg-text max-w-[620px] mt-6">
           When you partner with Decods, you&apos;re choosing a reliable
           development partner committed to delivering exceptional results. Our
           offshore software development model provides significant cost
@@ -19,13 +19,13 @@ const WhyChooseUs = () => {
       </FadeContent>
       <FadeContent delay={150}>
         {" "}
-        <p className="text-[32px] leading-[36px] text-white font-semibold max-w-[576px] mt-10">
+        <p className="lg:text-[32px] text-[24px] lg:leading-[36px] leading-[28px] text-white font-semibold max-w-[576px] mt-10">
           What Makes Decods Different from Other Software Development Companies
         </p>
       </FadeContent>
 
-      <div className="bg-black text-white  py-12 pb-0">
-        <div className=" grid grid-cols-1 md:grid-cols-3 grid-rows-3 2xl:gap-6 gap-4 relative">
+      <div className="dark-bg text-white  py-12 pb-0">
+        <div className=" xl:grid flex flex-col grid-cols-1 md:grid-cols-3 grid-rows-3 2xl:gap-6 xl:gap-4 gap-2 relative">
           {/* 01 */}
           <TextCard
             className="row-start-1 col-start-1 "
@@ -47,9 +47,9 @@ deployment guides. Knowledge transfer becomes
 seamless. Future maintenance stays straightforward."
           />
           {/* Image */}
-          <div className="row-start-1 row-span-1 col-start-3 2xl:-mb-[270px] -mb-[220px] -mt-[150px] relative">
+          <div className="row-start-1 row-span-1 col-start-3 2xl:-mb-[270px] xl:-mb-[220px] -mb-0 xl:h-auto h-[400px] xl:-mt-[150px] -mt-0 relative order-7">
             <div className={`group relative w-full h-full overflow-hidden`}>
-              <div className="absolute inset-0 z-0 transition-all duration-200 rounded-[24px] rounded-tl-[120px] overflow-hidden">
+              <div className="absolute inset-0 z-0 transition-all duration-200 rounded-[24px] lg:rounded-tl-[120px] rounded-tl-[80px] overflow-hidden">
                 <Image
                   src="https://res.cloudinary.com/dudf3yqtz/image/upload/v1749121822/aebe55ee1fed0db6abbb2759054695dcc30610e9_1_dxrsfr.jpg"
                   alt="Card Image"
@@ -112,7 +112,7 @@ your business grows."
           {/* 07 */}
 
           <TextCard
-            className="row-start-3 col-start-3 "
+            className="row-start-3 col-start-3 xl:mb-0 mb-10"
             title="Post-Launch Partnership"
             description="Our relationship doesn't end at deployment. We 
 provide comprehensive software maintenance and 

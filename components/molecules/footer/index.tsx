@@ -2,17 +2,18 @@ import Image from "next/image";
 import SocLinks from "../soc-links";
 import { footerTexts } from "@/mock";
 import Link from "next/link";
-import { Button } from "@/components/atoms/button";
-import { Input } from "@/components/atoms/input";
 import FadeContent from "../fade-content";
 import FadeDown from "../fade-down";
+import Subscribe from "../subscribe";
+import { useWindowSize } from "@/hooks/useWindowSize";
 
 const Footer = () => {
+  const { width } = useWindowSize();
   return (
-    <div className="w-full bg-black relative overflow-hidden">
+    <div className="w-full dark-bg relative overflow-hidden">
       <div className="w-full text-white section pb-8 relative z-20">
-        <div className="flex justify-between gap-6 ">
-          <div className="flex flex-col gap-4">
+        <div className="flex justify-between flex-wrap sm:flex-row flex-col sm:gap-6 gap-8 ">
+          <div className="flex flex-col gap-4 lg:w-max w-full">
             <FadeContent>
               <Image
                 src="https://res.cloudinary.com/dudf3yqtz/image/upload/v1749114870/Group_21_f82grw.png"
@@ -23,18 +24,21 @@ const Footer = () => {
             </FadeContent>
 
             <FadeContent>
-              <p className="paragraph text-white/50 font-medium leading-[24px] max-w-[280px] mt-5">
+              <p className="paragraph dark-bg-text font-medium leading-[24px] md:max-w-[280px] max-w-full mt-5">
                 DECODS is a programming company that builds high-performance
                 digital products through clean code, smart architecture, and
                 modern design.
               </p>
             </FadeContent>
 
-            <div className="w-full mt-8">
+            <div className="w-full sm:mt-8 mt-4">
               <SocLinks />
             </div>
+            <div className="xl:hidden block mt-8 lg:mb-0 mb-6">
+              <Subscribe />
+            </div>
           </div>
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col sm:gap-8 gap-5 ">
             <FadeContent>
               <h2 className="text-[16px] text-white font-semibold">
                 {footerTexts.company.title}
@@ -42,14 +46,14 @@ const Footer = () => {
             </FadeContent>
 
             {
-              <ul className="flex flex-col gap-2 font-normal  max-w-[180px]">
+              <ul className="flex flex-col gap-2 font-normal  sm:max-w-[180px] max-w-full">
                 {footerTexts.company.items.map((el, i) => {
                   return (
                     <li key={el.title}>
-                      <FadeDown delay={0.2 * i}>
+                      <FadeDown delay={0.1 * i}>
                         <Link
                           href={el.href}
-                          className="paragraph text-white/50 font-medium link-hover"
+                          className="paragraph dark-bg-text font-medium link-hover"
                         >
                           {el.title}
                         </Link>
@@ -60,9 +64,9 @@ const Footer = () => {
               </ul>
             }
           </div>
-          <div className="flex flex-col gap-8 max-w-[180px]">
+          <div className="flex flex-col sm:gap-8 gap-5 sm:max-w-[180px] max-w-[220px]">
             <FadeContent>
-              <h2 className="text-[16px] text-white uppercase font-semibold ">
+              <h2 className="text-[16px] text-white uppercase font-semibold max-w-[180px]">
                 {footerTexts.dev_and_design.title}
               </h2>
             </FadeContent>
@@ -72,10 +76,10 @@ const Footer = () => {
                 {footerTexts.dev_and_design.items.map((el, index) => {
                   return (
                     <li key={el.title}>
-                      <FadeDown delay={0.3 * index}>
+                      <FadeDown delay={0.05 * index}>
                         <Link
                           href={el.href}
-                          className="paragraph text-white/50 font-medium link-hover"
+                          className="paragraph dark-bg-text font-medium link-hover"
                         >
                           {el.title}
                         </Link>
@@ -86,9 +90,9 @@ const Footer = () => {
               </ul>
             }
           </div>
-          <div className="flex flex-col gap-8 max-w-[180px]">
+          <div className="flex flex-col sm:gap-8 gap-5 sm:max-w-[180px] max-w-[220px]">
             <FadeContent>
-              <h2 className="text-[16px] text-white uppercase font-semibold">
+              <h2 className="text-[16px] text-white uppercase font-semibold max-w-[180px]">
                 {footerTexts.support.title}
               </h2>
             </FadeContent>
@@ -98,10 +102,10 @@ const Footer = () => {
                 {footerTexts.support.items.map((el, i) => {
                   return (
                     <li key={el.title}>
-                      <FadeDown delay={0.3 * i}>
+                      <FadeDown delay={0.05 * i}>
                         <Link
                           href={el.href}
-                          className="paragraph text-white/50 font-medium link-hover"
+                          className="paragraph dark-bg-text font-medium link-hover"
                         >
                           {el.title}
                         </Link>
@@ -112,37 +116,19 @@ const Footer = () => {
               </ul>
             }
           </div>
-          <div className="flex flex-col gap-8">
-            <FadeContent>
-              <h2 className="text-[16px] text-white font-semibold">
-                SUBSCRIBE
-                <br /> TO NEWSLETTER
-              </h2>
-            </FadeContent>
 
-            <div className="flex flex-col gap-6">
-              <FadeDown>
-                <Input
-                  placeholder="Enter your email"
-                  type="email"
-                  className="py-6 pl-0 placeholder:text-white/50 placeholder:text-[16px] border-0 border-b border-b-[#BCBCCA] rounded-none !focus:outline-none !focus:ring-0 !outline-none !ring-0"
-                />
-              </FadeDown>
-              <FadeDown delay={0.6}>
-                <Button
-                  variant="secondary"
-                  className="!h-[44px] w-[145px] !text-[16px]"
-                >
-                  Subscribe
-                </Button>
-              </FadeDown>
-            </div>
+          <div className="xl:block hidden">
+            <Subscribe />
           </div>
         </div>
         <div className="mt-20">
           <FadeContent>
             <Image
-              src="https://res.cloudinary.com/dudf3yqtz/image/upload/v1749642572/footer__logo_ylx5hq.png"
+              src={
+                width > 430
+                  ? "https://res.cloudinary.com/dudf3yqtz/image/upload/v1749642572/footer__logo_ylx5hq.png"
+                  : "https://res.cloudinary.com/dudf3yqtz/image/upload/v1749973613/hero__logo_r4notj.png"
+              }
               width={1700}
               height={136}
               alt="logo"
@@ -152,7 +138,7 @@ const Footer = () => {
         </div>
         <div className="w-full mt-6 flex justify-center items-center">
           <FadeContent>
-            <p className="text-[14px] text-white/50">
+            <p className="text-[14px] dark-bg-text">
               © Copyright {new Date().getFullYear()}, All Rights Reserved by
               DECODS.
             </p>

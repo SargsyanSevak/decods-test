@@ -30,20 +30,32 @@ const Banner = dynamic(() =>
 const Home = () => {
   return (
     <>
-      <div className="w-full bg-black text-white content mt-20">
-        <div className="w-full flex flex-col gap-10">
+      <div className="w-full dark-bg text-white content ">
+        <div className="w-full flex flex-col gap-10 pt-20">
           <Heroleft />
           <div className="w-full h-[120px] text-center">
             <InfiniteHorizontalScroll items={logos} />
           </div>
         </div>
-        <div className="absolute top-0 right-4 opacity-[0.075] z-0">
+        <div className="absolute top-0 right-4 opacity-[0.03] z-0">
           <div className="w-[485px] h-full bg-gradient-to-b from-transparent to-black">
             <Image
-              src="https://res.cloudinary.com/dudf3yqtz/image/upload/v1749122519/Group_7_yzjage.png"
+              src={
+                "https://res.cloudinary.com/dudf3yqtz/image/upload/v1749122519/Group_7_yzjage.png"
+              }
               width={485}
               height={385}
               alt="Background"
+              className="md:block hidden"
+            />
+            <Image
+              src={
+                "https://res.cloudinary.com/dudf3yqtz/image/upload/v1749975364/Group_mpdi5u.png"
+              }
+              width={485}
+              height={385}
+              alt="Background"
+              className="md:hidden block"
             />
           </div>
         </div>
@@ -57,7 +69,7 @@ const Home = () => {
       </div>
 
       {/* Section 3 */}
-      <div className="w-full bg-black">
+      <div className="w-full dark-bg">
         <div className="w-full text-white section">
           <WhyChooseUs />
         </div>
@@ -65,13 +77,13 @@ const Home = () => {
 
       {/* Section 4 */}
       <div className="w-full bg-white">
-        <div className="w-full h-full text-black section pr-0">
+        <div className="w-full h-full text-black section xl:pr-0">
           <DevelopmentProcess />
         </div>
       </div>
 
       {/* Section 5 */}
-      <div className="w-full bg-black">
+      <div className="w-full dark-bg">
         <div className="w-full text-white section">
           <TechnologyStack />
         </div>
@@ -85,7 +97,7 @@ const Home = () => {
       </div>
 
       {/* Section 7 */}
-      <div className="w-full bg-black overflow-hidden">
+      <div className="w-full dark-bg overflow-hidden">
         <div className="w-full text-white section">
           <FAQ />
         </div>

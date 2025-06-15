@@ -20,13 +20,13 @@ const FAQ = () => {
         </h2>
       </FadeContent>
 
-      <div className="mt-14 flex gap-4 relative z-20 w-fill">
+      <div className="lg:mt-14 mt-10 flex lg:flex-row flex-col lg:gap-4 gap-0 relative z-20 w-fill">
         <Accordion
           type="single"
           collapsible
           value={openItem as string}
           onValueChange={(val) => setOpenItem(val ?? null)}
-          className="w-1/2 min-w-1/2"
+          className="lg:w-1/2 w-full min-w-1/2"
         >
           {faqDataLeft.map((el) => {
             const currentId = String(el.id);
@@ -50,7 +50,7 @@ const FAQ = () => {
           collapsible
           value={openItem as string}
           onValueChange={(val) => setOpenItem(val ?? null)}
-          className="w-1/2 min-w-1/2"
+          className="lg:w-1/2 w-full min-w-1/2"
         >
           {faqDataRight.map((el) => {
             const currentId = String(el.id);

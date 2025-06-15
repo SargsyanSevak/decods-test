@@ -28,7 +28,7 @@ const Testimonials = () => {
         <CarouselContent>
           {testimonials.map((item, index) => (
             <CarouselItem key={index} className="lg:basis-1/2 xl:basis-1/3 ">
-              <div className="bg-[#0505050F] rounded-[24px] rounded-tl-[120px] rounded-br-[120px]  h-[350px] mt-10 p-6 relative">
+              <div className="bg-[#0505050F] rounded-[24px] lg:rounded-tl-[120px] rounded-tl-[80px] lg:rounded-br-[120px] rounded-bt-[24px]  h-[350px] mt-10 p-6 relative">
                 <div className="absolute top-[-26px] right-8">
                   <Image
                     src="https://res.cloudinary.com/dudf3yqtz/image/upload/v1749573200/feedback-icon_kcrrvk.png"
@@ -37,7 +37,7 @@ const Testimonials = () => {
                     alt="quote"
                   />
                 </div>
-                <div className="w-full h-[250px]">
+                <div className="w-full h-[250px] lg:pt-0 pt-10">
                   <FadeContent>
                     <p className="break-words whitespace-normal 2xl:pt-20 sm:pt-24 md:pt-[70px] text-[#050505] font-medium paragraph">
                       {item.text}
@@ -49,7 +49,7 @@ const Testimonials = () => {
                   <FadeContent className="text-black font-semibold text-[18px]">
                     {item.by}
                   </FadeContent>
-                  <FadeContent className="paragraph  text-[#05050580] mt-1">
+                  <FadeContent className="paragraph  slate-text mt-1">
                     {item.company}
                   </FadeContent>
                 </div>

@@ -28,18 +28,20 @@ const Heroleft = () => {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className="w-full">
+    <div className="w-full relative z-20">
       <FadeContent delay={150}>
-        <div className="flex flex-col gap-6 pt-6 relative z-10">
+        <div className="flex flex-col sm:gap-6 gap-0 sm:pt-6 pt-0 relative z-10">
           <h1 className="title">
-            Software <br /> Development
+            <span>Sof</span>
+            <span className="pl-[2px]">tware</span>
+            <br /> Development
           </h1>
 
-          <div className="relative h-[46px] my-3 overflow-hidden">
+          <div className="relative sm:h-[46px] h-[48px] my-3 overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.h1
                 key={index}
-                className="text-[44px] leading-[44px] font-medium text-white/50 absolute"
+                className="sm:text-[44px] text-[24px] leading-[100%] font-medium  dark-bg-text absolute"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
@@ -49,8 +51,8 @@ const Heroleft = () => {
               </motion.h1>
             </AnimatePresence>
           </div>
-          <div className="text-white">
-            <p className="max-w-[700px] text-[18px] !antialiased">
+          <div className="">
+            <p className="max-w-[700px] dark-bg-text  text-[18px] !antialiased">
               Transform your business ideas into powerful digital solutions
               withs our trusted offshore development team. We deliver high
               quality software development at competitive rates while ensuring
@@ -63,10 +65,10 @@ const Heroleft = () => {
             target="_blank"
             rel="noreferrer"
             aria-label="calendly"
-            className="w-fit"
+            className="w-fit [@media(max-width:460px)]:w-full"
           >
             <Button
-              className="w-[196px] h-[56px] mt-4"
+              className="w-[196px] h-[56px] sm:mt-4 mt-8 [@media(max-width:460px)]:!w-full"
               variant="secondary"
               iconArrow
               iconPosition="right"
@@ -74,12 +76,12 @@ const Heroleft = () => {
               Book a Call
             </Button>
           </a>
-          <div className="mt-20 w-full  flex justify-between gap-10">
-            <div className="mt-6">
+          <div className="sm:mt-20 mt-10 w-full  flex lg:flex-row flex-col justify-between gap-10 relative z-20">
+            <div className="mt-6 lg:bg-transparent bg-[#0a0a0a] flex justify-center items-center sm:rounded-tr-[160px] sm:rounded-br-[160px] w-max [@media(max-width:460px)]:w-full">
               <AnimatedGradientSVG />
             </div>
 
-            <div className="max-w-[520px]  flex flex-col gap-8 justify-between bg-gradient-to-b from-black to-transparent relative z-20">
+            <div className="max-w-[520px]  flex flex-col sm:gap-8 gap-6 justify-between bg-gradient-to-b from-[#0a0a0a] to-transparent relative z-20">
               <motion.div
                 initial={{ y: 100, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
@@ -88,12 +90,12 @@ const Heroleft = () => {
                 className="w-full overflow-hidden"
               >
                 <FadeContent>
-                  <h2 className="2xl:text-[28px] text-[24px] leading-[100%] font-semibold">
+                  <h2 className="2xl:text-[28px] sm:text-[24px] text-[18px] leading-[100%] font-semibold">
                     Global Talent, Local Results
                   </h2>
                 </FadeContent>
                 <FadeContent>
-                  <p className="text-white/50 text-[16px] leading-[24px] mt-2">
+                  <p className="dark-bg-text text-[16px] leading-[24px] mt-2">
                     Access skilled developers worldwide. No compromise on
                     communication or project quality.
                   </p>
@@ -109,12 +111,12 @@ const Heroleft = () => {
               >
                 {" "}
                 <FadeContent>
-                  <h2 className="2xl:text-[28px] text-[24px] leading-[100%] font-semibold">
+                  <h2 className="2xl:text-[28px] sm:text-[24px] text-[18px] leading-[100%] font-semibold">
                     Cost-Effective Excellence
                   </h2>
                 </FadeContent>
                 <FadeContent>
-                  <p className="text-white/50 text-[16px] leading-[24px] mt-2">
+                  <p className="dark-bg-text text-[16px] leading-[24px] mt-2">
                     Premium software development services at 40–60% lower costs
                     than onshore alternatives.
                   </p>
@@ -128,12 +130,12 @@ const Heroleft = () => {
                 className="w-full overflow-hidden"
               >
                 <FadeContent>
-                  <h2 className="2xl:text-[28px] text-[24px] leading-[100%] font-semibold">
+                  <h2 className="2xl:text-[28px] sm:text-[24px] text-[18px] leading-[100%] font-semibold">
                     Fast Team Assembly
                   </h2>
                 </FadeContent>
                 <FadeContent>
-                  <p className="text-white/50 text-[16px] leading-[24px] mt-2">
+                  <p className="dark-bg-text text-[16px] leading-[24px] mt-2">
                     Start development within 48 hours. Pre-vetted developers
                     matched to your technology stack.
                   </p>
