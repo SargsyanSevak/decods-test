@@ -37,7 +37,7 @@ const Heroleft = () => {
             <br /> Development
           </h1>
 
-          <div className="relative sm:h-[46px] h-[48px] my-3 overflow-hidden">
+          <div className="relative sm:h-[47px] h-[48px] my-3 overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.h1
                 key={index}
