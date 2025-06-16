@@ -7,14 +7,14 @@ const ServiceCarousel = () => {
   return (
     <div className="w-full h-full">
       <div className="flex justify-between xl:flex-row flex-col-reverse xl:gap-20 gap-10">
-        <div className="">
+        <div>
           <FadeContent className="xl:block hidden">
             <h2 className="2xl:text-[52px] lg:text-[44px] text-[32px] lg:leading-[100%] leading-[36px] font-bold max-w-[600px]">
               Leading Software Development Company
             </h2>
           </FadeContent>
           <FadeContent>
-            <div className="flex justify-between md:flex-row flex-col lg:gap-10 gap-6 xl:mt-20 mt-10">
+            <div className="flex justify-between md:flex-row flex-col lg:gap-10 gap-6 xl:mt-20  lg:mt-10 mt-0">
               <p className="paragraph slate-text 2xl:max-w-[500px] max-w-full w-full">
                 As a trusted software development company,{" "}
                 <span className="text-black font-bold">
@@ -86,7 +86,7 @@ const ServiceCarousel = () => {
             </FadeContent>
           </div>
         </div>
-        <FadeContent className="xl:hidden block">
+        <FadeContent className="xl:hidden block lg:pb-5 pb-3">
           <h2 className="2xl:text-[52px] lg:text-[44px] text-[32px] lg:leading-[100%] leading-[36px] font-bold max-w-[600px]">
             Leading Software Development Company
           </h2>
