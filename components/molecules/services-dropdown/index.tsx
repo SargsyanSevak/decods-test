@@ -50,7 +50,7 @@ const ServicesDropdown = ({ scrolled }: { scrolled: boolean }) => {
 
       <div
         className={cn(
-          "fixed left-0 top-[76px] w-full bg-black/70 backdrop-blur-md text-white z-[9999] p-10  pb-20 rounded-none transition-opacity duration-300",
+          "fixed left-0 top-[76px] w-full bg-black/80 backdrop-blur-md text-white z-[9999] p-10  pb-20 rounded-none transition-opacity duration-300",
           isOpen ? "opacity-100" : "opacity-0 pointer-events-none",
           scrolled && "bg-white"
         )}
@@ -121,7 +121,7 @@ const ServicesDropdown = ({ scrolled }: { scrolled: boolean }) => {
                       "transition-colors duration-200",
                       scrolled
                         ? "text-[#05050580] group-hover:text-[#d1d1d1] hover:text-black"
-                        : "slate-text group-hover:text-[#4d4d4d] hover:text-white"
+                        : "dark-bg-text group-hover:text-[#4d4d4d] hover:text-white"
                     )}
                   >
                     {el.title}
@@ -142,7 +142,7 @@ const ServicesDropdown = ({ scrolled }: { scrolled: boolean }) => {
                       "transition-colors duration-200",
                       scrolled
                         ? "text-[#05050580] group-hover:text-[#d1d1d1] hover:text-black"
-                        : "slate-text group-hover:text-[#4d4d4d] hover:text-white"
+                        : "dark-bg-text group-hover:text-[#4d4d4d] hover:text-white"
                     )}
                   >
                     {el.title}

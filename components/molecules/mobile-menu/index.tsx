@@ -137,7 +137,7 @@ const MobileMenu = ({ scrolled }: { scrolled: boolean }) => {
                       href={service.href}
                       onClick={() => setIsOpen(false)}
                       className={cn(
-                        "paragraph text-[#ffffff80]",
+                        "paragraph text-[#c4c4c4]",
                         scrolled && "text-zinc-600 border-b-zinc-200"
                       )}
                     >
