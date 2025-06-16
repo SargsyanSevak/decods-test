@@ -54,9 +54,7 @@ const Heroleft = () => {
           <div className="">
             <p className="max-w-[700px] text-white text-[18px] !antialiased">
               Transform your business ideas into powerful digital solutions
-              withs our trusted offshore development team. We deliver high
-              quality software development at competitive rates while ensuring
-              quality and reliability.
+              withs our trusted offshore development team.
             </p>
           </div>
 

@@ -1,19 +1,20 @@
 import Image from "next/image";
 import { FadeContent, KeyTecknologies } from "@/components/molecules";
 import { ScrollArea, ScrollBar } from "@/components/atoms/scroll-area";
+import { ArrowRight } from "lucide-react";
 
 const ServiceCarousel = () => {
   return (
     <div className="w-full h-full">
-      <div className="flex justify-between xl:flex-row flex-col lg:gap-20 gap-10">
+      <div className="flex justify-between xl:flex-row flex-col-reverse xl:gap-20 gap-10">
         <div className="">
-          <FadeContent>
+          <FadeContent className="xl:block hidden">
             <h2 className="2xl:text-[52px] lg:text-[44px] text-[32px] lg:leading-[100%] leading-[36px] font-bold max-w-[600px]">
               Leading Software Development Company
             </h2>
           </FadeContent>
           <FadeContent>
-            <div className="flex justify-between md:flex-row flex-col lg:gap-10 gap-6 lg:mt-20 mt-10">
+            <div className="flex justify-between md:flex-row flex-col lg:gap-10 gap-6 xl:mt-20 mt-10">
               <p className="paragraph slate-text 2xl:max-w-[500px] max-w-full w-full">
                 As a trusted software development company,{" "}
                 <span className="text-black font-bold">
@@ -65,18 +66,18 @@ const ServiceCarousel = () => {
             </div>
           </FadeContent>
         </div>
-        <div className="2xl:w-[576px] 2xl:max-w-[576px] max-w-full w-full xl:min-w-[576px] min-w-full  rounded-[24px] sm:rounded-tl-[120px] rounded-tl-[80px]  overflow-hidden sm:mt-4 mt-0 relative [@media(max-width:600px)]:h-[400px]">
+        <div className="2xl:w-[576px] 2xl:max-w-[576px] max-w-full w-full xl:min-w-[576px] min-w-full rounded-[24px] lg:rounded-bl-[24px] rounded-bl-none sm:rounded-tl-[120px] rounded-tl-[80px]   overflow-hidden sm:mt-4 mt-0 relative">
           <Image
             src="https://res.cloudinary.com/dudf3yqtz/image/upload/v1749136929/2c148758ec5a882d3901266ceb7c4d8f61581922_ehkkd7.webp"
             width={576}
             height={916}
             alt="image"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover [@media(max-width:600px)]:h-[400px] rounded-[24px] sm:rounded-tl-[120px] rounded-tl-[80px]"
           />
 
-          <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent to-black pointer-events-none p-4 flex items-end">
+          <div className="lg:absolute static inset-0 z-10 lg:bg-gradient-to-b from-transparent to-black pointer-events-none lg:p-4 xl:pt-0 pt-4 flex items-end">
             <FadeContent>
-              <p className="text-[14px] italic text-white leading-[20px] font-medium">
+              <p className="text-[14px] italic lg:text-white text-black leading-[20px] font-medium">
                 «The global custom software development market is projected
                 to reach $146.18 billion by 2030, with businesses increasingly
                 choosing tailored solutions over off-the-shelf alternatives
@@ -85,12 +86,24 @@ const ServiceCarousel = () => {
             </FadeContent>
           </div>
         </div>
+        <FadeContent className="xl:hidden block">
+          <h2 className="2xl:text-[52px] lg:text-[44px] text-[32px] lg:leading-[100%] leading-[36px] font-bold max-w-[600px]">
+            Leading Software Development Company
+          </h2>
+        </FadeContent>
       </div>
-      <div className="lg:mt-24 md:mt-20 mt-16">
+      <div className="lg:mt-24 md:mt-20 mt-16 relative">
         <FadeContent>
           <h2 className="text-black section-title font-bold lg:max-w-[576px] max-w-[340px]">
             Key Technologies & Specializations
           </h2>
+          <div
+            className="sm:hidden  absolute bottom-1 left-0 flex items-center gap-2  w-full justify-end pr-4"
+            style={{ animation: "scroll-right 1.2s ease-in-out infinite" }}
+          >
+            <p className="text-[16px] font-semibold">Scroll</p>
+            <ArrowRight />
+          </div>
         </FadeContent>
 
         <div className="sm:grid hidden xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:mt-10 mt-8 xl:gap-4 gap-2">

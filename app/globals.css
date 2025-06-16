@@ -213,7 +213,20 @@ img {
       transform: translateX(-50%);
     }
   }
-
+  @keyframes scroll-right {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    50% {
+      transform: translateX(10px);
+      opacity: 0.7;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
   .animate-scroll {
     animation-name: scroll;
     animation-timing-function: linear;
@@ -221,4 +234,21 @@ img {
     animation-direction: var(--animation-direction, forwards);
     animation-duration: var(--animation-duration, 40s);
   }
+}
+@keyframes scroll-arrow {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+}
+.scroll-arrow {
+  position: absolute;
+  animation: scroll-arrow 1s ease-in-out infinite;
+}
+.scroll-arrow.second {
+  animation-delay: 0.5s;
 }

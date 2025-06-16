@@ -1,5 +1,6 @@
 import { ScrollArea, ScrollBar } from "@/components/atoms/scroll-area";
 import { ChooseBlocks, FadeContent, TextCard } from "@/components/molecules";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
@@ -25,11 +26,18 @@ const WhyChooseUs = () => {
         </p>
       </FadeContent>
 
-      <div className="dark-bg text-white  py-12 pb-0">
+      <div className="dark-bg text-white  py-12 pb-0 relative">
         <ScrollArea className="w-full sm:hidden block -mb-10">
           <ChooseBlocks />
           <ScrollBar orientation="horizontal" />
         </ScrollArea>
+        <div
+          className="sm:hidden  absolute bottom-1 left-0 flex items-center gap-2  w-full justify-end pr-4"
+          style={{ animation: "scroll-right 1.2s ease-in-out infinite" }}
+        >
+          <p className="text-[16px] font-semibold">Scroll</p>
+          <ArrowRight />
+        </div>
         <div className="xl:grid sm:flex hidden flex-col grid-cols-1 md:grid-cols-3 grid-rows-3 2xl:gap-6 xl:gap-4 gap-2 relative">
           {/* 01 */}
           <TextCard
