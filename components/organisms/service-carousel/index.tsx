@@ -98,11 +98,11 @@ const ServiceCarousel = () => {
             Key Technologies & Specializations
           </h2>
           <div
-            className="sm:hidden  absolute bottom-1 left-0 flex items-center gap-2  w-full justify-end pr-4"
+            className="sm:hidden  absolute bottom-3 left-0 flex items-center gap-2  w-full justify-end pr-4"
             style={{ animation: "scroll-right 1.2s ease-in-out infinite" }}
           >
-            <p className="text-[16px] font-semibold">Scroll</p>
-            <ArrowRight />
+            <p className="text-[12px] font-semibold">Scroll</p>
+            <ArrowRight size={14} />
           </div>
         </FadeContent>
 

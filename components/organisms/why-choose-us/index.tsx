@@ -32,11 +32,11 @@ const WhyChooseUs = () => {
           <ScrollBar orientation="horizontal" />
         </ScrollArea>
         <div
-          className="sm:hidden  absolute bottom-1 left-0 flex items-center gap-2  w-full justify-end pr-4"
+          className="sm:hidden  absolute bottom-3 left-0 flex items-center gap-2  w-full justify-end pr-4"
           style={{ animation: "scroll-right 1.2s ease-in-out infinite" }}
         >
-          <p className="text-[16px] font-semibold">Scroll</p>
-          <ArrowRight />
+          <p className="text-[12px] font-semibold">Scroll</p>
+          <ArrowRight size={14} />
         </div>
         <div className="xl:grid sm:flex hidden flex-col grid-cols-1 md:grid-cols-3 grid-rows-3 2xl:gap-6 xl:gap-4 gap-2 relative">
           {/* 01 */}
