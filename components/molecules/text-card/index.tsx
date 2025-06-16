@@ -19,7 +19,7 @@ const TextCard: FC<TextCardProps> = ({ title, description, className }) => {
         </h2>
       </FadeContent>
       <FadeContent>
-        <p className="paragraph dark-bg-text line-clamp-3">{description}</p>
+        <p className="paragraph text-white line-clamp-3">{description}</p>
       </FadeContent>
     </FadeDown>
   );

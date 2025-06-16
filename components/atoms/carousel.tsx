@@ -184,7 +184,7 @@ function CarouselPrevious({
       data-slot="carousel-previous"
       variant={variant}
       size={size}
-      className={cn("w-[56px] h-[56px] !p-0 hover:dark-bg", className)}
+      className={cn("w-[56px] h-[56px] !p-0 hover:bg-[#0a0a0a]", className)}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}
@@ -208,7 +208,7 @@ function CarouselNext({
       data-slot="carousel-next"
       variant={variant}
       size={size}
-      className={cn("w-[56px] h-[56px] hover:dark-bg !p-0", className)}
+      className={cn("w-[56px] h-[56px] hover:bg-[#0a0a0a] !p-0", className)}
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}
