@@ -1,7 +1,6 @@
 import Image from "next/image";
-import { Heart, Layers, ShoppingCart } from "lucide-react";
-import { IconCloud, IconDollar, IconHome } from "@/assets";
-import { FadeContent, FadeDown } from "@/components/molecules";
+import { FadeContent, KeyTecknologies } from "@/components/molecules";
+import { ScrollArea, ScrollBar } from "@/components/atoms/scroll-area";
 
 const ServiceCarousel = () => {
   return (
@@ -89,113 +88,20 @@ const ServiceCarousel = () => {
       </div>
       <div className="lg:mt-24 md:mt-20 mt-16">
         <FadeContent>
-          <h2 className="text-black section-title font-bold max-w-[576px]">
+          <h2 className="text-black section-title font-bold lg:max-w-[576px] max-w-[340px]">
             Key Technologies & Specializations
           </h2>
         </FadeContent>
 
-        <div className="grid xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:mt-10 mt-8 xl:gap-4 gap-2">
-          <FadeDown className="bg-[#0505050F] p-[20px] rounded-[24px] flex flex-col gap-1">
-            <FadeContent>
-              <span>
-                <Layers size={32} />
-              </span>
-            </FadeContent>
-            <FadeContent>
-              <h2 className="2xl:text-[24px] text-[18px] leading-[100%] font-bold lg:whitespace-nowrap whitespace-normal mt-2">
-                Custom ERP and CRM Development
-              </h2>
-            </FadeContent>
-            <FadeContent>
-              <p className="paragraph slate-text">
-                for streamlined business operations
-              </p>
-            </FadeContent>
-          </FadeDown>
-
-          <FadeDown className="bg-[#0505050F] p-[20px] rounded-[24px] flex flex-col gap-1">
-            <FadeContent>
-              <span>
-                <IconCloud />
-              </span>
-            </FadeContent>
-            <FadeContent>
-              <h2 className="2xl:text-[24px] text-[18px] leading-[100%] font-bold lg:whitespace-nowrap whitespace-normal mt-2">
-                SaaS Application Development
-              </h2>
-            </FadeContent>
-            <FadeContent>
-              <p className="paragraph slate-text">
-                with multi-tenant architectures
-              </p>
-            </FadeContent>
-          </FadeDown>
-
-          <FadeDown className="bg-[#0505050F] p-[20px] rounded-[24px] flex flex-col gap-1">
-            <FadeContent>
-              <span>
-                <ShoppingCart size={32} />
-              </span>
-            </FadeContent>
-            <FadeContent>
-              <h2 className="2xl:text-[24px] text-[18px] leading-[100%] font-bold lg:whitespace-nowrap whitespace-normal mt-2">
-                E-commerce Development
-              </h2>
-            </FadeContent>
-            <FadeContent>
-              <p className="paragraph slate-text">
-                with integrated payment systems
-              </p>
-            </FadeContent>
-          </FadeDown>
-          <FadeDown className="bg-[#0505050F] p-[20px] rounded-[24px] flex flex-col gap-1">
-            <FadeContent>
-              <span>
-                <Heart size={32} />
-              </span>
-            </FadeContent>
-            <FadeContent>
-              <h2 className="2xl:text-[24px] text-[18px] leading-[100%] font-bold lg:whitespace-nowrap whitespace-normal mt-2">
-                Healthcare Solutions
-              </h2>
-            </FadeContent>
-            <FadeContent>
-              <p className="paragraph slate-text">(HIPAA compliance)</p>
-            </FadeContent>
-          </FadeDown>
-
-          <FadeDown className="bg-[#0505050F] p-[20px] rounded-[24px] flex flex-col gap-1">
-            <FadeContent>
-              <span>
-                <IconDollar />
-              </span>
-            </FadeContent>
-            <FadeContent>
-              <h2 className="2xl:text-[24px] text-[18px] leading-[100%] font-bold lg:whitespace-nowrap whitespace-normal mt-2">
-                Financial Applications
-              </h2>
-            </FadeContent>
-            <FadeContent>
-              <p className="paragraph slate-text">(PCI, KYC compliance)</p>
-            </FadeContent>
-          </FadeDown>
-
-          <FadeDown className="bg-[#0505050F] p-[20px] rounded-[24px] flex flex-col gap-1">
-            <FadeContent>
-              <span>
-                <IconHome />
-              </span>
-            </FadeContent>
-            <FadeContent>
-              <h2 className="2xl:text-[24px] text-[18px] leading-[100%] font-bold lg:whitespace-nowrap whitespace-normal mt-2">
-                Real Estate Platforms
-              </h2>
-            </FadeContent>
-            <FadeContent>
-              <p className="paragraph slate-text">(CRM, mobile applications)</p>
-            </FadeContent>
-          </FadeDown>
+        <div className="sm:grid hidden xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:mt-10 mt-8 xl:gap-4 gap-2">
+          <KeyTecknologies />
         </div>
+        <ScrollArea className="w-full sm:hidden block -mb-10">
+          <div className="flex  gap-4 flex-row py-10 pr-4">
+            <KeyTecknologies />
+          </div>
+          <ScrollBar orientation="horizontal" />
+        </ScrollArea>
       </div>
     </div>
   );

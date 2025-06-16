@@ -1,4 +1,5 @@
-import { FadeContent, TextCard } from "@/components/molecules";
+import { ScrollArea, ScrollBar } from "@/components/atoms/scroll-area";
+import { ChooseBlocks, FadeContent, TextCard } from "@/components/molecules";
 import Image from "next/image";
 import React from "react";
 
@@ -25,7 +26,11 @@ const WhyChooseUs = () => {
       </FadeContent>
 
       <div className="dark-bg text-white  py-12 pb-0">
-        <div className=" xl:grid flex flex-col grid-cols-1 md:grid-cols-3 grid-rows-3 2xl:gap-6 xl:gap-4 gap-2 relative">
+        <ScrollArea className="w-full sm:hidden block -mb-10">
+          <ChooseBlocks />
+          <ScrollBar orientation="horizontal" />
+        </ScrollArea>
+        <div className="xl:grid sm:flex hidden flex-col grid-cols-1 md:grid-cols-3 grid-rows-3 2xl:gap-6 xl:gap-4 gap-2 relative">
           {/* 01 */}
           <TextCard
             className="row-start-1 col-start-1 "

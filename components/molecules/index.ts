@@ -13,3 +13,5 @@ export { default as ArticleCard } from "./article-card";
 export { default as FadeDown } from "./fade-down";
 export { default as MobileMenu } from "./mobile-menu";
 export { default as Subscribe } from "./subscribe";
+export { default as KeyTecknologies } from "./key-tecknologies";
+export { default as ChooseBlocks } from "./choose-blocks";
