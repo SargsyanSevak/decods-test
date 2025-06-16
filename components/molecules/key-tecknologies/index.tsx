@@ -3,10 +3,17 @@ import { Heart, Layers, ShoppingCart } from "lucide-react";
 import { IconCloud, IconDollar, IconHome } from "@/assets";
 import { FadeContent, FadeDown } from "@/components/molecules";
 
-const KeyTecknologies = () => {
+const KeyTecknologies = ({
+  disableAnimation,
+}: {
+  disableAnimation: boolean;
+}) => {
   return (
     <>
-      <FadeDown className="bg-[#0505050F] sm:min-w-auto min-w-[350px] p-[20px] rounded-[24px] flex flex-col gap-1">
+      <FadeDown
+        disable={disableAnimation}
+        className="bg-[#0505050F] sm:min-w-auto min-w-[350px] p-[20px] rounded-[24px] flex flex-col gap-1"
+      >
         <FadeContent>
           <span>
             <Layers size={32} />
@@ -24,7 +31,10 @@ const KeyTecknologies = () => {
         </FadeContent>
       </FadeDown>
 
-      <FadeDown className="bg-[#0505050F] p-[20px] rounded-[24px] flex flex-col gap-1 sm:min-w-auto min-w-[350px]">
+      <FadeDown
+        disable={disableAnimation}
+        className="bg-[#0505050F] p-[20px] rounded-[24px] flex flex-col gap-1 sm:min-w-auto min-w-[350px]"
+      >
         <FadeContent>
           <span>
             <IconCloud />
@@ -42,7 +52,10 @@ const KeyTecknologies = () => {
         </FadeContent>
       </FadeDown>
 
-      <FadeDown className="bg-[#0505050F] p-[20px] rounded-[24px] flex flex-col gap-1 sm:min-w-auto min-w-[350px]">
+      <FadeDown
+        disable={disableAnimation}
+        className="bg-[#0505050F] p-[20px] rounded-[24px] flex flex-col gap-1 sm:min-w-auto min-w-[350px]"
+      >
         <FadeContent>
           <span>
             <ShoppingCart size={32} />
@@ -59,7 +72,10 @@ const KeyTecknologies = () => {
           </p>
         </FadeContent>
       </FadeDown>
-      <FadeDown className="bg-[#0505050F] p-[20px] rounded-[24px] flex flex-col gap-1 sm:min-w-auto min-w-[350px]">
+      <FadeDown
+        disable={disableAnimation}
+        className="bg-[#0505050F] p-[20px] rounded-[24px] flex flex-col gap-1 sm:min-w-auto min-w-[350px]"
+      >
         <FadeContent>
           <span>
             <Heart size={32} />
@@ -75,7 +91,10 @@ const KeyTecknologies = () => {
         </FadeContent>
       </FadeDown>
 
-      <FadeDown className="bg-[#0505050F] p-[20px] rounded-[24px] flex flex-col gap-1 sm:min-w-auto min-w-[350px]">
+      <FadeDown
+        disable={disableAnimation}
+        className="bg-[#0505050F] p-[20px] rounded-[24px] flex flex-col gap-1 sm:min-w-auto min-w-[350px]"
+      >
         <FadeContent>
           <span>
             <IconDollar />
@@ -91,7 +110,10 @@ const KeyTecknologies = () => {
         </FadeContent>
       </FadeDown>
 
-      <FadeDown className="bg-[#0505050F] p-[20px] rounded-[24px] flex flex-col gap-1 sm:min-w-auto min-w-[350px]">
+      <FadeDown
+        disable={disableAnimation}
+        className="bg-[#0505050F] p-[20px] rounded-[24px] flex flex-col gap-1 sm:min-w-auto min-w-[350px]"
+      >
         <FadeContent>
           <span>
             <IconHome />

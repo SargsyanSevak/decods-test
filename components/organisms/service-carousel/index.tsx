@@ -94,11 +94,11 @@ const ServiceCarousel = () => {
         </FadeContent>
 
         <div className="sm:grid hidden xl:grid-cols-3 sm:grid-cols-2 grid-cols-1 sm:mt-10 mt-8 xl:gap-4 gap-2">
-          <KeyTecknologies />
+          <KeyTecknologies disableAnimation={false} />
         </div>
         <ScrollArea className="w-full sm:hidden block -mb-10">
           <div className="flex  gap-4 flex-row py-10 pr-4">
-            <KeyTecknologies />
+            <KeyTecknologies disableAnimation={true} />
           </div>
           <ScrollBar orientation="horizontal" />
         </ScrollArea>

@@ -11,6 +11,7 @@ interface TextCardProps {
 const TextCard: FC<TextCardProps> = ({ title, description, className }) => {
   return (
     <FadeDown
+      disable
       className={`relative flex flex-col justify-between z-10 slate-bg rounded-[24px] px-[20px] py-[16px] 2xl:h-[300px] xl:h-[250px] lg:h-[200px] h-[150px] ${className}`}
     >
       <FadeContent delay={150}>

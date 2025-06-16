@@ -7,6 +7,7 @@ interface FadeContentProps {
   className?: string;
   duration?: number;
   delay?: number;
+  disable?: boolean;
 }
 
 const FadeDown: React.FC<FadeContentProps> = ({
@@ -14,9 +15,10 @@ const FadeDown: React.FC<FadeContentProps> = ({
   className = "",
   duration = 0.6,
   delay = 0,
+  disable,
 }) => {
   const cardVariants = {
-    hidden: { opacity: 0, y: 40 },
+    hidden: { opacity: 0, y: disable ? 0 : 40 },
     show: {
       opacity: 1,
       y: 0,
