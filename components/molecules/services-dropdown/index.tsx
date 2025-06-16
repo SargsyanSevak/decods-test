@@ -120,7 +120,7 @@ const ServicesDropdown = ({ scrolled }: { scrolled: boolean }) => {
                     className={cn(
                       "transition-colors duration-200",
                       scrolled
-                        ? "text-[#05050580] group-hover:text-[#d1d1d1] hover:text-black"
+                        ? "slate-text group-hover:text-[#d1d1d1] hover:text-black"
                         : "dark-bg-text group-hover:text-[#4d4d4d] hover:text-white"
                     )}
                   >
@@ -141,7 +141,7 @@ const ServicesDropdown = ({ scrolled }: { scrolled: boolean }) => {
                     className={cn(
                       "transition-colors duration-200",
                       scrolled
-                        ? "text-[#05050580] group-hover:text-[#d1d1d1] hover:text-black"
+                        ? "slate-text group-hover:text-[#d1d1d1] hover:text-black"
                         : "dark-bg-text group-hover:text-[#4d4d4d] hover:text-white"
                     )}
                   >
