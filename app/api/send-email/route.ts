@@ -54,12 +54,12 @@ import { NextRequest, NextResponse } from 'next/server';
 import { contactSuccessTemplate } from '@/utils/emailTemplate';
 
 const transport = nodemailer.createTransport({
-  host: process.env.MAIL_HOST,
-  port: Number(process.env.MAIL_PORT),
+  host: process.env.NEXT_PUBLIC_MAIL_HOST,
+  port: Number(process.env.NEXT_PUBLIC_MAIL_PORT),
   secure: Number(process.env.MAIL_PORT) === 465,
   auth: {
-    user: process.env.MAIL_USER,
-    pass: process.env.MAIL_PASSWORD,
+    user: process.env.NEXT_PUBLIC_MAIL_USER,
+    pass: process.env.NEXT_PUBLIC_MAIL_PASSWORD,
   },
 } as SMTPTransport.Options);
 
@@ -111,6 +111,7 @@ export async function POST(req: NextRequest) {
     });
   } catch (error) {
 if(error){
+  console.error(error)
   return NextResponse.json(
     { message: 'Unable to send email' },
     { status: 500 }
