@@ -220,12 +220,13 @@ const ContactUs = () => {
                 id="terms"
                 checked={checked}
                 onCheckedChange={(e: boolean) => setChecked(e)}
+                className="bg-[#0505050F] w-[20px] h-[20px]"
               />
               <Label htmlFor="terms" className="text-[16px]">
                 I consent to marketing communications from Decods, Inc.
               </Label>
             </div>
-            <p className="text-[14px] max-w-[512px] mt-1 pl-7 slate-text">
+            <p className="text-[14px] max-w-[512px] mt-1 pl-8 slate-text">
               By submitting this form, you consent to the processing of your
               personal data uploaded through the contact form above,
               in accordance with the terms of Decods, Inc.’s{" "}
