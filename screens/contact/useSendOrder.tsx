@@ -5,8 +5,8 @@ import * as z from "zod";
 import { contactSchema } from "@/schema/contact-schema";
 import { toast } from "sonner";
 
-const projectTypes = ["Website", "App", "Landing page", "Other"] as const;
-const budget = ["$1k - $5k", "$20k - $30k", "$30k - $50k", "$50k+"] as const;
+const projectTypes = ["Website", "App", "Landing page","Hire Developer", "Other"] as const;
+const budget = ["$500 - $5k", "$5k - $20k", "$20k - $50k", "$50k - $100k","$100k+"] as const;
 
 type ProjectType = (typeof projectTypes)[number];
 type BudgetType = (typeof budget)[number];
@@ -17,7 +17,7 @@ const useSendOrder = () => {
   const [loading, setloading] = useState<boolean>(false);
   const [selectedProjectType, setSelectedProjectType] =
     useState<ProjectType>("Website");
-  const [selectedBudget, setSelectedBudget] = useState<BudgetType>("$1k - $5k");
+  const [selectedBudget, setSelectedBudget] = useState<BudgetType>("$500 - $5k");
 
   const handleChangeProjectType = useCallback((type: ProjectType) => {
     setSelectedProjectType(type);
@@ -71,7 +71,7 @@ const useSendOrder = () => {
         setloading(false);
         setValue("task", "");
         handleChangeProjectType("Website");
-        handleChangeBudget("$1k - $5k");
+        handleChangeBudget("$500 - $5k");
         setChecked(false);
         setTimeout(() => {
           reset();

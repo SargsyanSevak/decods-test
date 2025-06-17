@@ -12,7 +12,12 @@ import { ContactLinks } from "@/components/molecules";
 import { Toaster } from "sonner";
 import dynamic from "next/dynamic";
 import "react-international-phone/style.css";
-import { CircleAlert } from "lucide-react";
+import { CircleAlert, CircleHelp } from "lucide-react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/atoms/tooltip";
 
 const PhoneInput = dynamic(
   () => import("react-international-phone").then((mod) => mod.PhoneInput),
@@ -64,16 +69,31 @@ const ContactUs = () => {
               {projectTypes.map((el) => {
                 const selected = selectedProjectType === el;
                 return (
-                  <button
+                  <div
+                    role="button"
                     key={el}
                     className={cn(
-                      "h-[40px] rounded-[9999px] px-[20px] border-[1px] border-black/15 flex justify-center items-center slate-text cursor-pointer",
+                      "h-[40px] rounded-[9999px] px-[20px] border-[1px] border-black/15 flex justify-center items-center gap-4 slate-text cursor-pointer",
                       selected && "bg-black text-white border-black"
                     )}
                     onClick={() => handleChangeProjectType(el)}
                   >
-                    {el}
-                  </button>
+                    {el}{" "}
+                    <div className="md:flex hidden justify-center items-center">
+                      {el === "Hire Developer" && (
+                        <Tooltip>
+                          <TooltipTrigger>
+                            <CircleHelp size={18} />
+                          </TooltipTrigger>
+                          <TooltipContent className="w-[260px]">
+                            Hire Developer — fast matching with a vetted
+                            developer for your project. Get direct contact with
+                            the expert and quality assurance from our team.
+                          </TooltipContent>
+                        </Tooltip>
+                      )}
+                    </div>
+                  </div>
                 );
               })}
             </div>
