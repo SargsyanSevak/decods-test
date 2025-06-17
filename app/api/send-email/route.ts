@@ -1,52 +1,3 @@
-// import { contactSuccessTemplate } from "@/utils/emailTemplate";
-// import { htmlToText } from "html-to-text";
-// import { NextRequest, NextResponse } from "next/server";
-// import nodemailer from "nodemailer";
-
-// export async function POST(req: NextRequest) {
-//   const body = await req.json();
-//   const { to, subject } = body;
-//   const text = htmlToText(contactSuccessTemplate("Vrdo"));
-//   const html = contactSuccessTemplate("mrdo");
-
-//   if (!to || !subject || !text) {
-//     return NextResponse.json(
-//       { message: "Missing required fields" },
-//       { status: 400 }
-//     );
-//   }
-
-//   try {
-//     const transporter = nodemailer.createTransport({
-//       service: "gmail",
-//       auth: {
-//         user: "help@decods.com",
-//         pass: "crwu mxxy ivmg omgh",
-//       },
-//     });
-
-//     await transporter.sendMail({
-//       from: "help@decods.com",
-//       replyTo: "help@decods.com",
-//       to,
-//       subject,
-//       html,
-//       text,
-//     });
-
-//     return NextResponse.json(
-//       { message: "Email sent successfully" },
-//       { status: 200 }
-//     );
-//   } catch (error) {
-//     console.error("Email error:", error);
-//     return NextResponse.json(
-//       { message: "Failed to send email" },
-//       { status: 500 }
-//     );
-//   }
-// }
-
 import nodemailer from 'nodemailer';
 import Mail from 'nodemailer/lib/mailer';
 import SMTPTransport from 'nodemailer/lib/smtp-transport';
@@ -56,7 +7,7 @@ import { contactSuccessTemplate } from '@/utils/emailTemplate';
 const transport = nodemailer.createTransport({
   host: process.env.NEXT_PUBLIC_MAIL_HOST,
   port: Number(process.env.NEXT_PUBLIC_MAIL_PORT),
-  secure: Number(process.env.MAIL_PORT) === 465,
+  secure: Number(process.env.NEXT_PUBLIC_MAIL_PORT) === 465,
   auth: {
     user: process.env.NEXT_PUBLIC_MAIL_USER,
     pass: process.env.NEXT_PUBLIC_MAIL_PASSWORD,
@@ -90,8 +41,8 @@ export async function POST(req: NextRequest) {
     const plainText = `Thanks for contacting us, ${body.recipientName || 'Friend'}.\nWe’ve received your message and will get back to you shortly.`;
 
     const sender = {
-      name: "Decods - Software company",
-      address:process.env.MAIL_USER!,
+      name: 'Decods - Software company',
+      address:process.env.NEXT_PUBLIC_MAIL_USER!,
     };
     const recipient = {
       name: body.recipientName,
@@ -111,7 +62,6 @@ export async function POST(req: NextRequest) {
     });
   } catch (error) {
 if(error){
-  console.error(error)
   return NextResponse.json(
     { message: 'Unable to send email' },
     { status: 500 }
