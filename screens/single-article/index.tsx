@@ -49,18 +49,18 @@ const SingleArticleScreen: FC<Article> = ({ data }) => {
   return (
     <div className="text-white section">
       <div className="w-full max-w-[832px] mx-auto">
-        <h2 className="section-title text-black max-w-[712px]">{data.title}</h2>
-        <p className="text-[#05050580] text-[18px] leading-[24px] mt-4">
+        <h2 className="section-title text-black max-w-[780px]">{data.title}</h2>
+        <p className="text-[#05050580] lg:text-[18px] text-[16px] lg:leading-[24px] leading-[20px] mt-4">
           By <span className="font-medium text-black">{data.by}</span> on{" "}
           <span className="font-medium text-black">{data.date}</span> In{" "}
           {data.category}{" "}
         </p>
-        <p className="text-[#05050580] text-[18px] leading-[24px] mt-4">
+        <p className="text-[#05050580] lg:text-[18px] text-[16px] leading-[24px] mt-4">
           {data.description}
         </p>
 
-        <div className="flex items-center justify-between mt-14">
-          <h2 className="text-black text-[20px] font-semibold">
+        <div className="flex items-center justify-between lg:mt-14 mt-10">
+          <h2 className="text-black lg:text-[20px] text-[18px] font-semibold">
             Share this insight
           </h2>
           <div className="flex items-center gap-2">
@@ -92,17 +92,17 @@ const SingleArticleScreen: FC<Article> = ({ data }) => {
         />
       </div>
 
-      <div className="mt-[40px] w-full max-w-[872px] mx-auto flex flex-col gap-8">
+      <div className="mt-[40px] w-full max-w-[872px] mx-auto flex flex-col lg:gap-8 gap-6">
         {data.content.map((el) => {
           return (
             <div key={el.id}>
-              <h2 className="text-black text-[32px] font-semibold leading-[36px]">
+              <h2 className="text-black lg:text-[32px] text-[24px] font-semibold leading-[36px]">
                 {el.id}. {el.title}
               </h2>
-              <p className="text-[18px] text-[#05050580] leading-[24px] font-medium mt-4">
+              <p className="lg:text-[18px] text-[16px] text-[#05050580] leading-[24px] font-medium lg:mt-4 mt-2">
                 {el.subTitle}
               </p>
-              <p className="text-[18px] text-[#05050580] leading-[24px] font-medium mt-4">
+              <p className="lg:text-[18px] text-[16px] text-[#05050580] leading-[24px] font-medium lg:mt-4 mt-3">
                 {el.description}
               </p>
             </div>
@@ -111,7 +111,7 @@ const SingleArticleScreen: FC<Article> = ({ data }) => {
       </div>
 
       <div className="w-full mt-24">
-        <h2 className="text-black text-[42px] leading-[42px] font-bold">
+        <h2 className="text-black lg:text-[42px] text-[32px] leading-[100%] font-bold">
           Might be interesting
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-8 mt-8">

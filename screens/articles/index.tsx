@@ -6,8 +6,17 @@ import useArticles from "./useArticles";
 import { ArticleCard, DynamicPagination } from "@/components/molecules";
 import { useEffect } from "react";
 import { Input } from "@/components/atoms/input";
+import { useWindowSize } from "@/hooks/useWindowSize";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/atoms/select";
 
 const Articles = () => {
+  const { width } = useWindowSize();
   const {
     tabs,
     tab,
@@ -26,26 +35,47 @@ const Articles = () => {
 
   return (
     <div className="text-white section">
-      <h2 className="section-title text-black max-w-[800px]">
+      <h2 className="section-title text-black xl:max-w-[800px] max-w-[600px]">
         Explore the Future of Tech — One Article at a Time
       </h2>
-      <div className="mt-20">
-        <div className="flex justify-between items-center">
-          <Tabs
-            value={tab}
-            onValueChange={(e) => {
-              setTab(e);
-              setPage(1);
-            }}
-          >
-            <TabsList className="flex items-center gap-2">
-              {tabs.map((el) => (
-                <TabsTrigger key={el} value={el}>
-                  {el}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-          </Tabs>
+      <div className="lg:mt-20 mt-12">
+        <div className="flex justify-between gap-6 items-center">
+          {width > 764 ? (
+            <Tabs
+              value={tab}
+              onValueChange={(e) => {
+                setTab(e);
+                setPage(1);
+              }}
+            >
+              <TabsList className="flex items-center gap-2">
+                {tabs.map((el) => (
+                  <TabsTrigger key={el} value={el}>
+                    {el}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </Tabs>
+          ) : (
+            <Select>
+              <SelectTrigger className="w-fit bg-black !text-white text-[16px]  rounded-[999]  px-[20px] !py-[8px] !h-[44px]">
+                <SelectValue
+                  className="!text-white"
+                  placeholder={"All"}
+                  defaultValue={"All"}
+                />
+              </SelectTrigger>
+              <SelectContent>
+                {tabs.map((el) => {
+                  return (
+                    <SelectItem key={el} value={el}>
+                      {el}
+                    </SelectItem>
+                  );
+                })}
+              </SelectContent>
+            </Select>
+          )}
 
           <Input
             className="max-w-[300px] py-5 text-black"

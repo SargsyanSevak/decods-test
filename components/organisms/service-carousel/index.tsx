@@ -14,7 +14,7 @@ const ServiceCarousel = () => {
             </h2>
           </FadeContent>
           <FadeContent>
-            <div className="flex justify-between md:flex-row flex-col lg:gap-10 gap-6 xl:mt-20  lg:mt-10 mt-0">
+            <div className="flex justify-between xl:flex-row flex-col lg:gap-10 gap-6 xl:mt-20  lg:mt-10 mt-0">
               <p className="paragraph slate-text 2xl:max-w-[500px] max-w-full w-full">
                 As a trusted software development company,{" "}
                 <span className="text-black font-bold">
@@ -37,6 +37,27 @@ const ServiceCarousel = () => {
                 market-ready SaaS platforms, we provide comprehensive IT
                 services that drive measurablebusiness results.
               </p>
+              <div className="2xl:w-[576px] 2xl:max-w-[576px] max-w-full w-full xl:min-w-[576px] min-w-full rounded-[24px] lg:rounded-bl-[24px] rounded-bl-none sm:rounded-tl-[120px] rounded-tl-[80px]   overflow-hidden sm:mt-4 mt-0 relative xl:hidden block">
+                <Image
+                  src="https://res.cloudinary.com/dudf3yqtz/image/upload/v1749136929/2c148758ec5a882d3901266ceb7c4d8f61581922_ehkkd7.webp"
+                  width={576}
+                  height={916}
+                  alt="image"
+                  className="w-full h-full object-cover [@media(max-width:600px)]:h-[400px] rounded-[24px] sm:rounded-tl-[120px] rounded-tl-[80px]"
+                />
+
+                <div className="lg:absolute static inset-0 z-10 lg:bg-gradient-to-b from-transparent to-black pointer-events-none lg:p-4 xl:pt-0 pt-4 flex items-end">
+                  <FadeContent>
+                    <p className="text-[14px] italic lg:text-white text-black leading-[20px] font-medium">
+                      «The global custom software development market
+                      is projected to reach $146.18 billion by 2030, with
+                      businesses increasingly choosing tailored solutions over
+                      off-the-shelf alternatives to gain competitive advantage
+                      and operational efficiency.»
+                    </p>
+                  </FadeContent>
+                </div>
+              </div>
               <p className="paragraph slate-text 2xl:max-w-[500px] max-w-full w-full">
                 We excel in web application development, creating responsive,
                 scalable solutions using React, Angular, and Vue. js. Our mobile
@@ -66,7 +87,7 @@ const ServiceCarousel = () => {
             </div>
           </FadeContent>
         </div>
-        <div className="2xl:w-[576px] 2xl:max-w-[576px] max-w-full w-full xl:min-w-[576px] min-w-full rounded-[24px] lg:rounded-bl-[24px] rounded-bl-none sm:rounded-tl-[120px] rounded-tl-[80px]   overflow-hidden sm:mt-4 mt-0 relative">
+        <div className="2xl:w-[576px] 2xl:max-w-[576px] max-w-full w-full xl:min-w-[576px] min-w-full rounded-[24px] lg:rounded-bl-[24px] rounded-bl-none sm:rounded-tl-[120px] rounded-tl-[80px]   overflow-hidden sm:mt-4 mt-0 relative xl:block hidden">
           <Image
             src="https://res.cloudinary.com/dudf3yqtz/image/upload/v1749136929/2c148758ec5a882d3901266ceb7c4d8f61581922_ehkkd7.webp"
             width={576}
