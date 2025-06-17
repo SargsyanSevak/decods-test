@@ -252,3 +252,11 @@ img {
 .scroll-arrow.second {
   animation-delay: 0.5s;
 }
+
+.react-international-phone-input {
+  border: none !important;
+  width: 100%;
+}
+.react-international-phone-country-selector-button {
+  border: none !important;
+}

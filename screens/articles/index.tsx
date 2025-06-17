@@ -38,7 +38,7 @@ const Articles = () => {
       <h2 className="section-title text-black xl:max-w-[800px] max-w-[600px]">
         Explore the Future of Tech — One Article at a Time
       </h2>
-      <div className="lg:mt-20 mt-12">
+      <div className="lg:mt-20 mt-12 w-full">
         <div className="flex justify-between gap-6 items-center">
           {width > 764 ? (
             <Tabs
@@ -57,7 +57,7 @@ const Articles = () => {
               </TabsList>
             </Tabs>
           ) : (
-            <Select>
+            <Select onValueChange={(e) => setTab(e)}>
               <SelectTrigger className="w-fit bg-black !text-white text-[16px]  rounded-[999]  px-[20px] !py-[8px] !h-[44px]">
                 <SelectValue
                   className="!text-white"

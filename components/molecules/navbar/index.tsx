@@ -130,6 +130,7 @@ export default function Navbar() {
               <Button
                 variant={lightMode ? "default" : "secondary"}
                 className="!h-[44px] !w-[127px] !text-[16px]  relative z-20"
+                onClick={() => replace("/contact")}
               >
                 Contact Us
               </Button>
@@ -140,6 +141,7 @@ export default function Navbar() {
           <Button
             variant={lightMode ? "default" : "secondary"}
             className="!h-[44px] !w-[127px] !text-[16px]  relative z-20"
+            onClick={() => replace("/contact")}
           >
             Contact Us
           </Button>
