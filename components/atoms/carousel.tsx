@@ -189,7 +189,7 @@ function CarouselPrevious({
       onClick={scrollPrev}
       {...props}
     >
-      <ChevronLeft size={16} color={!canScrollPrev ? "#0505053D" : "white"} />
+      <ChevronLeft size={16} color={!canScrollPrev ? "gray" : "white"} />
       <span className="sr-only">Previous slide</span>
     </Button>
   );
@@ -213,7 +213,7 @@ function CarouselNext({
       onClick={scrollNext}
       {...props}
     >
-      <ChevronRight size={16} color={!canScrollNext ? "#0505053D" : "white"} />
+      <ChevronRight size={16} color={!canScrollNext ? "gray" : "white"} />
       <span className="sr-only">Next slide</span>
     </Button>
   );

@@ -44,7 +44,7 @@ export function contactSuccessTemplate(name: string) {
             <p style="text-align: center; font-size: 14px; color: #444; margin-top: 20px;">
               <span style="margin: 0 10px;">
                 <strong>WhatsApp:</strong>
-                <a href="https://decods.com/whatsapp" style="color: #279A8D; text-decoration: none;">+1 (307) 500-6990</a>
+                <a href="https://decods.com/whatsapp" style="color: #279A8D; text-decoration: none;">+1 (929) 650-9060</a>
               </span>
               <span style="margin: 0 10px;">
                 <strong>Telegram:</strong>

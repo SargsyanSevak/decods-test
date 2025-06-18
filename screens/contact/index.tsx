@@ -47,7 +47,7 @@ const ContactUs = () => {
 
   return (
     <section className="w-full text-black section relative overflow-hidden">
-      <div className="">
+      <div>
         <div className="flex flex-col max-w-[700px]">
           <h2 className="section-title text-black font-bold">
             Let’s Collaborate
@@ -67,7 +67,7 @@ const ContactUs = () => {
             </h2>
             <div className="flex flex-wrap gap-2 mt-2">
               {projectTypes.map((el) => {
-                const selected = selectedProjectType === el;
+                const selected = selectedProjectType.includes(el);
                 return (
                   <div
                     role="button"
@@ -262,7 +262,7 @@ const ContactUs = () => {
               iconPosition="right"
               className="min-w-[130px] [@media(max-width:480px)]:w-full"
               type="submit"
-              disabled={!checked || loading}
+              disabled={loading}
               isLoading={loading}
             >
               Send

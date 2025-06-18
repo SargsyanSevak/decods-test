@@ -5,23 +5,55 @@ import * as z from "zod";
 import { contactSchema } from "@/schema/contact-schema";
 import { toast } from "sonner";
 
-const projectTypes = ["Website", "App", "Landing page","Hire Developer", "Other"] as const;
-const budget = ["$500 - $5k", "$5k - $20k", "$20k - $50k", "$50k - $100k","$100k+"] as const;
+const projectTypes = [
+  "Website",
+  "App",
+  "Landing page",
+  "Hire Developer",
+  "Other",
+] as const;
+const budget = [
+  "$1k - $5k",
+  "$5k - $20k",
+  "$20k - $50k",
+  "$50k - $100k",
+  "$100k+",
+] as const;
 
-type ProjectType = (typeof projectTypes)[number];
-type BudgetType = (typeof budget)[number];
+type ProjectType = (typeof projectTypes)[number] | undefined;
+type BudgetType = (typeof budget)[number] | undefined;
 type ContactUs = z.infer<typeof contactSchema>;
 
 const useSendOrder = () => {
   const [checked, setChecked] = useState<boolean>(false);
   const [loading, setloading] = useState<boolean>(false);
-  const [selectedProjectType, setSelectedProjectType] =
-    useState<ProjectType>("Website");
-  const [selectedBudget, setSelectedBudget] = useState<BudgetType>("$500 - $5k");
+  const [selectedProjectType, setSelectedProjectType] = useState<
+    Array<ProjectType>
+  >([]);
+  const [selectedBudget, setSelectedBudget] = useState<BudgetType>();
 
-  const handleChangeProjectType = useCallback((type: ProjectType) => {
-    setSelectedProjectType(type);
-  }, []);
+  const handleChangeProjectType = useCallback(
+    (val: string | null | undefined) => {
+      if (!val) {
+        setSelectedProjectType([]);
+      } else {
+        setSelectedProjectType((prevProjectTypes) => {
+          const alreadySelected = prevProjectTypes.includes(val as ProjectType);
+
+          if (alreadySelected) {
+            return prevProjectTypes.filter((type) => type !== val);
+          }
+
+          if (prevProjectTypes.length >= 3) {
+            return prevProjectTypes;
+          }
+
+          return [...prevProjectTypes, val as ProjectType];
+        });
+      }
+    },
+    []
+  );
 
   const handleChangeBudget = useCallback((budget: BudgetType) => {
     setSelectedBudget(budget);
@@ -45,6 +77,14 @@ const useSendOrder = () => {
   });
 
   const handleFormSubmit = async (data: ContactUs) => {
+    if (!selectedProjectType?.length) {
+      toast.error("Please select at least one project type.");
+      return;
+    }
+    if (!selectedBudget) {
+      toast.error("Please select a project budget");
+      return;
+    }
     setloading(true);
     try {
       const response = await fetch("/api/send-message", {
@@ -52,26 +92,26 @@ const useSendOrder = () => {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           ...data,
-          projectType: selectedProjectType,
+          projectType: selectedProjectType.join(","),
           projectBudget: selectedBudget,
         }),
       });
       if (response.ok) {
-        await fetch('/api/send-email', { 
-          method: 'POST',
+        await fetch("/api/send-email", {
+          method: "POST",
           headers: {
-            'Content-Type': 'application/json',
+            "Content-Type": "application/json",
           },
           body: JSON.stringify({
             recipientName: data.fullName,
             recipientEmail: data.email,
+            consent: checked ? "checked" : "unchecked",
           }),
-
         });
         setloading(false);
         setValue("task", "");
-        handleChangeProjectType("Website");
-        handleChangeBudget("$500 - $5k");
+        handleChangeProjectType(undefined);
+        handleChangeBudget(undefined);
         setChecked(false);
         setTimeout(() => {
           reset();

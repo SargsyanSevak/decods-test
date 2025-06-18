@@ -11,6 +11,7 @@ export async function POST(request: Request) {
       projectBudget,
       projectType,
       task,
+      consent,
     } = body;
 
     const botToken = process.env.NEXT_PUBLIC_TELEGRAM_BOT_TOKEN;
@@ -25,6 +26,7 @@ export async function POST(request: Request) {
 		📞 Phone: ${phone}
 		💰 Budget: ${projectBudget}
 		🛠 Project Type: ${projectType}
+    🔒 Consent : ${consent}
 		📝 Task Description: ${task}
 				`;
 

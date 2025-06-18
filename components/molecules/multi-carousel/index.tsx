@@ -91,7 +91,7 @@ const MultiCarousel = ({ slides }: MultiCarouselProps) => {
           disabled={current <= 0}
         >
           <ChevronLeft
-            color={current <= 0 ? "#0505053D" : "white"}
+            color={current <= 0 ? "gray" : "white"}
             className="size-5"
           />
         </Button>
@@ -101,7 +101,7 @@ const MultiCarousel = ({ slides }: MultiCarouselProps) => {
           disabled={current >= maxIndex}
         >
           <ChevronRight
-            color={current >= maxIndex ? "#0505053D" : "white"}
+            color={current >= maxIndex ? "gray" : "white"}
             className="size-5"
           />
         </Button>
