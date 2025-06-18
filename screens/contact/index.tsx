@@ -223,7 +223,7 @@ const ContactUs = () => {
                   return (
                     <Textarea
                       placeholder="Pitch your project idea here..."
-                      className="py-6 pl-0 placeholder:text-[#585858] placeholder:text-[14px] border-0 border-b border-b-gray-200 rounded-none !focus:outline-none !focus:ring-0 !outline-none !ring-0 min-h-[150px] shadow-none"
+                      className="py-6 pl-0 placeholder:text-[#585858] placeholder:text-[14px] border-0 border-b border-b-gray-200 rounded-none !focus:outline-none !focus:ring-0 !outline-none !ring-0 min-h-[150px] shadow-none max-h-[600px]"
                       error={errors?.task?.message}
                       {...field}
                     />
