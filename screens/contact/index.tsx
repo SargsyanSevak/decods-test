@@ -73,26 +73,24 @@ const ContactUs = () => {
                     role="button"
                     key={el}
                     className={cn(
-                      "h-[40px] rounded-[9999px] px-[20px] border-[1px] border-black/15 flex justify-center items-center gap-4 slate-text cursor-pointer",
+                      "h-[40px] rounded-[9999px] px-[20px] border-[1px] border-black/15 flex justify-center items-center gap-4 slate-text text-[16px] cursor-pointer",
                       selected && "bg-black text-white border-black"
                     )}
                     onClick={() => handleChangeProjectType(el)}
                   >
                     {el}{" "}
-                    <div className="md:flex hidden justify-center items-center">
-                      {el === "Hire Developer" && (
-                        <Tooltip>
-                          <TooltipTrigger>
-                            <CircleHelp size={18} />
-                          </TooltipTrigger>
-                          <TooltipContent className="w-[260px]">
-                            Hire Developer — fast matching with a vetted
-                            developer for your project. Get direct contact with
-                            the expert and quality assurance from our team.
-                          </TooltipContent>
-                        </Tooltip>
-                      )}
-                    </div>
+                    {el === "Hire Developer" && (
+                      <Tooltip>
+                        <TooltipTrigger className="md:flex hidden justify-center items-center">
+                          <CircleHelp size={18} />
+                        </TooltipTrigger>
+                        <TooltipContent className="w-[260px]">
+                          Hire Developer — fast matching with a vetted developer
+                          for your project. Get direct contact with the expert
+                          and quality assurance from our team.
+                        </TooltipContent>
+                      </Tooltip>
+                    )}
                   </div>
                 );
               })}
@@ -107,7 +105,7 @@ const ContactUs = () => {
                   <button
                     key={el}
                     className={cn(
-                      "h-[40px] rounded-[9999px] px-[20px] border-[1px] border-black/15 flex justify-center items-center slate-text cursor-pointer",
+                      "h-[40px] rounded-[9999px] px-[20px] border-[1px] border-black/15 flex justify-center items-center slate-text text-[16px] cursor-pointer",
                       selected && "bg-black text-white border-black"
                     )}
                     onClick={() => handleChangeBudget(el)}
@@ -274,7 +272,7 @@ const ContactUs = () => {
               target="_blank"
               rel="noreferrer"
               aria-label="calendly"
-              className="w-full"
+              className="w-fit [@media(max-width:480px)]:w-full"
             >
               <Button
                 variant="outline"

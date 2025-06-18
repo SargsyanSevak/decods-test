@@ -8,12 +8,12 @@ const ContactLinks = () => {
 
         <a
           aria-label="wa"
-          href="https://wa.me/13075006990"
+          href="https://wa.me/19296509060"
           target="_blank"
           rel="noreferrer"
           className="font-bold md:text-[24px] text-[16px] cursor-pointer transition-all duration-300 hover:text-primary mt-2"
         >
-          +1 (307) 500-6990
+          +1 (929) 650-9060
         </a>
         <p className="text-[#05050580] text-[16px]">Whatsapp</p>
       </div>
@@ -26,7 +26,7 @@ const ContactLinks = () => {
           rel="noreferrer"
           className="font-bold md:text-[24px] text-[16px] cursor-pointer transition-all duration-300 hover:text-primary mt-2"
         >
-          +1 302 302 32 32
+          @decods
         </a>
         <p className="text-[#05050580] text-[16px]">Telegram</p>
       </div>
