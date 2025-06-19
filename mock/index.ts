@@ -435,7 +435,7 @@ export const ourTeamData = [
     bio: "Strategic vision and client relationships. 8+ years building scalable software solutions for international markets.",
     linkedinUrl: "https://www.linkedin.com/in/sargsyansevak/",
     image:
-      "https://res.cloudinary.com/dudf3yqtz/image/upload/v1750364330/5e4041de8dcb2a6e29f4a0111c78867158fb561f_vt3ibi.png",
+      "https://res.cloudinary.com/dudf3yqtz/image/upload/v1750365085/5e4041de8dcb2a6e29f4a0111c78867158fb561f_1_rbxf5t.png",
   },
   {
     fullName: "Joe Doe",

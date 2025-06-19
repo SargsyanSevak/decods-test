@@ -10,6 +10,7 @@ import {
 import { FadeContent, FadeDown } from "@/components/molecules";
 import { IconLinkedinBlack } from "@/assets";
 import { ourTeamData } from "@/mock";
+import { cn } from "@/lib/utils";
 
 const OurTeam = () => {
   return (
@@ -45,7 +46,10 @@ const OurTeam = () => {
                   width={348}
                   height={415}
                   src={el.image}
-                  className="w-full  object-cover sm:h-[415px] h-[330px]"
+                  className={cn(
+                    "w-full  object-cover sm:h-[415px] h-[330px]",
+                    index === 1 && "scale-150"
+                  )}
                   alt={el.fullName}
                 />
               </div>
