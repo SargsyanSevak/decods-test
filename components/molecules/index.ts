@@ -16,3 +16,4 @@ export { default as Subscribe } from "./subscribe";
 export { default as KeyTecknologies } from "./key-tecknologies";
 export { default as ChooseBlocks } from "./choose-blocks";
 export { default as ContactLinks } from "./contact-links";
+export { default as StackCoverageItems } from "./stack-coverage-items";

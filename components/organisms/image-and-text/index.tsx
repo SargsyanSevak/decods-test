@@ -11,7 +11,8 @@ type ImageAndTextProps = {
   subTitleTwo: string;
   descriptionOne: string;
   descriptionTwo: string;
-  button: ReactNode;
+  button?: ReactNode;
+  dark?: boolean;
 };
 
 const ImageAndText: FC<ImageAndTextProps> = ({
@@ -23,6 +24,7 @@ const ImageAndText: FC<ImageAndTextProps> = ({
   descriptionOne,
   descriptionTwo,
   button,
+  dark,
 }) => {
   const imageOrder = reversed ? "order-2 lg:order-2" : "order-2 lg:order-1";
   const textOrder = reversed ? "order-1 lg:order-1" : "order-1 lg:order-2";
@@ -38,27 +40,60 @@ const ImageAndText: FC<ImageAndTextProps> = ({
         className={`lg:h-[500px] h-fit flex flex-col gap-2 lg:max-w-[430px] max-w-full ${textOrder}`}
       >
         <FadeContent>
-          <h2 className="section-title font-bold text-black">{title}</h2>
+          <h2
+            className={cn(
+              "section-title font-bold text-black",
+              dark && "text-white"
+            )}
+          >
+            {title}
+          </h2>
         </FadeContent>
         <FadeContent>
-          <h3 className="section-sub-title text-black font-semibold">
+          <h3
+            className={cn(
+              "section-sub-title text-black font-semibold",
+              dark && "text-white"
+            )}
+          >
             {subTitleOne}
           </h3>
         </FadeContent>
         <FadeContent>
-          <p className="paragraph slate-text">{descriptionOne}</p>
+          <p
+            className={cn(
+              "paragraph slate-text",
+              dark && "dark-bg-text xl:max-w-[429px]"
+            )}
+          >
+            {descriptionOne}
+          </p>
         </FadeContent>
         <FadeContent>
-          <h3 className="section-sub-title text-black font-semibold mt-4">
+          <h3
+            className={cn(
+              "section-sub-title text-black font-semibold mt-4",
+              dark && "text-white"
+            )}
+          >
             {subTitleTwo}
           </h3>
         </FadeContent>
         <FadeContent>
-          <p className="paragraph slate-text">{descriptionTwo}</p>
+          <p
+            className={cn(
+              "paragraph slate-text",
+              dark && "dark-bg-text xl:max-w-[429px]"
+            )}
+          >
+            {descriptionTwo}
+          </p>
         </FadeContent>
-        <FadeDown className={cn(reversed && "lg:mt-10 mt-6 ")}>
-          {button}
-        </FadeDown>
+        {button && (
+          <FadeDown className={cn(reversed && "lg:mt-10 mt-6 ")}>
+            {button}
+          </FadeDown>
+        )}
       </div>
 
       {/* Image Block */}

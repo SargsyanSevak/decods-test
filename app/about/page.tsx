@@ -116,12 +116,12 @@ const Page = () => {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="calendly"
-                  className="w-fit full-button mt-6"
+                  className="w-fit [@media(max-width:480px)]:w-full mt-6"
                 >
                   <Button
                     iconArrow
                     iconPosition="right"
-                    className="!h-[56px] w-[187px] full-button"
+                    className="!h-[56px] w-[187px] [@media(max-width:480px)]:w-full"
                     type="button"
                   >
                     Book a Call

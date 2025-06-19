@@ -10,3 +10,5 @@ export { default as Banner } from "./banner";
 export { default as WhoWeAre } from "./who-we-are";
 export { default as OurTeam } from "./our-team";
 export { default as ImageAndText } from "./image-and-text";
+export { default as HiringSolutions } from "./hiring-solutions";
+export { default as StackCoverage } from "./stack-coverage";
