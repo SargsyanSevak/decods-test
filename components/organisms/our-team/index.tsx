@@ -9,6 +9,7 @@ import {
 } from "@/components/atoms/carousel";
 import { FadeContent, FadeDown } from "@/components/molecules";
 import { IconLinkedinBlack } from "@/assets";
+import { ourTeamData } from "@/mock";
 
 const OurTeam = () => {
   return (
@@ -34,29 +35,30 @@ const OurTeam = () => {
         className="w-full mt-10"
       >
         <CarouselContent>
-          {[1, 2, 3, 4, 5, 6].map((_, index) => (
+          {ourTeamData.map((el, index) => (
             <CarouselItem
               key={index}
-              className="lg:basis-1/2 2xl:basis-1/4 xl:basis-1/3 h-fit max-h-[500px]"
+              className="lg:basis-1/3 xl:basis-1/4 sm:basis-1/2  h-fit "
             >
-              <div className="lg:rounded-[20px] rounded-[24px] lg:rounded-tl-[98px] rounded-tl-[80px]  lg:rounded-br-[98px] rouned-tl-[80px] overflow-hidden">
+              <div className="lg:rounded-[20px] rounded-[24px] lg:rounded-tl-[98px] rounded-tl-[80px]  lg:rounded-br-[98px] rouned-tl-[80px] overflow-hidden sm:h-[415px] h-[330px]">
                 <Image
                   width={348}
                   height={415}
-                  src="https://res.cloudinary.com/dudf3yqtz/image/upload/v1729424636/samples/people/kitchen-bar.jpg"
-                  className="w-full h-full object-cover min-h-[300px] max-h-[400px]"
-                  alt="member"
+                  src={el.image}
+                  className="w-full  object-cover sm:h-[415px] h-[330px]"
+                  alt={el.fullName}
                 />
               </div>
               <div>
                 <h2 className="text-[24px] font-semibold text-black mt-3">
-                  Aleksandr Orlov
+                  {el.fullName}
                 </h2>
                 <p className="text-[14px] slate-text font-medium">
-                  SEO Specialist
+                  {el.position}
                 </p>
                 <a
-                  href="htttps://linkedin.com"
+                  href={el.linkedinUrl}
+                  target="_blank"
                   className="flex items-center gap-2 mt-4"
                 >
                   <IconLinkedinBlack />
@@ -65,8 +67,7 @@ const OurTeam = () => {
                   </span>
                 </a>
                 <p className="paragraph slate-text mt-4 xl:max-w-[360px] max-w-full">
-                  Strategic vision and client relationships. 8+ years building
-                  scalable software solutions for international markets.
+                  {el.bio}
                 </p>
               </div>
             </CarouselItem>

@@ -419,3 +419,46 @@ export const mockArticles = Array.from({ length: 50 }, (_, i) => ({
     },
   ],
 }));
+
+export const ourTeamData = [
+  {
+    fullName: "Aleksandr Orlov",
+    position: "SEO Specialist",
+    bio: "Strategic vision and client relationships. 8+ years building scalable software solutions for international markets.",
+    linkedinUrl: "https://www.linkedin.com/in/orlov-aleksandr-0697ab15a/",
+    image:
+      "https://res.cloudinary.com/dudf3yqtz/image/upload/v1750349070/5e0576009d9335d9be126f0c2a911be9b335f3de_atlrn9.jpg",
+  },
+  {
+    fullName: "Sevak Sargsyan",
+    position: "Software Engineer",
+    bio: "Strategic vision and client relationships. 8+ years building scalable software solutions for international markets.",
+    linkedinUrl: "https://www.linkedin.com/in/sargsyansevak/",
+    image:
+      "https://res.cloudinary.com/dudf3yqtz/image/upload/v1750349036/fac23e5b9644d93f3e0c5d1dfff7601162b5a981_knntz0.jpg",
+  },
+  {
+    fullName: "Joe Doe",
+    position: "QA Engineer",
+    bio: "Strategic vision and client relationships. 8+ years building scalable software solutions for international markets.",
+    linkedinUrl: "https://www.linkedin.com",
+    image:
+      "https://res.cloudinary.com/dudf3yqtz/image/upload/v1729424636/samples/people/kitchen-bar.jpg",
+  },
+  {
+    fullName: "Joe Doe",
+    position: "QA Engineer",
+    bio: "Strategic vision and client relationships. 8+ years building scalable software solutions for international markets.",
+    linkedinUrl: "https://www.linkedin.com",
+    image:
+      "https://res.cloudinary.com/dudf3yqtz/image/upload/v1729424636/samples/people/kitchen-bar.jpg",
+  },
+  {
+    fullName: "Joe Doe",
+    position: "QA Engineer",
+    bio: "Strategic vision and client relationships. 8+ years building scalable software solutions for international markets.",
+    linkedinUrl: "https://www.linkedin.com",
+    image:
+      "https://res.cloudinary.com/dudf3yqtz/image/upload/v1729424636/samples/people/kitchen-bar.jpg",
+  },
+];
