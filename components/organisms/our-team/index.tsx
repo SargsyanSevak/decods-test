@@ -40,7 +40,7 @@ const OurTeam = () => {
               key={index}
               className="lg:basis-1/3 xl:basis-1/4 sm:basis-1/2  h-fit "
             >
-              <div className="lg:rounded-[20px] rounded-[24px] lg:rounded-tl-[98px] rounded-tl-[80px]  lg:rounded-br-[98px] rouned-tl-[80px] overflow-hidden sm:h-[415px] h-[330px]">
+              <div className="lg:rounded-[20px] rounded-[24px] lg:rounded-tl-[98px] rounded-tl-[80px]  lg:rounded-br-[98px] rouned-tl-[80px] overflow-hidden sm:h-[415px] h-[330px] bg-[#00000040]">
                 <Image
                   width={348}
                   height={415}

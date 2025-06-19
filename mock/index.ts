@@ -427,7 +427,7 @@ export const ourTeamData = [
     bio: "Strategic vision and client relationships. 8+ years building scalable software solutions for international markets.",
     linkedinUrl: "https://www.linkedin.com/in/orlov-aleksandr-0697ab15a/",
     image:
-      "https://res.cloudinary.com/dudf3yqtz/image/upload/v1750349070/5e0576009d9335d9be126f0c2a911be9b335f3de_atlrn9.jpg",
+      "https://res.cloudinary.com/dudf3yqtz/image/upload/v1750364327/5b0b6cdcc3ac740511e29e34ae605e65f34443b5_1_w1wgnp.png",
   },
   {
     fullName: "Sevak Sargsyan",
@@ -435,7 +435,7 @@ export const ourTeamData = [
     bio: "Strategic vision and client relationships. 8+ years building scalable software solutions for international markets.",
     linkedinUrl: "https://www.linkedin.com/in/sargsyansevak/",
     image:
-      "https://res.cloudinary.com/dudf3yqtz/image/upload/v1750349036/fac23e5b9644d93f3e0c5d1dfff7601162b5a981_knntz0.jpg",
+      "https://res.cloudinary.com/dudf3yqtz/image/upload/v1750364330/5e4041de8dcb2a6e29f4a0111c78867158fb561f_vt3ibi.png",
   },
   {
     fullName: "Joe Doe",
