@@ -72,7 +72,7 @@ function Button({
         {
           "flex-row-reverse": iconPosition === "left",
         },
-        props.disabled && "!bg-[#222222] opacity-80"
+        props.disabled && "bg-[#222222] opacity-80"
       )}
       {...props}
     >

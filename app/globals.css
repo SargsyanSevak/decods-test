@@ -172,6 +172,9 @@
   .slate-bg {
     @apply bg-[#222222];
   }
+  .full-button {
+    @apply [@media(max-width:480px)]:w-full;
+  }
 }
 
 html {

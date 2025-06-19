@@ -11,3 +11,8 @@ export { default as IconDollar } from "./IconDollar";
 export { default as IconCloud } from "./IconCloud";
 export { default as IconHome } from "./IconHome";
 export { default as IconXBlack } from "./IconXBlack";
+export { default as IconLinkedinBlack } from "./IconLinkedinBlack";
+export { default as IconChat } from "./IconChat";
+export { default as IconSchedule } from "./IconSchedule";
+export { default as IconBag } from "./IconBag";
+export { default as IconArrowRotated } from "./IconArrowRotated";

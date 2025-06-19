@@ -7,3 +7,6 @@ export { default as TechnologyStack } from "./technology-stack";
 export { default as Testimonials } from "./testimonials";
 export { default as FAQ } from "./faq";
 export { default as Banner } from "./banner";
+export { default as WhoWeAre } from "./who-we-are";
+export { default as OurTeam } from "./our-team";
+export { default as ImageAndText } from "./image-and-text";

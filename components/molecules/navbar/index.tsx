@@ -38,7 +38,7 @@ export default function Navbar() {
   return (
     <nav
       className={cn(
-        "w-full flex items-center bg-[#050505] border-b-[1px] border-b-white/15  h-[80px] z-50 sticky !top-0 left-[-1px] right-[-1px]  transition-colors duration-500 ease-in-out ",
+        "w-full flex items-center bg-[#050505] border-b-[1px] border-b-white/15  h-[80px] z-50 sticky !top-0 left-[-1px] right-[-1px]  transition-colors duration-75 ease-in-out ",
         scrolled && "bg-white shadow-[0_0_20px_0_rgba(0,0,0,0.1)]",
         pathname !== "/" && "bg-white"
       )}
