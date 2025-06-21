@@ -485,15 +485,15 @@ export const ourTeamData = [
   {
     fullName: "Roman Trotsko",
     position: "Founder",
-    bio: "Strategic vision and client relationships. 8+ years building scalable software solutions for international markets.",
-    linkedinUrl: "https://www.linkedin.com",
+    bio: "Visionary and strategist with 5+ years building scalable digital products. Focused on business growth and strong client relationships.",
+    linkedinUrl: "https://www.linkedin.com/in/trotsco",
     image:
       "https://res.cloudinary.com/dudf3yqtz/image/upload/v1750503537/61475d85ee6e318915c8bf462982297f228ccd0a_fftnfs.png",
   },
   {
     fullName: "Aleksandr Orlov",
     position: "SEO Specialist",
-    bio: "Strategic vision and client relationships. 8+ years building scalable software solutions for international markets.",
+    bio: "Digital marketing expert with a deep focus on SEO strategy and performance. Helps businesses grow through targeted organic reach.",
     linkedinUrl: "https://www.linkedin.com/in/orlov-aleksandr-0697ab15a/",
     image:
       "https://res.cloudinary.com/dudf3yqtz/image/upload/v1750364327/5b0b6cdcc3ac740511e29e34ae605e65f34443b5_1_w1wgnp.png",
@@ -501,7 +501,7 @@ export const ourTeamData = [
   {
     fullName: "Sevak Sargsyan",
     position: "Software Engineer",
-    bio: "Strategic vision and client relationships. 8+ years building scalable software solutions for international markets.",
+    bio: "Experienced developer focused on scalable architecture and clean code. Passionate about building reliable digital solutions.",
     linkedinUrl: "https://www.linkedin.com/in/sargsyansevak/",
     image:
       "https://res.cloudinary.com/dudf3yqtz/image/upload/v1750365085/5e4041de8dcb2a6e29f4a0111c78867158fb561f_1_rbxf5t.png",
