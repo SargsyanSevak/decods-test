@@ -7,6 +7,7 @@ import {
   StackCoverage,
   Testimonials,
 } from "@/components/organisms";
+import { hireDeveloperFaqDataLeft, hireDeveloperFaqDataRight } from "@/mock";
 import { Metadata } from "next";
 import Image from "next/image";
 
@@ -307,7 +308,10 @@ const Page = () => {
       {/* Section 9 */}
       <div className="w-full dark-bg overflow-hidden">
         <div className="w-full text-white section">
-          <FAQ />
+          <FAQ
+            faqDataLeft={hireDeveloperFaqDataLeft}
+            faqDataRight={hireDeveloperFaqDataRight}
+          />
         </div>
       </div>
 

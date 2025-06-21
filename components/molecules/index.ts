@@ -17,3 +17,5 @@ export { default as KeyTecknologies } from "./key-tecknologies";
 export { default as ChooseBlocks } from "./choose-blocks";
 export { default as ContactLinks } from "./contact-links";
 export { default as StackCoverageItems } from "./stack-coverage-items";
+export { default as PortfolioCard } from "./portfolio-card";
+export { default as DevApproachCards } from "./dev-approach-cards";

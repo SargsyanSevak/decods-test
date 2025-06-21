@@ -29,14 +29,15 @@ const Heroleft = () => {
   }, []);
   return (
     <div className="w-full relative z-20">
-      <FadeContent delay={150}>
-        <div className="flex flex-col sm:gap-6 gap-0 sm:pt-6 pt-0 relative z-10">
+      <div className="flex flex-col sm:gap-6 gap-0 sm:pt-6 pt-0 relative z-10">
+        <FadeContent>
           <h1 className="title">
             <span>Sof</span>
             <span className="pl-[2px]">tware</span>
             <br /> Development
           </h1>
-
+        </FadeContent>
+        <FadeContent>
           <div className="relative sm:h-[47px] h-[48px] my-3 overflow-hidden">
             <AnimatePresence mode="wait">
               <motion.h1
@@ -51,13 +52,15 @@ const Heroleft = () => {
               </motion.h1>
             </AnimatePresence>
           </div>
-          <div className="">
-            <p className="max-w-[700px] text-white text-[18px] !antialiased">
-              Transform your business ideas into powerful digital solutions
-              withs our trusted offshore development team.
-            </p>
-          </div>
+        </FadeContent>
 
+        <FadeContent>
+          <p className="max-w-[700px] text-white text-[18px] !antialiased">
+            Transform your business ideas into powerful digital solutions withs
+            our trusted offshore development team.
+          </p>
+        </FadeContent>
+        <FadeContent>
           <a
             href="https://calendly.com/help-decods/30min"
             target="_blank"
@@ -74,75 +77,76 @@ const Heroleft = () => {
               Book a Call
             </Button>
           </a>
-          <div className="sm:mt-20 mt-10 w-full  flex lg:flex-row flex-col justify-between gap-10 relative z-20">
-            <div className="mt-6 lg:bg-transparent bg-[#0a0a0a] flex justify-center items-center sm:rounded-tr-[160px] sm:rounded-br-[160px] w-max [@media(max-width:460px)]:w-full">
-              <AnimatedGradientSVG />
-            </div>
+        </FadeContent>
 
-            <div className="max-w-[520px]  flex flex-col sm:gap-8 gap-6 justify-between bg-gradient-to-b from-[#0a0a0a] to-transparent relative z-20">
-              <motion.div
-                initial={{ y: 100, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
-                viewport={{ once: true, amount: 0.2 }}
-                className="w-full overflow-hidden"
-              >
-                <FadeContent>
-                  <h2 className="2xl:text-[28px] sm:text-[24px] text-[18px] leading-[100%] font-semibold">
-                    Global Talent, Local Results
-                  </h2>
-                </FadeContent>
-                <FadeContent>
-                  <p className="dark-bg-text text-[16px] leading-[24px] mt-2">
-                    Access skilled developers worldwide. No compromise on
-                    communication or project quality.
-                  </p>
-                </FadeContent>
-              </motion.div>
+        <div className="sm:mt-20 mt-10 w-full  flex lg:flex-row flex-col justify-between gap-10 relative z-20">
+          <div className="mt-6 lg:bg-transparent bg-[#0a0a0a] flex justify-center items-center sm:rounded-tr-[160px] sm:rounded-br-[160px] w-max [@media(max-width:460px)]:w-full">
+            <AnimatedGradientSVG />
+          </div>
 
-              <motion.div
-                initial={{ y: 100, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 1, ease: "easeOut" }}
-                viewport={{ once: true, amount: 0.2 }}
-                className="w-full overflow-hidden"
-              >
-                {" "}
-                <FadeContent>
-                  <h2 className="2xl:text-[28px] sm:text-[24px] text-[18px] leading-[100%] font-semibold">
-                    Cost-Effective Excellence
-                  </h2>
-                </FadeContent>
-                <FadeContent>
-                  <p className="dark-bg-text text-[16px] leading-[24px] mt-2">
-                    Premium software development services at 40–60% lower costs
-                    than onshore alternatives.
-                  </p>
-                </FadeContent>
-              </motion.div>
-              <motion.div
-                initial={{ y: 100, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 1, ease: "easeOut" }}
-                viewport={{ once: true, amount: 0.2 }}
-                className="w-full overflow-hidden"
-              >
-                <FadeContent>
-                  <h2 className="2xl:text-[28px] sm:text-[24px] text-[18px] leading-[100%] font-semibold">
-                    Fast Team Assembly
-                  </h2>
-                </FadeContent>
-                <FadeContent>
-                  <p className="dark-bg-text text-[16px] leading-[24px] mt-2">
-                    Start development within 48 hours. Pre-vetted developers
-                    matched to your technology stack.
-                  </p>
-                </FadeContent>
-              </motion.div>
-            </div>
+          <div className="max-w-[520px]  flex flex-col sm:gap-8 gap-6 justify-between bg-gradient-to-b from-[#0a0a0a] to-transparent relative z-20">
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.2 }}
+              className="w-full overflow-hidden"
+            >
+              <FadeContent>
+                <h2 className="2xl:text-[28px] sm:text-[24px] text-[18px] leading-[100%] font-semibold">
+                  Global Talent, Local Results
+                </h2>
+              </FadeContent>
+              <FadeContent>
+                <p className="dark-bg-text text-[16px] leading-[24px] mt-2">
+                  Access skilled developers worldwide. No compromise on
+                  communication or project quality.
+                </p>
+              </FadeContent>
+            </motion.div>
+
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.2 }}
+              className="w-full overflow-hidden"
+            >
+              {" "}
+              <FadeContent>
+                <h2 className="2xl:text-[28px] sm:text-[24px] text-[18px] leading-[100%] font-semibold">
+                  Cost-Effective Excellence
+                </h2>
+              </FadeContent>
+              <FadeContent>
+                <p className="dark-bg-text text-[16px] leading-[24px] mt-2">
+                  Premium software development services at 40–60% lower costs
+                  than onshore alternatives.
+                </p>
+              </FadeContent>
+            </motion.div>
+            <motion.div
+              initial={{ y: 100, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.2 }}
+              className="w-full overflow-hidden"
+            >
+              <FadeContent>
+                <h2 className="2xl:text-[28px] sm:text-[24px] text-[18px] leading-[100%] font-semibold">
+                  Fast Team Assembly
+                </h2>
+              </FadeContent>
+              <FadeContent>
+                <p className="dark-bg-text text-[16px] leading-[24px] mt-2">
+                  Start development within 48 hours. Pre-vetted developers
+                  matched to your technology stack.
+                </p>
+              </FadeContent>
+            </motion.div>
           </div>
         </div>
-      </FadeContent>
+      </div>
     </div>
   );
 };

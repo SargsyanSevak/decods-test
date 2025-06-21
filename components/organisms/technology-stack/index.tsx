@@ -75,7 +75,7 @@ const TechnologyStack = () => {
       </FadeDown>
 
       <div className="w-full relative z-20">
-        <div className="w-full flex justify-between gap-6 xl:flex-nowrap flex-wrap sm:flex-row flex-col md:mt-10 mt-2">
+        <div className="w-full grid xl:grid-cols-5 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-10 md:mt-10 mt-2">
           {techStack.map((el) => {
             return (
               <div key={el.category} className="text-white">

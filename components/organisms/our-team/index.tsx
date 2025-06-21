@@ -41,17 +41,21 @@ const OurTeam = () => {
               key={index}
               className="lg:basis-1/3 xl:basis-1/4 sm:basis-1/2  h-fit "
             >
-              <div className="lg:rounded-[20px] rounded-[24px] lg:rounded-tl-[98px] rounded-tl-[80px]  lg:rounded-br-[98px] rouned-tl-[80px] overflow-hidden sm:h-[415px] h-[330px] bg-[#00000040]">
-                <Image
-                  width={348}
-                  height={415}
-                  src={el.image}
-                  className={cn(
-                    "w-full  object-cover sm:h-[415px] h-[330px]",
-                    index === 1 && "scale-150"
-                  )}
-                  alt={el.fullName}
-                />
+              <div className="lg:rounded-[20px] rounded-[24px] lg:rounded-tl-[98px] rounded-tl-[80px] lg:rounded-br-[98px] rounded-br-[80px] overflow-hidden h-[420px] bg-[#00000040] relative">
+                <div
+                  className={cn("absolute inset-0 flex justify-end items-end")}
+                >
+                  <Image
+                    width={348}
+                    height={372}
+                    src={el.image}
+                    className={cn(
+                      "object-cover w-full h-full",
+                      index === 2 && "scale-150"
+                    )}
+                    alt={el.fullName}
+                  />
+                </div>
               </div>
               <div>
                 <h2 className="text-[24px] font-semibold text-black mt-3">

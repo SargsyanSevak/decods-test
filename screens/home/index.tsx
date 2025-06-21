@@ -1,5 +1,5 @@
 import { Heroleft } from "@/components/organisms";
-import { logos } from "@/mock";
+import { faqDataLeft, faqDataRight, logos } from "@/mock";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 
@@ -99,7 +99,7 @@ const Home = () => {
       {/* Section 7 */}
       <div className="w-full dark-bg overflow-hidden">
         <div className="w-full text-white section">
-          <FAQ />
+          <FAQ faqDataLeft={faqDataLeft} faqDataRight={faqDataRight} />
         </div>
       </div>
 

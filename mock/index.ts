@@ -420,7 +420,76 @@ export const mockArticles = Array.from({ length: 50 }, (_, i) => ({
   ],
 }));
 
+export const portfolioCategories = [
+  "Web Application",
+  "Mobile Applications",
+  "Enterprise Solutions",
+  "API & Backend",
+  "E-commerce & SaaS",
+];
+export const mockPortfolios = Array.from({ length: 50 }, (_, i) => ({
+  id: i + 1,
+  title: `Enterprise CRM System`,
+  subTitle: "40% increase in sales team efficiency",
+  link: "https://google.com",
+  stack: ["React", "Node.js", "PostgreSQL"],
+  category:
+    portfolioCategories[Math.floor(Math.random() * portfolioCategories.length)],
+  image:
+    "https://res.cloudinary.com/dudf3yqtz/image/upload/v1749136929/2c148758ec5a882d3901266ceb7c4d8f61581922_ehkkd7.webp",
+  description:
+    "Scalable customer relationship management solution with advanced analytics and reporting capabilities.",
+  content: [
+    {
+      id: 1,
+      title: "Smashing Magazine",
+      subTitle: "Best for: Frontend developers, designers, UX engineers",
+      description:
+        "Smashing Magazine is one of the most iconic resources for web professionals. Known for its thoughtful, in-depth articles, it covers topics ranging from CSS tricks and accessibility to performance optimization and design systems. What sets Smashing apart is its editorial depth—each article is like a mini-course, helping you understand not just the “how” but the “why” behind each solution. Whether you're exploring the nuances of responsive design or diving into the latest front-end frameworks, Smashing is a goldmine of reliable content.",
+    },
+    {
+      id: 2,
+      title: "Stack Overflow Blog",
+      subTitle:
+        "Best for: Full-stack devs, engineering managers, community-focused developers",
+      description:
+        "Stack Overflow isn’t just the place for copying code snippets—it also publishes a high-quality blog that dives into the broader world of software engineering. From thoughtful explorations of developer workflows and productivity, to deep dives into the evolution of programming languages and tools, their blog is a great mix of practical insights and cultural commentary. They also share unique data-driven stories from their massive user base, giving readers a peek into real-world developer trends.",
+    },
+    {
+      id: 3,
+      title: "CSS-Tricks (by DigitalOcean)",
+      subTitle: "Best for: Frontend devs, UI/UX specialists, visual coders",
+      description:
+        "Founded by Chris Coyier and now a part of the DigitalOcean family, CSS-Tricks is the ultimate hub for everything related to front-end development. While CSS is the anchor, the blog goes far beyond—covering modern JavaScript, accessibility, SVGs, grid systems, and frameworks like React or Vue. With a mix of hands-on tutorials, demos, and “guide” style posts, CSS-Tricks empowers developers to build visually stunning and performant interfaces.",
+    },
+    {
+      id: 4,
+      title: "Overreacted (Dan Abramov)",
+      subTitle:
+        "Best for: React developers, advanced JS engineers, devs who think deeply",
+      description:
+        "Dan Abramov—one of the core React developers at Meta—uses his personal blog to explore technical concepts, anti-patterns, and philosophical takes on modern frontend engineering. His writing style is incredibly approachable, yet rich with depth and precision. Overreacted is a must-read if you want to go beyond the docs and gain a deeper understanding of component lifecycles, rendering behaviors, and developer mindset.",
+    },
+    {
+      id: 5,
+      title: "The GitHub Blog",
+      subTitle:
+        "Best for: Open-source contributors, DevOps engineers, software teams",
+      description:
+        "As the world’s largest repository platform, GitHub naturally has a pulse on the development world. Their blog is filled with product updates, security news, productivity tips, and feature releases that affect millions. But beyond the tools, they also spotlight powerful open-source projects, share industry case studies, and highlight best practices for version control, CI/CD, and collaboration—making it a must-follow for teams building scalable software.",
+    },
+  ],
+}));
+
 export const ourTeamData = [
+  {
+    fullName: "Roman Trotsko",
+    position: "Founder",
+    bio: "Strategic vision and client relationships. 8+ years building scalable software solutions for international markets.",
+    linkedinUrl: "https://www.linkedin.com",
+    image:
+      "https://res.cloudinary.com/dudf3yqtz/image/upload/v1750503537/61475d85ee6e318915c8bf462982297f228ccd0a_fftnfs.png",
+  },
   {
     fullName: "Aleksandr Orlov",
     position: "SEO Specialist",
@@ -460,5 +529,100 @@ export const ourTeamData = [
     linkedinUrl: "https://www.linkedin.com",
     image:
       "https://res.cloudinary.com/dudf3yqtz/image/upload/v1729424636/samples/people/kitchen-bar.jpg",
+  },
+];
+
+export const portfolioFaqDataLeft = [
+  {
+    id: 1,
+    question: "What is a software development portfolio?",
+    answer:
+      "A software development portfolio is a curated collection of custom software examples that demonstrates a development team's technical expertise, problem-solving capabilities, and successful project outcomes across different industries and technologies.",
+  },
+  {
+    id: 2,
+    question: "How to create a custom software portfolio?",
+    answer: `Creating a custom software portfolio involves selecting diverse software development work samples that showcase your technical skills, include detailed software project documentation examples, and highlight measurable business results from each implementation.
+`,
+  },
+  {
+    id: 3,
+    question: "What makes a good software engineering portfolio?",
+    answer: `A good software engineering portfolio combines best software development case studies with clear project descriptions, technology stacks used, challenges overcome, and quantifiable results achieved for clients.`,
+  },
+  {
+    id: 4,
+    question: "What to include in programming portfolio?",
+    answer: `Your programming portfolio should feature software development case studies, prototype to production examples, code samples, user experience improvements achieved, and performance improvement examples that demonstrate your technical capabilities.`,
+  },
+  {
+    id: 5,
+    question: "Software portfolio vs resume difference?",
+    answer: `While a resume lists your qualifications, a software portfolio provides tangible proof through real-world software applications, successful software implementations, and detailed custom software project showcases that demonstrate actual work quality and results.`,
+  },
+];
+
+export const hireDeveloperFaqDataLeft = [
+  {
+    id: 1,
+    question: "How to hire software developers effectively?",
+    answer:
+      "Focus on clear project requirements, assess both technical skills and communication abilities, and consider cultural fit. Our vetting process covers all these aspects, ensuring you get developers who can contribute from day one",
+  },
+  {
+    id: 2,
+    question:
+      "What's the difference between outsourcing and staff augmentation?",
+    answer: `Team extension services add developers to your existing team under your management. External development transfers entire project responsibility to an external team. We offer both models based on your needs and project complexity.
+`,
+  },
+  {
+    id: 3,
+    question: "How much does it cost to hire remote developers?",
+    answer: `Remote developer rates range from $25-75/hour depending on experience and location. This typically represents 40-60% savings compared to local hiring while maintaining quality standards. Contract-based software developers often offer better rates for longer commitments`,
+  },
+  {
+    id: 4,
+    question: "What are the benefits of dedicated development teams?",
+    answer: `Dedicated teams offer focused attention, faster onboarding, better project continuity, and cost predictability. You get a committed team without the overhead of hiring full-time employees. Perfect for hire developers for startup scenarios or enterprise expansion`,
+  },
+  {
+    id: 5,
+    question: "When to hire full-stack vs specialized developers?",
+    answer: `Full-stack developers work best for MVPs and smaller projects requiring versatility. Specialized developers are ideal for complex features, performance optimization, or when deep expertise is critical. Hire agile development team approaches often combine both types strategically.`,
+  },
+  {
+    id: 6,
+    question: "How do you manage remote development teams effectively?",
+    answer:
+      "Clear communication channels, defined deliverables, regular check-ins, and proper project management tools are essential. We provide dedicated project managers to ensure smooth collaboration across all timezone boundaries.",
+  },
+];
+export const hireDeveloperFaqDataRight = [
+  {
+    id: 1,
+    question: "What locations are your developers from?",
+    answer: `Our developers are primarily based in Eastern Europe, Latin America, and Asia. All have strong English proficiency and experience working with US/European time zones. Many work as full-time remote developers exclusively for Western companies.
+`,
+  },
+  {
+    id: 2,
+    question: "Do we interview the candidates ourselves?",
+    answer: `Yes, you conduct final interviews to assess cultural fit and communication style. We handle technical screening beforehand, so you can focus on team dynamics and project alignment. It's your call entirely.`,
+  },
+  {
+    id: 3,
+    question: "Can I replace a developer mid-project?",
+    answer: `Absolutely. If a developer isn't meeting expectations, we can replace them within 5-7 business days with no additional fees during the first 30 days. Happens rarely, but safety nets matter.`,
+  },
+  {
+    id: 4,
+    question: "Do you offer project management or just staffing?",
+    answer: `Both approaches available. Talent scaling solutions provide developers who integrate with your existing team. For complete IT development outsourcing, we include dedicated program managers, scrum masters, and delivery oversight.`,
+  },
+  {
+    id: 5,
+    question: "Ready to Build Your Dream Development Team?",
+    answer: `Stop wasting time on endless interviews. Let us match you with pre-vetted developers who can start contributing from day one. Get your project estimate and team recommendations within 24 hours. Companies that hire software engineers through our platform typically fill positions 5x faster than traditional recruitment.`,
   },
 ];

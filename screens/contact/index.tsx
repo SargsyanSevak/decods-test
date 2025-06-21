@@ -52,7 +52,7 @@ const ContactUs = () => {
           <h2 className="section-title text-black font-bold">
             Let’s Collaborate
           </h2>
-          <h1 className="section-title slate-text font-bold">
+          <h1 className="section-title slate-text font-bold mt-3">
             Contact us via the form or by Email
           </h1>
           <p className="paragraph slate-text mt-4">

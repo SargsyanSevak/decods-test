@@ -12,8 +12,8 @@ const Footer = () => {
   return (
     <div className="w-full dark-bg relative overflow-hidden">
       <div className="w-full text-white section pb-8 relative z-20">
-        <div className="flex justify-between flex-wrap sm:flex-row flex-col sm:gap-6 gap-8 ">
-          <div className="flex flex-col gap-4 lg:w-max w-full">
+        <div className="flex justify-between gap-10 md:flex-row flex-col">
+          <div className="flex flex-col gap-4 lg:w-max w-full min-w-[300px]">
             <FadeContent>
               <Image
                 src="https://res.cloudinary.com/dudf3yqtz/image/upload/v1749114870/Group_21_f82grw.png"
@@ -38,83 +38,91 @@ const Footer = () => {
               <Subscribe />
             </div>
           </div>
-          <div className="flex flex-col sm:gap-8 gap-5 ">
-            <FadeContent>
-              <h2 className="text-[16px] text-white font-semibold">
-                {footerTexts.company.title}
-              </h2>
-            </FadeContent>
 
-            {
-              <ul className="flex flex-col gap-2 font-normal  sm:max-w-[180px] max-w-full">
-                {footerTexts.company.items.map((el, i) => {
-                  return (
-                    <li key={el.title}>
-                      <FadeDown delay={0.1 * i}>
-                        <Link
-                          href={el.href}
-                          className="paragraph dark-bg-text font-medium link-hover"
-                        >
-                          {el.title}
-                        </Link>
-                      </FadeDown>
-                    </li>
-                  );
-                })}
-              </ul>
-            }
-          </div>
-          <div className="flex flex-col sm:gap-8 gap-5 sm:max-w-[180px] max-w-[220px]">
-            <FadeContent>
-              <h2 className="text-[16px] text-white uppercase font-semibold max-w-[180px]">
-                {footerTexts.dev_and_design.title}
-              </h2>
-            </FadeContent>
+          <div className="w-full grid sm:grid-cols-3 grid-cols-2 [@media(max-width:360px)]:grid-cols-1 gap-10">
+            {/* Company Links */}
+            <div className="flex flex-col sm:gap-8 gap-5 ">
+              <FadeContent>
+                <h2 className="text-[16px] text-white font-semibold">
+                  {footerTexts.company.title}
+                </h2>
+              </FadeContent>
 
-            {
-              <ul className="flex flex-col gap-2 font-normal">
-                {footerTexts.dev_and_design.items.map((el, index) => {
-                  return (
-                    <li key={el.title}>
-                      <FadeDown delay={0.05 * index}>
-                        <Link
-                          href={el.href}
-                          className="paragraph dark-bg-text font-medium link-hover"
-                        >
-                          {el.title}
-                        </Link>
-                      </FadeDown>
-                    </li>
-                  );
-                })}
-              </ul>
-            }
-          </div>
-          <div className="flex flex-col sm:gap-8 gap-5 sm:max-w-[180px] max-w-[220px]">
-            <FadeContent>
-              <h2 className="text-[16px] text-white uppercase font-semibold max-w-[180px]">
-                {footerTexts.support.title}
-              </h2>
-            </FadeContent>
+              {
+                <ul className="flex flex-col gap-2 font-normal  sm:max-w-[180px] max-w-full">
+                  {footerTexts.company.items.map((el, i) => {
+                    return (
+                      <li key={el.title}>
+                        <FadeDown delay={0.1 * i}>
+                          <Link
+                            href={el.href}
+                            className="paragraph dark-bg-text font-medium link-hover"
+                          >
+                            {el.title}
+                          </Link>
+                        </FadeDown>
+                      </li>
+                    );
+                  })}
+                </ul>
+              }
+            </div>
 
-            {
-              <ul className="flex flex-col gap-2 font-normal ">
-                {footerTexts.support.items.map((el, i) => {
-                  return (
-                    <li key={el.title}>
-                      <FadeDown delay={0.05 * i}>
-                        <Link
-                          href={el.href}
-                          className="paragraph dark-bg-text font-medium link-hover"
-                        >
-                          {el.title}
-                        </Link>
-                      </FadeDown>
-                    </li>
-                  );
-                })}
-              </ul>
-            }
+            {/* Development Services Links */}
+            <div className="flex flex-col sm:gap-8 gap-5 sm:max-w-[180px] max-w-[220px]">
+              <FadeContent>
+                <h2 className="text-[16px] text-white uppercase font-semibold max-w-[180px]">
+                  {footerTexts.dev_and_design.title}
+                </h2>
+              </FadeContent>
+
+              {
+                <ul className="flex flex-col gap-2 font-normal">
+                  {footerTexts.dev_and_design.items.map((el, index) => {
+                    return (
+                      <li key={el.title}>
+                        <FadeDown delay={0.05 * index}>
+                          <Link
+                            href={el.href}
+                            className="paragraph dark-bg-text font-medium link-hover"
+                          >
+                            {el.title}
+                          </Link>
+                        </FadeDown>
+                      </li>
+                    );
+                  })}
+                </ul>
+              }
+            </div>
+
+            {/* Business Links */}
+            <div className="flex flex-col sm:gap-8 gap-5 sm:max-w-[180px] max-w-[220px]">
+              <FadeContent>
+                <h2 className="text-[16px] text-white uppercase font-semibold max-w-[180px]">
+                  {footerTexts.support.title}
+                </h2>
+              </FadeContent>
+
+              {
+                <ul className="flex flex-col gap-2 font-normal ">
+                  {footerTexts.support.items.map((el, i) => {
+                    return (
+                      <li key={el.title}>
+                        <FadeDown delay={0.05 * i}>
+                          <Link
+                            href={el.href}
+                            className="paragraph dark-bg-text font-medium link-hover"
+                          >
+                            {el.title}
+                          </Link>
+                        </FadeDown>
+                      </li>
+                    );
+                  })}
+                </ul>
+              }
+            </div>
           </div>
 
           <div className="xl:block hidden">

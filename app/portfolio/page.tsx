@@ -1,3 +1,4 @@
+import { PortfolioScreen } from "@/screens";
 import { Metadata } from "next";
 
 export const dynamic = "force-static";
@@ -125,7 +126,7 @@ export const metadata: Metadata = {
 };
 
 const Page = () => {
-  return <div className="text-white content">Portfolio</div>;
+  return <PortfolioScreen />;
 };
 
 export default Page;

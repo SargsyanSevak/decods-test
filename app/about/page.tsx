@@ -2,6 +2,7 @@ import { IconBag, IconChat, IconSchedule } from "@/assets";
 import { Button } from "@/components/atoms/button";
 import { FadeContent, FadeDown } from "@/components/molecules";
 import { FAQ, ImageAndText, OurTeam, WhoWeAre } from "@/components/organisms";
+import { faqDataLeft, faqDataRight } from "@/mock";
 import { Metadata } from "next";
 import Image from "next/image";
 
@@ -284,7 +285,7 @@ const Page = () => {
 
       <div className="w-full dark-bg overflow-hidden">
         <div className="w-full text-white section">
-          <FAQ />
+          <FAQ faqDataLeft={faqDataLeft} faqDataRight={faqDataRight} />
         </div>
       </div>
     </div>
