@@ -13,7 +13,7 @@ const ServicesScreen = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-20 gap-10">
             {/* Text Left */}
             <div className="flex flex-col  gap-8 lg:max-w-[588px] max-w-full  h-full pb-10">
-              <FadeContent className="lg:max-w-[488px] max-w-[880px]">
+              <FadeContent className="lg:max-w-[650px] max-w-[880px]">
                 <h1 className=" text-black section-title">
                   Custom Software Development Services That Scale Your Business
                 </h1>
@@ -86,7 +86,7 @@ const ServicesScreen = () => {
                 guaranteed. Long-term efficiency for businesses from startups to
                 Fortune 500 enterprises.
               </FadeContent>
-              <FadeDown className="mt-4">
+              <FadeDown className="lg:mt-10 mt-5">
                 <a
                   href="https://calendly.com/help-decods/30min"
                   target="_blank"
@@ -208,8 +208,8 @@ const ServicesScreen = () => {
         <div className="w-full text-white section">
           <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-20 gap-10">
             {/* Text Left */}
-            <div className="flex flex-col lg:order-2 order-1 gap-8 lg:max-w-[488px] max-w-full  h-full lg:pb-10 pb-0">
-              <FadeContent className="lg:max-w-[688px] max-w-[580px]">
+            <div className="flex flex-col lg:order-2 order-1 gap-8 lg:max-w-[500px] max-w-full  h-full lg:pb-10 pb-0">
+              <FadeContent className="lg:max-w-[700px] max-w-[680px]">
                 <h1 className=" text-white section-title">
                   Comprehensive Application Development Services
                 </h1>
@@ -222,6 +222,25 @@ const ServicesScreen = () => {
                 guaranteed. Long-term efficiency for businesses from startups to
                 Fortune 500 enterprises.
               </FadeContent>
+              <FadeDown className="lg:mt-10 mt-6">
+                <a
+                  href="https://calendly.com/help-decods/30min"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="calendly"
+                  className="w-fit [@media(max-width:480px)]:w-full mt-6"
+                >
+                  <Button
+                    variant="secondary"
+                    iconArrow
+                    iconPosition="right"
+                    className="!h-[56px] w-[180px] [@media(max-width:480px)]:w-full"
+                    type="button"
+                  >
+                    Book a Call
+                  </Button>
+                </a>
+              </FadeDown>
             </div>
             {/* Image Right */}
             <div className="lg:h-[500px] order-2 md:h-[400px] h-[360px] min-w-[300px] rounded-[24px] overflow-hidden rounded-tr-[80px] lg:rounded-tr-[120px] relative">

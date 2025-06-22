@@ -47,7 +47,7 @@ const ImageAndTextService: FC<ImageAndTextProps> = ({
           <FadeContent>
             <h2
               className={cn(
-                "section-title leading-[100%] max-w-[460px] font-bold text-black",
+                "section-title leading-[100%] max-w-[600px] font-bold text-black",
                 dark && "text-white"
               )}
             >
@@ -59,7 +59,7 @@ const ImageAndTextService: FC<ImageAndTextProps> = ({
         <FadeContent>
           <h3
             className={cn(
-              "section-sub-title text-black font-semibold mt-3",
+              "section-sub-title text-black font-semibold leading-[100%] mt-3",
               dark && "text-white"
             )}
           >
@@ -69,7 +69,7 @@ const ImageAndTextService: FC<ImageAndTextProps> = ({
         <FadeContent>
           <p
             className={cn(
-              "paragraph slate-text",
+              "paragraph slate-text mt-4",
               dark && "dark-bg-text xl:max-w-[429px]"
             )}
           >
