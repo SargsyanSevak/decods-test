@@ -24,7 +24,7 @@ const ServicesScreen = () => {
                 enterprise platforms – we build tailored applications that drive
                 measurable results worth every invested dollar in 2025.
               </FadeContent>
-              <FadeDown className="mt-4">
+              <FadeDown className="lg:mt-10 mt-5">
                 <a
                   href="https://calendly.com/help-decods/30min"
                   target="_blank"
