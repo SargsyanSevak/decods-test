@@ -19,3 +19,4 @@ export { default as ContactLinks } from "./contact-links";
 export { default as StackCoverageItems } from "./stack-coverage-items";
 export { default as PortfolioCard } from "./portfolio-card";
 export { default as DevApproachCards } from "./dev-approach-cards";
+export { default as CoreDevServices } from "./core-dev-services";

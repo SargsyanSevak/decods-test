@@ -626,3 +626,52 @@ export const hireDeveloperFaqDataRight = [
     answer: `Stop wasting time on endless interviews. Let us match you with pre-vetted developers who can start contributing from day one. Get your project estimate and team recommendations within 24 hours. Companies that hire software engineers through our platform typically fill positions 5x faster than traditional recruitment.`,
   },
 ];
+
+export const serviceFaqDataLeft = [
+  {
+    id: 1,
+    question: "What makes a good custom software development company?",
+    answer:
+      "Look for proven technical expertise, transparent communication, agile methodology adoption, and a portfolio of successful projects in your industry. The best software development companies focus on business outcomes, not just technical delivery. Finding a team that speaks both code and business fluently is essential.",
+  },
+  {
+    id: 2,
+    question: "How does end-to-end software development work?",
+    answer: `Our comprehensive approach covers requirements analysis, architecture design, development, testing, deployment, and ongoing support. We handle everything from initial consultation to post-launch maintenance, ensuring seamless project delivery. Think of us as your complete digital transformation partner.
+`,
+  },
+  {
+    id: 3,
+    question: "What's included in your technology consulting services?",
+    answer: `We provide strategic technology assessment, architecture planning, tech stack recommendations, digital transformation strategies, and implementation guidance. Our consultants help you make informed decisions that align with your business goals. Having dedicated CTO-level expertise on demand makes the difference.`,
+  },
+  {
+    id: 4,
+    question: "How do you ensure software quality and security?",
+    answer: `We implement comprehensive QA processes including automated testing, code reviews, security audits, and performance monitoring. Our development follows industry best practices and compliance standards to ensure enterprise-grade quality. Security isn't an afterthought – it's built in from day one.`,
+  },
+];
+export const serviceFaqDataRight = [
+  {
+    id: 1,
+    question: "Do you provide post-launch support and maintenance?",
+    answer:
+      "Yes, we offer comprehensive support packages including bug fixes, security updates, performance optimization, and feature enhancements. Our teams ensure your software remains current, secure, and scalable as your business grows. Consider it protection for your digital investment.",
+  },
+  {
+    id: 2,
+    question: "How do we get started with our software project?",
+    answer: `Contact us for a free consultation where we'll discuss your requirements, timeline, and budget. We'll provide a detailed project proposal within 48 hours, including technical approach, team structure, and transparent pricing. No hidden costs, no surprises.
+`,
+  },
+  {
+    id: 3,
+    question: "Ready to Transform Your Business with Custom Software?",
+    answer: `Let's discuss your project requirements and deliver a solution that drives real business value. Your digital transformation journey starts here.`,
+  },
+  {
+    id: 4,
+    question: "What's your typical project timeline and process?",
+    answer: `Projects range from 2-3 months for MVPs to 12+ months for enterprise solutions. We start with discovery and planning (1-2 weeks), followed by iterative development sprints, continuous testing, and staged deployment with your approval at each milestone. Transparent timelines guaranteed.`,
+  },
+];

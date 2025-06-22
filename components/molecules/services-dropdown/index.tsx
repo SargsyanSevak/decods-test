@@ -5,9 +5,11 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { servicesleft, servicesRight } from "@/mock";
 import FadeContent from "../fade-content";
+import { useRouter } from "next/navigation";
 
 const ServicesDropdown = ({ scrolled }: { scrolled: boolean }) => {
   const [isOpen, setIsOpen] = useState(false);
+  const { push } = useRouter();
 
   const handleMouseEnter = useCallback(() => {
     setIsOpen(true);
@@ -43,6 +45,7 @@ const ServicesDropdown = ({ scrolled }: { scrolled: boolean }) => {
             "flex items-center gap-1 cursor-pointer dark-bg-text hover:text-white transition-all duration-300 ease-in-out h-[70px]",
             scrolled && "text-black hover:text-gray-700"
           )}
+          onClick={() => push("/services")}
         >
           Services <ChevronDown size={16} />
         </button>

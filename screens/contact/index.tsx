@@ -166,7 +166,10 @@ const ContactUs = () => {
 
             <figure className="w-full">
               <h2 className="text-[16px] font-semibold text-black mb-2">
-                Company
+                Company{" "}
+                <span className="text-gray-500 font-medium text-[14px]">
+                  (Optional)
+                </span>
               </h2>
               <Controller
                 control={control}
@@ -187,7 +190,10 @@ const ContactUs = () => {
 
             <figure className="w-full">
               <h2 className="text-[16px] font-semibold text-black mb-2">
-                Phone Number
+                Phone Number{" "}
+                <span className="text-gray-500 font-medium text-[14px]">
+                  (Optional)
+                </span>
               </h2>
               <Controller
                 control={control}

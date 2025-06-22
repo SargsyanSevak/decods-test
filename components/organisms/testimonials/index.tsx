@@ -10,12 +10,12 @@ import {
 } from "@/components/atoms/carousel";
 import { FadeContent } from "@/components/molecules";
 
-const Testimonials = () => {
+const Testimonials = ({ title }: { title?: string }) => {
   return (
     <div className="w-full">
-      <FadeContent>
+      <FadeContent className="max-w-[900px] mx-auto">
         <h2 className="section-title  text-black text-center">
-          What Our Clients Say
+          {title || "What Our Clients Say"}
         </h2>
       </FadeContent>
 

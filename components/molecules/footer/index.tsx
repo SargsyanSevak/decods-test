@@ -11,7 +11,7 @@ const Footer = () => {
   const { width } = useWindowSize();
   return (
     <div className="w-full dark-bg relative overflow-hidden">
-      <div className="w-full text-white section pb-8 relative z-20">
+      <div className="w-full text-white section pb-4 relative z-20">
         <div className="flex justify-between gap-10 md:flex-row flex-col">
           <div className="flex flex-col gap-4 lg:w-max w-full min-w-[300px]">
             <FadeContent>

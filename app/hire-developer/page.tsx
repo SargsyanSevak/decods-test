@@ -80,8 +80,8 @@ const Page = () => {
       {/* Section 1 */}
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-20 gap-10  section md:pt-20 pt-10">
         {/* Text Left */}
-        <div className=" h-fit flex flex-col gap-2 lg:max-w-[588px] max-w-full">
-          <FadeContent className="lg:max-w-[388px] max-w-[500px]">
+        <div className=" h-fit flex flex-col gap-4 lg:max-w-[700px] max-w-full">
+          <FadeContent className="max-w-[700px]">
             <h1 className=" text-black section-title">
               Hire Software Developers & Dedicated Development Teams
             </h1>
@@ -96,7 +96,7 @@ const Page = () => {
               compared to in-house hiring costs in 2025.
             </p>
           </FadeContent>
-          <FadeDown className="mt-7">
+          <FadeDown className="mt-10">
             <a
               href="https://calendly.com/help-decods/30min"
               target="_blank"

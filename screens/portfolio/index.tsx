@@ -7,6 +7,7 @@ import {
   PortfolioCard,
   DynamicPagination,
   FadeContent,
+  FadeDown,
 } from "@/components/molecules";
 import { useRef } from "react";
 import { Input } from "@/components/atoms/input";
@@ -53,8 +54,8 @@ const PortfolioScreen = () => {
         <div className="w-full text-white section md:pt-20 pt-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-20 gap-10">
             {/* Text Left */}
-            <div className="flex flex-col justify-between gap-2 lg:max-w-[588px] max-w-full  h-full pb-10">
-              <FadeContent className="lg:max-w-[388px] max-w-[500px]">
+            <div className="flex flex-col gap-4 lg:max-w-[588px] max-w-full  h-full pb-10">
+              <FadeContent className="lg:max-w-[500px] max-w-[500px]">
                 <h1 className=" text-black section-title">
                   Our Portfolio - Custom Software Examples & Case Studies
                 </h1>
@@ -70,6 +71,24 @@ const PortfolioScreen = () => {
                   healthcare software portfolio, and education software cases.
                 </p>
               </FadeContent>
+              <FadeDown className="mt-10">
+                <a
+                  href="https://calendly.com/help-decods/30min"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="calendly"
+                  className="w-fit [@media(max-width:480px)]:w-full mt-6"
+                >
+                  <Button
+                    iconArrow
+                    iconPosition="right"
+                    className="!h-[56px] w-[180px] [@media(max-width:480px)]:w-full"
+                    type="button"
+                  >
+                    Book a Call
+                  </Button>
+                </a>
+              </FadeDown>
             </div>
 
             {/* Image Right */}

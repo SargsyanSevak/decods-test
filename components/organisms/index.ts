@@ -13,3 +13,4 @@ export { default as ImageAndText } from "./image-and-text";
 export { default as HiringSolutions } from "./hiring-solutions";
 export { default as StackCoverage } from "./stack-coverage";
 export { default as DevApproach } from "./dev-approach";
+export { default as ImageAndTextService } from "./image-and-text-service";

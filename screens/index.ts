@@ -3,3 +3,4 @@ export { default as Articles } from "./articles";
 export { default as SingleArticleScreen } from "./single-article";
 export { default as ContactUs } from "./contact";
 export { default as PortfolioScreen } from "./portfolio";
+export { default as ServicesScreen } from "./services";
