@@ -542,14 +542,16 @@ export const portfolioFaqDataLeft = [
   {
     id: 2,
     question: "How to create a custom software portfolio?",
-    answer: `Creating a custom software portfolio involves selecting diverse software development work samples that showcase your technical skills, include detailed software project documentation examples, and highlight measurable business results from each implementation.
-`,
+    answer: `Creating a custom software portfolio involves selecting diverse software development work samples that showcase your technical skills, include detailed software project documentation examples, and highlight measurable business results from each implementation.`,
   },
   {
     id: 3,
     question: "What makes a good software engineering portfolio?",
     answer: `A good software engineering portfolio combines best software development case studies with clear project descriptions, technology stacks used, challenges overcome, and quantifiable results achieved for clients.`,
   },
+];
+
+export const portfolioFaqDataRight = [
   {
     id: 4,
     question: "What to include in programming portfolio?",
@@ -559,6 +561,11 @@ export const portfolioFaqDataLeft = [
     id: 5,
     question: "Software portfolio vs resume difference?",
     answer: `While a resume lists your qualifications, a software portfolio provides tangible proof through real-world software applications, successful software implementations, and detailed custom software project showcases that demonstrate actual work quality and results.`,
+  },
+  {
+    id: 6,
+    question: "Should I include personal projects in my portfolio?",
+    answer: `Yes, personal projects are valuable in a software portfolio as they showcase your passion, creativity, and ability to take initiative. They can demonstrate technical skills, learning progression, and your ability to deliver complete solutions independently.`,
   },
 ];
 
@@ -590,12 +597,6 @@ export const hireDeveloperFaqDataLeft = [
     id: 5,
     question: "When to hire full-stack vs specialized developers?",
     answer: `Full-stack developers work best for MVPs and smaller projects requiring versatility. Specialized developers are ideal for complex features, performance optimization, or when deep expertise is critical. Hire agile development team approaches often combine both types strategically.`,
-  },
-  {
-    id: 6,
-    question: "How do you manage remote development teams effectively?",
-    answer:
-      "Clear communication channels, defined deliverables, regular check-ins, and proper project management tools are essential. We provide dedicated project managers to ensure smooth collaboration across all timezone boundaries.",
   },
 ];
 export const hireDeveloperFaqDataRight = [

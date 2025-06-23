@@ -86,7 +86,7 @@ const WhoWeAre = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 lg:gap-20 gap-10 items-center">
         {/* Text Block */}
         <div
-          className={`lg:h-[500px] h-fit flex flex-col gap-2 lg:max-w-[430px] max-w-full order-1 lg:order-2`}
+          className={`lg:h-[500px] h-fit flex flex-col gap-2 lg:max-w-[600px] max-w-full order-1 lg:order-2`}
         >
           <FadeContent>
             <h2 className="section-title font-bold text-white">

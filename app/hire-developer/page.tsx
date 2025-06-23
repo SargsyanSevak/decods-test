@@ -220,8 +220,8 @@ const Page = () => {
           <ImageAndText
             dark
             title="Selection & Onboarding"
-            subTitleOne="Step 3:Technical Screening"
-            subTitleTwo="Step 4:Trial Period & Onboarding"
+            subTitleOne="Technical Screening"
+            subTitleTwo="Trial Period & Onboarding"
             descriptionOne="You conduct final interviews focusing on cultural fit. We handle live coding sessions, system design reviews, and reference checks. This is where hire a dedicated development team decisions get finalized."
             descriptionTwo="Start with a 2-week trial period. Full project kickoff includes NDA signing, development environment setup, and communication protocols. Most clients convert trial developers to permanent team members within this timeframe."
             image="https://res.cloudinary.com/dudf3yqtz/image/upload/v1750350975/7c64f2b2e1871c0f464755122b6b9046d9db2676_fimi1k.jpg"

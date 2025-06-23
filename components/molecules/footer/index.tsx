@@ -6,9 +6,11 @@ import FadeContent from "../fade-content";
 import FadeDown from "../fade-down";
 import Subscribe from "../subscribe";
 import { useWindowSize } from "@/hooks/useWindowSize";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
   const { width } = useWindowSize();
+  const pathname = usePathname();
   return (
     <div className="w-full dark-bg relative overflow-hidden">
       <div className="w-full text-white section pb-4 relative z-20">
@@ -54,12 +56,18 @@ const Footer = () => {
                     return (
                       <li key={el.title}>
                         <FadeDown delay={0.1 * i}>
-                          <Link
-                            href={el.href}
-                            className="paragraph dark-bg-text font-medium link-hover"
-                          >
-                            {el.title}
-                          </Link>
+                          {pathname === el.href ? (
+                            <p className="paragraph dark-bg-text font-medium link-hover cursor-pointer">
+                              {el.title}
+                            </p>
+                          ) : (
+                            <Link
+                              href={el.href}
+                              className="paragraph dark-bg-text font-medium link-hover"
+                            >
+                              {el.title}
+                            </Link>
+                          )}
                         </FadeDown>
                       </li>
                     );
@@ -82,12 +90,18 @@ const Footer = () => {
                     return (
                       <li key={el.title}>
                         <FadeDown delay={0.05 * index}>
-                          <Link
-                            href={el.href}
-                            className="paragraph dark-bg-text font-medium link-hover"
-                          >
-                            {el.title}
-                          </Link>
+                          {pathname === el.href ? (
+                            <p className="paragraph dark-bg-text font-medium link-hover cursor-pointer">
+                              {el.title}
+                            </p>
+                          ) : (
+                            <Link
+                              href={el.href}
+                              className="paragraph dark-bg-text font-medium link-hover"
+                            >
+                              {el.title}
+                            </Link>
+                          )}
                         </FadeDown>
                       </li>
                     );
@@ -110,12 +124,18 @@ const Footer = () => {
                     return (
                       <li key={el.title}>
                         <FadeDown delay={0.05 * i}>
-                          <Link
-                            href={el.href}
-                            className="paragraph dark-bg-text font-medium link-hover"
-                          >
-                            {el.title}
-                          </Link>
+                          {pathname === el.href ? (
+                            <p className="paragraph dark-bg-text font-medium link-hover cursor-pointer">
+                              {el.title}
+                            </p>
+                          ) : (
+                            <Link
+                              href={el.href}
+                              className="paragraph dark-bg-text font-medium link-hover"
+                            >
+                              {el.title}
+                            </Link>
+                          )}
                         </FadeDown>
                       </li>
                     );

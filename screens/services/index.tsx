@@ -243,25 +243,23 @@ const ServicesScreen = () => {
               </FadeDown>
             </div>
             {/* Image Right */}
-            <div className="lg:h-[500px] order-2 md:h-[400px] h-[360px] min-w-[300px] rounded-[24px] overflow-hidden rounded-tr-[80px] lg:rounded-tr-[120px] relative">
+            <div className="order-2 min-w-[300px] h-fit  overflow-hidden  relative flex flex-col">
               <Image
                 src="https://res.cloudinary.com/dudf3yqtz/image/upload/v1750593103/b517903e17888f90b9e8f7c551439d8349a5e83b_xnhuqw.jpg"
                 width={715}
-                height={550}
+                height={450}
                 alt="How we work"
-                className="object-cover w-full h-full"
+                className="object-cover w-full h-full rounded-[24px] rounded-tr-[80px] lg:rounded-tr-[120px]"
               />
-              <div className="absolute  inset-0 z-10 bg-gradient-to-b from-transparent to-black pointer-events-none sm:p-4 p-2  flex items-end">
-                <FadeContent>
-                  <p className="text-[14px] italic text-white leading-[20px] font-medium">
-                    «The global custom software development market is projected
-                    to reach $146.18 billion by 2030, with businesses
-                    increasingly choosing tailored solutions over off-the-shelf
-                    alternatives to gain competitive advantage and operational
-                    efficiency.»
-                  </p>
-                </FadeContent>
-              </div>
+
+              <FadeContent className="mt-4">
+                <p className="text-[14px] italic text-white leading-[20px] font-medium">
+                  «The global custom software development market is projected
+                  to reach $146.18 billion by 2030, with businesses increasingly
+                  choosing tailored solutions over off-the-shelf alternatives
+                  to gain competitive advantage and operational efficiency.»
+                </p>
+              </FadeContent>
             </div>
           </div>
           <CoreDevServices />

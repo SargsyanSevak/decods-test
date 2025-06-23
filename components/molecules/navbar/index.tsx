@@ -53,18 +53,31 @@ export default function Navbar() {
             return (
               <li key={el.label}>
                 <FadeContent>
-                  <Link
-                    href={el.href}
-                    className={cn(
-                      "relative after:absolute after:left-0 after:bottom-[-4px] after:h-[1px] after:bg-white after:transition-all after:duration-300 hover:text-white transition-all duration-300 ease-in-out",
-                      pathname === el.href
-                        ? "after:w-full"
-                        : "after:w-0 hover:after:w-full",
-                      lightMode && "text-black after:bg-black hover:text-black"
-                    )}
-                  >
-                    {el.label}
-                  </Link>
+                  {pathname === el.href ? (
+                    <p
+                      className={cn(
+                        "relative cursor-pointer after:absolute after:left-0 after:bottom-[-2px] after:h-[1px] after:bg-white after:transition-all after:duration-300 hover:text-white transition-all duration-300 ease-in-out after:w-full",
+                        lightMode &&
+                          "text-black after:bg-black hover:text-black"
+                      )}
+                    >
+                      {el.label}
+                    </p>
+                  ) : (
+                    <Link
+                      href={el.href}
+                      className={cn(
+                        "relative after:absolute after:left-0 after:bottom-[-4px] after:h-[1px] after:bg-white after:transition-all after:duration-300 hover:text-white transition-all duration-300 ease-in-out",
+                        pathname === el.href
+                          ? "after:w-full !select-none"
+                          : "after:w-0 hover:after:w-full",
+                        lightMode &&
+                          "text-black after:bg-black hover:text-black"
+                      )}
+                    >
+                      {el.label}
+                    </Link>
+                  )}
                 </FadeContent>
               </li>
             );
@@ -74,7 +87,11 @@ export default function Navbar() {
           layoutId={scrolled ? "" : "logo"}
           className="flex items-center justify-center cursor-pointer"
           role="button"
-          onClick={() => replace("/")}
+          onClick={() => {
+            if (pathname !== "/") {
+              replace("/");
+            }
+          }}
           transition={{ ease: "easeOut", duration: 0.6 }}
         >
           <svg
@@ -111,26 +128,41 @@ export default function Navbar() {
           </li>
           <li>
             <FadeContent>
-              <Link
-                href={"/articles"}
-                className={cn(
-                  "relative after:absolute after:left-0 after:bottom-[-4px] after:h-[1px] after:bg-white after:transition-all after:duration-300 hover:text-white transition-all duration-300 ease-in-out",
-                  pathname === "/articles"
-                    ? "after:w-full"
-                    : "after:w-0 hover:after:w-full",
-                  lightMode && "text-black after:bg-black hover:text-black"
-                )}
-              >
-                Articles
-              </Link>
+              {pathname === "/articles" ? (
+                <p
+                  className={cn(
+                    "relative cursor-pointer after:absolute after:left-0 after:bottom-[-2px] after:h-[1px] after:bg-white after:transition-all after:duration-300 hover:text-white transition-all duration-300 ease-in-out after:w-full",
+                    lightMode && "text-black after:bg-black hover:text-black"
+                  )}
+                >
+                  Articles
+                </p>
+              ) : (
+                <Link
+                  href={"/articles"}
+                  className={cn(
+                    "relative after:absolute after:left-0 after:bottom-[-4px] after:h-[1px] after:bg-white after:transition-all after:duration-300 hover:text-white transition-all duration-300 ease-in-out",
+                    pathname === "/articles"
+                      ? "after:w-full"
+                      : "after:w-0 hover:after:w-full",
+                    lightMode && "text-black after:bg-black hover:text-black"
+                  )}
+                >
+                  Articles
+                </Link>
+              )}
             </FadeContent>
           </li>
           <li>
             <FadeContent>
               <Button
                 variant={lightMode ? "default" : "secondary"}
-                className="!h-[44px] !w-[127px] !text-[16px]  relative z-20"
-                onClick={() => replace("/contact")}
+                className="!h-[44px] !w-[127px] !text-[16px] cursor-pointer  relative z-20"
+                onClick={() => {
+                  if (pathname !== "/contact") {
+                    replace("/contact");
+                  }
+                }}
               >
                 Contact Us
               </Button>
@@ -141,7 +173,11 @@ export default function Navbar() {
           <Button
             variant={lightMode ? "default" : "secondary"}
             className="!h-[44px] !w-[127px] !text-[16px]  relative z-20"
-            onClick={() => replace("/contact")}
+            onClick={() => {
+              if (pathname !== "/contact") {
+                replace("/contact");
+              }
+            }}
           >
             Contact Us
           </Button>

@@ -12,7 +12,7 @@ const DevApproach = () => {
   return (
     <div className="w-full relative">
       <FadeContent>
-        <h2 className="section-title max-w-[524px]">
+        <h2 className="section-title max-w-[650px]">
           What sets our development approach apart?
         </h2>
       </FadeContent>

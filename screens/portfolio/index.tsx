@@ -23,7 +23,7 @@ import {
 import Image from "next/image";
 import { DevApproach, FAQ } from "@/components/organisms";
 import { Button } from "@/components/atoms/button";
-import { portfolioFaqDataLeft } from "@/mock";
+import { portfolioFaqDataLeft, portfolioFaqDataRight } from "@/mock";
 
 const PortfolioScreen = () => {
   const { width } = useWindowSize();
@@ -217,7 +217,10 @@ const PortfolioScreen = () => {
 
       <div className="w-full dark-bg overflow-hidden">
         <div className="w-full text-white section">
-          <FAQ faqDataLeft={portfolioFaqDataLeft} />
+          <FAQ
+            faqDataLeft={portfolioFaqDataLeft}
+            faqDataRight={portfolioFaqDataRight}
+          />
         </div>
       </div>
     </div>

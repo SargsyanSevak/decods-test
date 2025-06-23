@@ -86,7 +86,9 @@ const TechnologyStack = () => {
                   {el.technologies.map((item, i) => {
                     return (
                       <FadeDown key={item} delay={0.1 * i}>
-                        <li className="paragraph dark-bg-text">{item}</li>
+                        <li className="paragraph dark-bg-text link-hover cursor-pointer">
+                          {item}
+                        </li>
                       </FadeDown>
                     );
                   })}

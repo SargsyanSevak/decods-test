@@ -5,9 +5,10 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { servicesleft, servicesRight } from "@/mock";
 import FadeContent from "../fade-content";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 const ServicesDropdown = ({ scrolled }: { scrolled: boolean }) => {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const { push } = useRouter();
 
@@ -45,7 +46,11 @@ const ServicesDropdown = ({ scrolled }: { scrolled: boolean }) => {
             "flex items-center gap-1 cursor-pointer dark-bg-text hover:text-white transition-all duration-300 ease-in-out h-[70px]",
             scrolled && "text-black hover:text-gray-700"
           )}
-          onClick={() => push("/services")}
+          onClick={() => {
+            if (pathname !== "/services") {
+              push("/services");
+            }
+          }}
         >
           Services <ChevronDown size={16} />
         </button>
@@ -96,12 +101,18 @@ const ServicesDropdown = ({ scrolled }: { scrolled: boolean }) => {
               delivering cutting-edge web development and tailor-made software
               solutions.
             </p>
-            <Link
-              href="/services"
-              className="flex items-center gap-2 text-[16px] font-bold mt-20"
-            >
-              Explore All Services <ArrowRight className="rotate-[-45deg]" />
-            </Link>
+            {pathname === "/services" ? (
+              <p className="flex items-center gap-2 cursor-pointer text-[16px] font-bold mt-20">
+                Explore All Services <ArrowRight className="rotate-[-45deg]" />
+              </p>
+            ) : (
+              <Link
+                href="/services"
+                className="flex items-center gap-2 text-[16px] font-bold mt-20"
+              >
+                Explore All Services <ArrowRight className="rotate-[-45deg]" />
+              </Link>
+            )}
           </div>
 
           {/* Right Grid */}
@@ -118,17 +129,30 @@ const ServicesDropdown = ({ scrolled }: { scrolled: boolean }) => {
             >
               {servicesleft.map((el) => (
                 <li key={el.id}>
-                  <Link
-                    href={el.href}
-                    className={cn(
-                      "transition-colors duration-200",
-                      scrolled
-                        ? "slate-text group-hover:text-[#d1d1d1] hover:text-black"
-                        : "dark-bg-text group-hover:text-[#4d4d4d] hover:text-white"
-                    )}
-                  >
-                    {el.title}
-                  </Link>
+                  {pathname === el.href ? (
+                    <p
+                      className={cn(
+                        "transition-colors cursor-pointer duration-200",
+                        scrolled
+                          ? "slate-text group-hover:text-[#d1d1d1] hover:text-black"
+                          : "dark-bg-text group-hover:text-[#4d4d4d] hover:text-white"
+                      )}
+                    >
+                      {el.title}
+                    </p>
+                  ) : (
+                    <Link
+                      href={el.href}
+                      className={cn(
+                        "transition-colors duration-200",
+                        scrolled
+                          ? "slate-text group-hover:text-[#d1d1d1] hover:text-black"
+                          : "dark-bg-text group-hover:text-[#4d4d4d] hover:text-white"
+                      )}
+                    >
+                      {el.title}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -139,17 +163,30 @@ const ServicesDropdown = ({ scrolled }: { scrolled: boolean }) => {
             >
               {servicesRight.map((el) => (
                 <li key={el.id}>
-                  <Link
-                    href={el.href}
-                    className={cn(
-                      "transition-colors duration-200",
-                      scrolled
-                        ? "slate-text group-hover:text-[#d1d1d1] hover:text-black"
-                        : "dark-bg-text group-hover:text-[#4d4d4d] hover:text-white"
-                    )}
-                  >
-                    {el.title}
-                  </Link>
+                  {pathname === el.href ? (
+                    <p
+                      className={cn(
+                        "transition-colors cursor-pointer duration-200",
+                        scrolled
+                          ? "slate-text group-hover:text-[#d1d1d1] hover:text-black"
+                          : "dark-bg-text group-hover:text-[#4d4d4d] hover:text-white"
+                      )}
+                    >
+                      {el.title}
+                    </p>
+                  ) : (
+                    <Link
+                      href={el.href}
+                      className={cn(
+                        "transition-colors duration-200",
+                        scrolled
+                          ? "slate-text group-hover:text-[#d1d1d1] hover:text-black"
+                          : "dark-bg-text group-hover:text-[#4d4d4d] hover:text-white"
+                      )}
+                    >
+                      {el.title}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>

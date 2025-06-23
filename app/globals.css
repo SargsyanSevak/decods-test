@@ -170,7 +170,7 @@
     @apply text-[#999999];
   }
   .slate-bg {
-    @apply bg-[#222222];
+    @apply bg-[#1E201E];
   }
   .full-button {
     @apply [@media(max-width:480px)]:w-full;
