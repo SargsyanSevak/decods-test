@@ -72,9 +72,9 @@ const MobileMenu = ({ scrolled }: { scrolled: boolean }) => {
         {isOpen && (
           <motion.div
             key="mobile-menu"
-            initial={{ x: "-100%", opacity: 0 }}
+            initial={{ x: "100%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            exit={{ x: "-100%", opacity: 0 }}
+            exit={{ x: "100%", opacity: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
             className={cn(
               "fixed inset-0 top-[76px] z-50 w-full h-screen dark-bg flex flex-col p-4  pb-10  overflow-y-auto",

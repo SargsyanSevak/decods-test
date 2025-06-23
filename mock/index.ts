@@ -165,7 +165,11 @@ export const testimonials = [
 ];
 
 export const servicesleft = [
-  { id: 1, title: "Custom Software Development", href: "#" },
+  {
+    id: 1,
+    title: "Custom Software Development",
+    href: "/services/custom-software-development",
+  },
   { id: 2, title: "Web And Mobile Applications Development", href: "#" },
   { id: 3, title: "UI/UX Design", href: "#" },
   { id: 4, title: "DevOps", href: "#" },
